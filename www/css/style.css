@@ -1,0 +1,65 @@
+body, div, a, p, span, ul, li, strong, em, del {
+  font-family: "Franklin Gothic Book", Arial, sans-serif;
+  font-size: 14px; }
+
+body {
+   background-color: #201A1A; 
+   margin: 0;
+   padding: 0; 
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto; 
+    z-index: 1; 
+}
+/*Початок Навігація*/
+.nav {
+    height: 31px;
+    background-color: #FBF4B3;
+    padding: 20px 20px;
+}
+
+.logo {
+    width: 250px;
+    height: 31px;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    margin: 0 30px 0 0;
+    display: inline-block;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menu-item {
+    display: inline-block;
+    margin: 5px 20px 0 0;
+    border-bottom: 1px dashed #891818;
+}
+
+.menu-item span{
+    text-decoration: none;
+    font: 19px Tahoma, sans-serif;
+    color: #891818;
+    cursor:  pointer;
+}
+/*Кінець Навігація*/
+
+/*Початок Про послугу*/
+.aboutBg {
+    height: 364px;
+    background-image: url("../img/aboutBg.png");
+    background-repeat: no-repeat;
+}
+
+.blackoutBg{
+    height: 364px;
+    background-color: rgba(0,0,0,0.8);
+}
+/*Кінець Про послугу*/
