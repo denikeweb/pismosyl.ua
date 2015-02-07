@@ -11,6 +11,7 @@
 		
 		private $ctrls = [
 			'index' => 'Index',
+			'admin' => 'Admin',
 			'404' => 'C404'
 		];
 
@@ -20,7 +21,6 @@
 		 * @param $request
 		 */
 		private function ajaxRoute(&$ctrlName) {
-			$request = $this->action;
 			$className = 'Ajax\\' . $this->action;
 		}
 
@@ -39,7 +39,7 @@
 				$ctrlName = $this->ctrls ['index'];
 				
 			if (!is_null($this->do) and $this->do == 'ajax')
-				$this->ajaxCtrls ($ctrlName);
+				$this->ajaxRoute ($ctrlName);
 			
 			self::$get = $_GET;
 			self::$post = $_POST;
