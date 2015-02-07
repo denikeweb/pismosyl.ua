@@ -8,7 +8,14 @@
 			<li class="menu-item"><span>Контакты</span></li>
 		</ul>
 	</nav>
+
 	<div class="aboutBg">
-		<div class="blackoutBg"></div>
+		<div class="blackoutBg p30">
+
+		</div>
+	</div>
+
+	<div class="constructor p30">
+		<?= $constructor; ?>
 	</div>
 </div>

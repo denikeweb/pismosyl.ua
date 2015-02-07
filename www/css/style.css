@@ -11,7 +11,8 @@ body {
 .wrapper {
     width: 1000px;
     margin: 0 auto; 
-    z-index: 1; 
+    z-index: 1;
+	background: #ffffff;
 }
 /*Початок Навігація*/
 .nav {
@@ -59,7 +60,18 @@ body {
 }
 
 .blackoutBg{
-    height: 364px;
+    min-height: 304px;
     background-color: rgba(0,0,0,0.8);
 }
 /*Кінець Про послугу*/
+
+/*
+	Interface styles begin
+*/
+.p30 {
+	padding: 30px;
+}
+
+/*
+	Interface styles end
+*/

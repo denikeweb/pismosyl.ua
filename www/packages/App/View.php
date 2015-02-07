@@ -13,6 +13,7 @@
 			$template = 'template';
 			
 			$files = array(
+				'constructor'  => 'constructor',
 				'content'  => $page,
 				'template'  => $template
 			);
