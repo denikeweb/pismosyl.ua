@@ -33,7 +33,8 @@
 		 *
 		 * @return string
 		 */
-		public static function getView ($files) {
+		public static function getView ($files, $data = NULL) {
+			if (!is_null($data)) extract($data);
 			if (is_string ($files)) {
 				$filename = $files;
 				$files = array ();
