@@ -1,3 +1,15 @@
+/* font-family: "PTSansRegular"; */
+@font-face {
+    font-family: "PTSansRegular";
+    src: url("../fonts/PTSansRegular/PTSansRegular.eot");
+    src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansRegular/PTSansRegular.woff") format("woff"),
+    url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "PTSansRegular"; */
+
 body, div, a, p, span, ul, li, strong, em, del {
   font-family: "Franklin Gothic Book", Arial, sans-serif;
   font-size: 14px; }
@@ -11,8 +23,19 @@ body {
 .wrapper {
     width: 1000px;
     margin: 0 auto; 
-    z-index: 1;
-	background: #ffffff;
+    z-index: 1; 
+}
+
+.headerText {
+    font: 18pt "PTSansRegular";
+    color: #1f1e18;
+    margin: 0;
+}
+
+.usualText {
+    font: 14pt "PTSansRegular";
+    color: #1f1e18;
+    margin: 0;
 }
 /*Початок Навігація*/
 .nav {
@@ -55,23 +78,102 @@ body {
 /*Початок Про послугу*/
 .aboutBg {
     height: 364px;
-    background-image: url("../img/aboutBg.png");
+    background-image: url("../img/aboutBg.jpg");
     background-repeat: no-repeat;
 }
 
 .blackoutBg{
-    min-height: 304px;
+    height: 304px;
     background-color: rgba(0,0,0,0.8);
+    padding: 30px;
+}
+
+.aboutText{
+    color: #F9F5CF;
+    width: 456px;
+    margin-bottom: 40px;
+    font: 14pt "PTSansRegular";
+    color: #fbf4b3;
+}
+
+.blackoutBg button {
+    width: 315px;
+    height: 68px;
+    display: block;
+    cursor: pointer;
+}
+
+.buyButton {
+    background-color: #609A34;
+    border: 0;
+    border-radius: 3px;
+    margin-bottom: 15px; 
+    box-shadow: 0 3px 0 0 #2b4e12;
+    font: 14pt "PTSansRegular";
+    color: #fbf4b3;
+}
+
+.infoButton {
+    background-color: #c8692a;
+    border: 0;
+    border-radius: 3px;
+    margin-bottom: 15px; 
+    box-shadow: 0 3px 0 0 #612e0d;
+    font: 14pt "PTSansRegular";
+    color: #fbf4b3;
 }
 /*Кінець Про послугу*/
 
-/*
-	Interface styles begin
-*/
-.p30 {
-	padding: 30px;
+/*Початок Фотографії*/
+.photos{
+    height: 205px;
+    background-color: #ffffff;
+    padding: 30px;
 }
 
-/*
-	Interface styles end
-*/
+.photos h3{
+    margin: 0 0 3px 0;
+}
+
+.photos p {
+    margin: 0 0 5px 0;
+}
+
+.photoSet {
+    height: 118px;
+    padding:0;
+    margin: 0;
+}
+
+.photoSet img {
+    height: 118px;
+    width: 185px;
+    margin-left: 0px;
+    display: inline-block;
+}
+    
+img.first{
+    margin:0;
+}    
+/*Кінець Фотографії*/
+
+/*Початок Для кого*/
+.youWant {
+    height: 200px;
+    padding: 30px;
+    background-color: #f8fabf;
+    vertical-align: top;
+}
+
+.youWant p{
+    display: inline-block;
+    width: 306px;
+    height: 165px;
+    
+}
+
+p.ywCenter {
+    width: 290px;
+    margin: 0 10px;
+}
+/*Кінець Для кого*/
