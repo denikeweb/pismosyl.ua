@@ -37,20 +37,29 @@
             <h3 class="headerText">Вот такие письма мы пишем...</h3>
             <p class="usualText">У нас разработаны стандарты для писем — это то, что гарантирует качество нашей работы. Посмотрите на то, что мы делаем:</p>
             <div class="photoSet">
-                <img class="first" src="../img/photos/img1.png"/>
-                <img src="../img/photos/img2.png"/>
-                <img src="../img/photos/img3.png"/>
-                <img src="../img/photos/img4.png"/>
-                <img src="../img/photos/img5.png"/>
+                <ul id="gallery">
+                    <li><a href="../img/photos/img1.png"><img class="first" src="../img/photos/img1.png"/></a></li><li><a href="../img/photos/img2.png"><img src="../img/photos/img2.png"/></a></li><li><a href="../img/photos/img3.png"><img src="../img/photos/img3.png"/></a></li><li><a href="../img/photos/img4.png"><img src="../img/photos/img4.png"/></a></li><li><a href="../img/photos/img5.png"><img src="../img/photos/img5.png"/></a></li>
+                </ul>
             </div>
         </div>
         <div class="youWant">
             <h3 class="headerText">Наш сервис понадобится, если вы хотите</h3>
-            <p class="usualText"><span>Сделать приятное своему парню/девушке</span> и удивить своего любимого человека. Только представьте, сколько радости будет у них на глазах, когда они получат такой красивый и оригинальный подарок от вас.</p>
-            <p class="usualText ywCenter"><span>Начать отношение с</span> парнем/девушкой. Ведь признаться в симпатии,  отправив красивое и «живое» письмо намного  романтичнее, чем позвонить «544».</p>
-            <p class="usualText"><span>Удивить своих родителей</span>, прислав им в честь знаменательного празника (или просто так) поздравление, или просто сказав пару нежных и заботливых слов своим родным.</p>
+            <p class="usualText"><strong>Сделать приятное своему парню/девушке</strong> и удивить своего любимого человека. Только представьте, сколько радости будет у них на глазах, когда они получат такой красивый и оригинальный подарок от вас.</p>
+            <p class="usualText ywCenter"><strong>Начать отношение с</strong> парнем/девушкой. Ведь признаться в симпатии,  отправив красивое и «живое» письмо намного  романтичнее, чем позвонить «544».</p>
+            <p class="usualText"><strong>Удивить своих родителей</strong>, прислав им в честь знаменательного празника (или просто так) поздравление, или просто сказав пару нежных и заботливых слов своим родным.</p>
         </div>
     </div>
-    <script type="text/javascript" src="//miradas.ru/js/mirada-core.js"></script>    
+    
+    <link href="ppgallery/css/ppgallery.css" rel="stylesheet" type="text/css" />
+<link href="ppgallery/css/dark-hive/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script> 
+<script type="text/javascript" src="ppgallery/js/ppgallery.js"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#gallery').ppGallery();
+});
+</script>
+        
 </body>
 </html>

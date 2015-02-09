@@ -8,10 +8,20 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "PTSansBold";
+    src: url("../fonts/PTSansBold/PTSansBold.eot");
+    src: url("../fonts/PTSansBold/PTSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/PTSansBold/PTSansBold.woff") format("woff"),
+    url("../fonts/PTSansBold/PTSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 /* font-family: "PTSansRegular"; */
 
 body, div, a, p, span, ul, li, strong, em, del {
-  font-family: "Franklin Gothic Book", Arial, sans-serif;
+  font-family: "PTSansRegular", Tahoma, Arial, sans-serif;
   font-size: 14px; }
 
 body {
@@ -41,7 +51,7 @@ body {
 .nav {
     height: 31px;
     background-color: #FBF4B3;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
 .logo {
@@ -91,16 +101,17 @@ body {
 .aboutText{
     color: #F9F5CF;
     width: 456px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font: 14pt "PTSansRegular";
     color: #fbf4b3;
 }
 
-.blackoutBg button {
+button {
     width: 315px;
     height: 68px;
     display: block;
     cursor: pointer;
+    outline: none;
 }
 
 .buyButton {
@@ -108,7 +119,7 @@ body {
     border: 0;
     border-radius: 3px;
     margin-bottom: 15px; 
-    box-shadow: 0 3px 0 0 #2b4e12;
+    box-shadow: 0 3px #2b4e12;
     font: 14pt "PTSansRegular";
     color: #fbf4b3;
 }
@@ -118,7 +129,7 @@ body {
     border: 0;
     border-radius: 3px;
     margin-bottom: 15px; 
-    box-shadow: 0 3px 0 0 #612e0d;
+    box-shadow: 0 3px #612e0d;
     font: 14pt "PTSansRegular";
     color: #fbf4b3;
 }
@@ -147,8 +158,8 @@ body {
 
 .photoSet img {
     height: 118px;
-    width: 185px;
-    margin-left: 0px;
+    width: 184px;
+    margin-left: 5px;
     display: inline-block;
 }
     
@@ -162,18 +173,21 @@ img.first{
     height: 200px;
     padding: 30px;
     background-color: #f8fabf;
-    vertical-align: top;
 }
 
 .youWant p{
     display: inline-block;
     width: 306px;
     height: 165px;
-    
+    vertical-align: top;
 }
 
 p.ywCenter {
     width: 290px;
     margin: 0 10px;
+}
+
+.usualText strong {
+    font: 14pt "PTSansBold";
 }
 /*Кінець Для кого*/
