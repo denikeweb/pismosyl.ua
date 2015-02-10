@@ -11,6 +11,7 @@
     <meta name="interkassa-verification" content="7374c6e625877e634f2c0a5cbf3f06a4" />
     <!--<link rel="shortcut icon" href="//miradas.ru/favicon.ico">-->
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/colorbox.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <div class="wrapper">
@@ -37,29 +38,50 @@
             <h3 class="headerText">Вот такие письма мы пишем...</h3>
             <p class="usualText">У нас разработаны стандарты для писем — это то, что гарантирует качество нашей работы. Посмотрите на то, что мы делаем:</p>
             <div class="photoSet">
-                <ul id="gallery">
-                    <li><a href="../img/photos/img1.png"><img class="first" src="../img/photos/img1.png"/></a></li><li><a href="../img/photos/img2.png"><img src="../img/photos/img2.png"/></a></li><li><a href="../img/photos/img3.png"><img src="../img/photos/img3.png"/></a></li><li><a href="../img/photos/img4.png"><img src="../img/photos/img4.png"/></a></li><li><a href="../img/photos/img5.png"><img src="../img/photos/img5.png"/></a></li>
-                </ul>
+                <a class="photoSetPic" href="../img/photos/img1.png"><img class="first" src="../img/photos/img1.png"/></a><a class="photoSetPic" href="../img/photos/img2.png"><img src="../img/photos/img2.png"/></a><a class="photoSetPic" href="../img/photos/img3.png"><img src="../img/photos/img3.png"/></a><a class="photoSetPic" href="../img/photos/img4.png"><img src="../img/photos/img4.png"/></a><a class="photoSetPic" href="../img/photos/img5.png"><img src="../img/photos/img5.png"/></a>
             </div>
         </div>
         <div class="youWant">
             <h3 class="headerText">Наш сервис понадобится, если вы хотите</h3>
-            <p class="usualText"><strong>Сделать приятное своему парню/девушке</strong> и удивить своего любимого человека. Только представьте, сколько радости будет у них на глазах, когда они получат такой красивый и оригинальный подарок от вас.</p>
-            <p class="usualText ywCenter"><strong>Начать отношение с</strong> парнем/девушкой. Ведь признаться в симпатии,  отправив красивое и «живое» письмо намного  романтичнее, чем позвонить «544».</p>
-            <p class="usualText"><strong>Удивить своих родителей</strong>, прислав им в честь знаменательного празника (или просто так) поздравление, или просто сказав пару нежных и заботливых слов своим родным.</p>
+            <p class="usualText"><strong class="boldText">Сделать приятное своему парню/девушке</strong> и удивить своего любимого человека. Только представьте, сколько радости будет у них на глазах, когда они получат такой красивый и оригинальный подарок от вас.</p>
+            <p class="usualText ywCenter"><strong class="boldText">Начать отношение с</strong> парнем/девушкой. Ведь признаться в симпатии,  отправив красивое и «живое» письмо намного  романтичнее, чем позвонить «544».</p>
+            <p class="usualText"><strong class="boldText">Удивить своих родителей</strong>, прислав им в честь знаменательного празника (или просто так) поздравление, или просто сказав пару нежных и заботливых слов своим родным.</p>
+        </div>
+        <div class="steps">
+            <h3 class="headerText stepsHeader">Все делаем в 3 этапа:</h3>
+            <div class="stepBlock">
+                <a class="pictureSB" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a>
+                <p class="usualText textSB">Этап 1: конструируете письмо на сайте</p>
+            </div><div class="stepBlock centerB"><a class="pictureSB" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a><p class="usualText textSB">Этап 2: Оплачиваете заказ</p></div><div class="stepBlock">
+                <a class="pictureSB" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a>
+                <p class="usualText textSB">Этап 3: Получатель радуется</p>
+            </div>     
+            <h3 class="headerText curierHeader">Схема с курьером</h3>
+            <div class="row3picBC">
+                <div class="blockPC">
+                    <a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a>
+                </div><div class="blockPC centerB"><a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a></div><div class="blockPC">
+                <a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a></div>    
+            </div>  
+            <div class="row2picBC">
+                <div class="blockPC"><a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a></div><div class="blockPC rightB">
+                <a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a></div>
+            </div>           
+        </div>
+        <div class="constructor">
+            <h3 class="headerText constructorHeader">Конструктор</h3>
+            <div class="constructorBody"></div>
         </div>
     </div>
     
-    <link href="ppgallery/css/ppgallery.css" rel="stylesheet" type="text/css" />
-<link href="ppgallery/css/dark-hive/jquery-ui-1.8.6.custom.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script> 
-<script type="text/javascript" src="ppgallery/js/ppgallery.js"></script> 
-<script type="text/javascript">
-$(document).ready(function() {
-	$('#gallery').ppGallery();
-});
-</script>
-        
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script>
+    $(document).ready(function(){
+            jQuery('.photoSetPic').colorbox({rel:'.photoSetPic'});
+            jQuery('.pictureSB').colorbox({rel:'.pictureSB'}); 
+            jQuery('.pictureC').colorbox({rel:'.pictureC'});      
+    });
+    </script>
 </body>
 </html>

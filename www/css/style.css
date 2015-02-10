@@ -39,11 +39,18 @@ body {
 .headerText {
     font: 18pt "PTSansRegular";
     color: #1f1e18;
+    line-height: 18px;
     margin: 0;
 }
 
 .usualText {
     font: 14pt "PTSansRegular";
+    color: #1f1e18;
+    margin: 0;
+}
+
+.boldText {
+    font: 14pt "PTSansBold";
     color: #1f1e18;
     margin: 0;
 }
@@ -93,7 +100,7 @@ body {
 }
 
 .blackoutBg{
-    height: 304px;
+    height: 305px;
     background-color: rgba(0,0,0,0.8);
     padding: 30px;
 }
@@ -104,6 +111,7 @@ body {
     margin-bottom: 30px;
     font: 14pt "PTSansRegular";
     color: #fbf4b3;
+    text-align: justify;
 }
 
 button {
@@ -143,7 +151,7 @@ button {
 }
 
 .photos h3{
-    margin: 0 0 3px 0;
+    margin: 0 0 16px 0;
 }
 
 .photos p {
@@ -177,17 +185,87 @@ img.first{
 
 .youWant p{
     display: inline-block;
-    width: 306px;
+    width: 301px;
     height: 165px;
     vertical-align: top;
+    text-align: justify;
 }
 
 p.ywCenter {
     width: 290px;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
-.usualText strong {
-    font: 14pt "PTSansBold";
+.youWant h3 {
+    margin: 0 0 16px 0;
 }
 /*Кінець Для кого*/
+
+/*Початок Кроки*/
+.steps {
+    height: 750px;
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+.stepBlock {
+    display: inline-block;
+    height: 250px;
+    width:305px;
+    vertical-align: top;
+}
+
+.stepsHeader {
+    margin: 0 0 18px 0;
+}
+
+.centerB {
+    margin: 0 12px;
+}
+
+.textSB {
+    margin: 3px 0 0 0;
+}
+
+.curierHeader {
+    margin: 40px 0 18px 0;
+}
+
+.row3picBC {
+    height: 192px;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+.row2picBC {
+    height: 192px;
+    width: 622px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.blockPC {
+    display: inline-block;
+}
+
+.rightB {
+    margin: 0 0 0 12px;
+}
+/*Кінець Кроки*/
+
+/*Початок Конструктора*/
+.constructor {
+    height: 352px;
+    padding: 30px;
+    background-color: #F8FABF;
+}
+
+.constructorHeader {
+    margin: 0 0 21px 0;
+}
+
+.constructorBody {
+    height: 313px;
+    background-color: #A3D39C;
+}
+/*Кінець Конструктора*/
