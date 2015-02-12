@@ -203,9 +203,9 @@ p.ywCenter {
 
 /*Початок Кроки*/
 .steps {
-    height: 750px;
+    height: 758px;
     background-color: #ffffff;
-    padding: 30px;
+    padding: 30px 30px 22px 30px;
 }
 
 .stepBlock {
@@ -269,3 +269,87 @@ p.ywCenter {
     background-color: #A3D39C;
 }
 /*Кінець Конструктора*/
+
+/*Початок Набори*/
+.packages {
+    padding: 30px;
+    height: 450px;
+    background-color: #c4df9b;
+}
+
+.packageHeader {
+    margin: 0 0 28px 0;
+}
+
+.pack {
+    height: 400px;
+    width: 305px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.packCenter {
+    height: 400px;
+    width: 290px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+}
+
+.packImg {
+   height: 214px;
+   width: 214px;
+   border-radius: 107px; 
+   margin: auto;
+   display: block;
+   margin-bottom: 18px;
+}
+
+.packHead {
+    text-align: center;
+    line-height: 29px;
+    margin: 0 0 16px 0;
+}
+
+.packText {
+    text-align: center;
+    line-height: 20px;
+}
+/*Кінець Набори*/
+
+/*Початок Гарантії*/
+.warranty {
+    height: 90px;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.warrHead {
+    margin: 0 0 22px 0;
+}
+/*Кінець Гарантії*/
+
+/*Початок Футер*/
+footer {
+    height: 145px;
+    padding: 30px;
+    background-color: #fbf4b3;
+}
+
+.footBlock {
+    display: inline-block;
+    height: 145px;
+}
+
+.footLink {
+    text-decoration: underline;
+}
+
+.footBlock {
+    width: 470px;
+}
+
+.footBlock:last-child {
+    text-align: right;
+}
+/*Кінець Футер*/
