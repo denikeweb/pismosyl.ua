@@ -15,6 +15,6 @@
 	</head>
 	<body>
 		<?= $content; ?>
-		<script type="text/javascript" src="//miradas.ru/js/mirada-core.js"></script>
+		<script type="text/javascript" src="scripts.js"></script>
 	</body>
 </html>

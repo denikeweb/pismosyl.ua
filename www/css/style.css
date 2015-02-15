@@ -357,3 +357,14 @@ footer {
     text-align: right;
 }
 /*Кінець Футер*/
+
+/**
+	constructor begin */
+.hidden {
+	display: none;
+}
+.constructor-navigator {
+	
+}
+/**
+	constructor end */
