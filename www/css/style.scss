@@ -363,6 +363,7 @@ footer {
 $g3: #333333;
 $g6: #666666;
 $g9: #999999;
+$w: white;
 
 
 /**
@@ -374,7 +375,7 @@ $g9: #999999;
 .constructor-navigator {
 	width: 292px;
 	padding: 10px;
-	border: 1px solid $g9;
+	border: 1px solid $w;
 	display: inline-block;
 	&.step1 {
 
@@ -388,8 +389,9 @@ $g9: #999999;
 	&.active {
 		background: rgba(200,105,42,0.8);
 	}
-	&.steped {
-		
+	&.stepped {
+		background: rgba(200,105,42,0.8);
+		color: $g6;
 	}
 }
 .constructor-steps {

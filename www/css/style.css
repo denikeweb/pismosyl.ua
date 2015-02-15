@@ -306,7 +306,7 @@ footer {
 .constructor-navigator {
   width: 292px;
   padding: 10px;
-  border: 1px solid #999999;
+  border: 1px solid white;
   display: inline-block; }
   .constructor-navigator.step2 {
     border-left: 0; }
@@ -314,6 +314,9 @@ footer {
     border-left: 0; }
   .constructor-navigator.active {
     background: rgba(200, 105, 42, 0.8); }
+  .constructor-navigator.stepped {
+    background: rgba(200, 105, 42, 0.8);
+    color: #666666; }
 
 /**
 	constructor end */
