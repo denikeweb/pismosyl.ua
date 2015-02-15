@@ -64,8 +64,7 @@ body {
 .logo {
     width: 250px;
     height: 31px;
-    background-image: url("../img/logo.png");
-    background-repeat: no-repeat;
+    background: url("../img/logo.png") no-repeat;
     margin: 0 30px 0 0;
     display: inline-block;
 }
@@ -136,7 +135,6 @@ button {
     background-color: #c8692a;
     border: 0;
     border-radius: 3px;
-    margin-bottom: 15px; 
     box-shadow: 0 3px #612e0d;
     font: 14pt "PTSansRegular";
     color: #fbf4b3;
@@ -174,6 +172,11 @@ button {
 img.first{
     margin:0;
 }    
+
+.photoSetPic {
+    line-height: 0;
+    width: 0;    
+}
 /*Кінець Фотографії*/
 
 /*Початок Для кого*/
@@ -307,8 +310,8 @@ p.ywCenter {
 
 .packHead {
     text-align: center;
-    line-height: 29px;
-    margin: 0 0 16px 0;
+    line-height: 22px;
+    margin: 0 0 6px 0;
 }
 
 .packText {
@@ -342,7 +345,8 @@ footer {
 }
 
 .footLink {
-    text-decoration: underline;
+    border-bottom: 1px dashed #1f1e18;
+    text-decoration: none;
 }
 
 .footBlock {
