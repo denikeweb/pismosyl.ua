@@ -8,8 +8,8 @@
 	</div>
 
 
-	<div class="constructor step1">
+	<div class="constructor-steps step1">
 
 	</div>
-	<div class="constructor step2"></div>
+	<div class="constructor-steps step2"></div>
 </div>
