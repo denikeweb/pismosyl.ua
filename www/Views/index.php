@@ -70,10 +70,10 @@
         <div class="footBlock">
             <div><span class="usualText footLink" >О сервисе</span></div>
             <div><span class="usualText footLink" >Примеры писем</span></div>
-            <div><a class="usualText footLink" >Как делается</a></div>
-            <div><a class="usualText footLink" >Конструктор</a></div>
-            <div><a class="usualText footLink" >Пакеты</a></div>
-            <div><a class="usualText footLink" >Гарантии</a></div>
+            <div><span class="usualText footLink" >Как делается</span></div>
+            <div><span class="usualText footLink" >Конструктор</span></div>
+            <div><span class="usualText footLink" >Пакеты</span></div>
+            <div><span class="usualText footLink" >Гарантии</span></div>
         </div><div class="footBlock">
             <p class="usualText">Письмосыл © 2015. Все права защищены<br/><br/>
                 Контакты:<br/>
