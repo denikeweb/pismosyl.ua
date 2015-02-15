@@ -1,370 +1,324 @@
+@charset "IBM866";
 /* font-family: "PTSansRegular"; */
 @font-face {
-    font-family: "PTSansRegular";
-    src: url("../fonts/PTSansRegular/PTSansRegular.eot");
-    src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/PTSansRegular/PTSansRegular.woff") format("woff"),
-    url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
+  font-family: "PTSansRegular";
+  src: url("../fonts/PTSansRegular/PTSansRegular.eot");
+  src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSansRegular/PTSansRegular.woff") format("woff"), url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 @font-face {
-    font-family: "PTSansBold";
-    src: url("../fonts/PTSansBold/PTSansBold.eot");
-    src: url("../fonts/PTSansBold/PTSansBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/PTSansBold/PTSansBold.woff") format("woff"),
-    url("../fonts/PTSansBold/PTSansBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
+  font-family: "PTSansBold";
+  src: url("../fonts/PTSansBold/PTSansBold.eot");
+  src: url("../fonts/PTSansBold/PTSansBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSansBold/PTSansBold.woff") format("woff"), url("../fonts/PTSansBold/PTSansBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
 /* font-family: "PTSansRegular"; */
-
 body, div, a, p, span, ul, li, strong, em, del {
   font-family: "PTSansRegular", Tahoma, Arial, sans-serif;
   font-size: 14px; }
 
 body {
-   background-color: #201A1A; 
-   margin: 0;
-   padding: 0; 
-}
+  background-color: #201A1A;
+  margin: 0;
+  padding: 0; }
 
 .wrapper {
-    width: 1000px;
-    margin: 0 auto; 
-    z-index: 1; 
-}
+  width: 1000px;
+  margin: 0 auto;
+  z-index: 1; }
 
 .headerText {
-    font: 18pt "PTSansRegular";
-    color: #1f1e18;
-    line-height: 18px;
-    margin: 0;
-}
+  font: 18pt "PTSansRegular";
+  color: #1f1e18;
+  line-height: 18px;
+  margin: 0; }
 
 .usualText {
-    font: 14pt "PTSansRegular";
-    color: #1f1e18;
-    margin: 0;
-}
+  font: 14pt "PTSansRegular";
+  color: #1f1e18;
+  margin: 0; }
 
 .boldText {
-    font: 14pt "PTSansBold";
-    color: #1f1e18;
-    margin: 0;
-}
+  font: 14pt "PTSansBold";
+  color: #1f1e18;
+  margin: 0; }
+
 /*Початок Навігація*/
 .nav {
-    height: 31px;
-    background-color: #FBF4B3;
-    padding: 20px;
-}
+  height: 31px;
+  background-color: #FBF4B3;
+  padding: 20px; }
 
 .logo {
-    width: 250px;
-    height: 31px;
-    background: url("../img/logo.png") no-repeat;
-    margin: 0 30px 0 0;
-    display: inline-block;
-}
+  width: 250px;
+  height: 31px;
+  background: url("../img/logo.png") no-repeat;
+  margin: 0 30px 0 0;
+  display: inline-block; }
 
 .menu {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline-block;
-    vertical-align: top;
-}
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top; }
 
 .menu-item {
-    display: inline-block;
-    margin: 5px 20px 0 0;
-    border-bottom: 1px dashed #891818;
-}
+  display: inline-block;
+  margin: 5px 20px 0 0;
+  border-bottom: 1px dashed #891818; }
 
-.menu-item span{
-    text-decoration: none;
-    font: 19px Tahoma, sans-serif;
-    color: #891818;
-    cursor:  pointer;
-}
+.menu-item span {
+  text-decoration: none;
+  font: 19px Tahoma, sans-serif;
+  color: #891818;
+  cursor: pointer; }
+
 /*Кінець Навігація*/
-
 /*Початок Про послугу*/
 .aboutBg {
-    height: 364px;
-    background-image: url("../img/aboutBg.jpg");
-    background-repeat: no-repeat;
-}
+  height: 364px;
+  background-image: url("../img/aboutBg.jpg");
+  background-repeat: no-repeat; }
 
-.blackoutBg{
-    height: 305px;
-    background-color: rgba(0,0,0,0.8);
-    padding: 30px;
-}
+.blackoutBg {
+  height: 305px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px; }
 
-.aboutText{
-    color: #F9F5CF;
-    width: 456px;
-    margin-bottom: 30px;
-    font: 14pt "PTSansRegular";
-    color: #fbf4b3;
-    text-align: justify;
-}
+.aboutText {
+  color: #F9F5CF;
+  width: 456px;
+  margin-bottom: 30px;
+  font: 14pt "PTSansRegular";
+  color: #fbf4b3;
+  text-align: justify; }
 
 button {
-    width: 315px;
-    height: 68px;
-    display: block;
-    cursor: pointer;
-    outline: none;
-}
+  width: 315px;
+  height: 68px;
+  display: block;
+  cursor: pointer;
+  outline: none; }
 
 .buyButton {
-    background-color: #609A34;
-    border: 0;
-    border-radius: 3px;
-    margin-bottom: 15px; 
-    box-shadow: 0 3px #2b4e12;
-    font: 14pt "PTSansRegular";
-    color: #fbf4b3;
-}
+  background-color: #609A34;
+  border: 0;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px #2b4e12;
+  font: 14pt "PTSansRegular";
+  color: #fbf4b3; }
 
 .infoButton {
-    background-color: #c8692a;
-    border: 0;
-    border-radius: 3px;
-    box-shadow: 0 3px #612e0d;
-    font: 14pt "PTSansRegular";
-    color: #fbf4b3;
-}
+  background-color: #c8692a;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 3px #612e0d;
+  font: 14pt "PTSansRegular";
+  color: #fbf4b3; }
+
 /*Кінець Про послугу*/
-
 /*Початок Фотографії*/
-.photos{
-    height: 205px;
-    background-color: #ffffff;
-    padding: 30px;
-}
+.photos {
+  height: 205px;
+  background-color: #ffffff;
+  padding: 30px; }
 
-.photos h3{
-    margin: 0 0 16px 0;
-}
+.photos h3 {
+  margin: 0 0 16px 0; }
 
 .photos p {
-    margin: 0 0 5px 0;
-}
+  margin: 0 0 5px 0; }
 
 .photoSet {
-    height: 118px;
-    padding:0;
-    margin: 0;
-}
+  height: 118px;
+  padding: 0;
+  margin: 0; }
 
 .photoSet img {
-    height: 118px;
-    width: 184px;
-    margin-left: 5px;
-    display: inline-block;
-}
-    
-img.first{
-    margin:0;
-}    
+  height: 118px;
+  width: 184px;
+  margin-left: 5px;
+  display: inline-block; }
+
+img.first {
+  margin: 0; }
 
 .photoSetPic {
-    line-height: 0;
-    width: 0;    
-}
-/*Кінець Фотографії*/
+  line-height: 0;
+  width: 0; }
 
+/*Кінець Фотографії*/
 /*Початок Для кого*/
 .youWant {
-    height: 200px;
-    padding: 30px;
-    background-color: #f8fabf;
-}
+  height: 200px;
+  padding: 30px;
+  background-color: #f8fabf; }
 
-.youWant p{
-    display: inline-block;
-    width: 301px;
-    height: 165px;
-    vertical-align: top;
-    text-align: justify;
-}
+.youWant p {
+  display: inline-block;
+  width: 301px;
+  height: 165px;
+  vertical-align: top;
+  text-align: justify; }
 
 p.ywCenter {
-    width: 290px;
-    margin: 0 20px;
-}
+  width: 290px;
+  margin: 0 20px; }
 
 .youWant h3 {
-    margin: 0 0 16px 0;
-}
-/*Кінець Для кого*/
+  margin: 0 0 16px 0; }
 
+/*Кінець Для кого*/
 /*Початок Кроки*/
 .steps {
-    height: 758px;
-    background-color: #ffffff;
-    padding: 30px 30px 22px 30px;
-}
+  height: 758px;
+  background-color: #ffffff;
+  padding: 30px 30px 22px 30px; }
 
 .stepBlock {
-    display: inline-block;
-    height: 250px;
-    width:305px;
-    vertical-align: top;
-}
+  display: inline-block;
+  height: 250px;
+  width: 305px;
+  vertical-align: top; }
 
 .stepsHeader {
-    margin: 0 0 18px 0;
-}
+  margin: 0 0 18px 0; }
 
 .centerB {
-    margin: 0 12px;
-}
+  margin: 0 12px; }
 
 .textSB {
-    margin: 3px 0 0 0;
-}
+  margin: 3px 0 0 0; }
 
 .curierHeader {
-    margin: 40px 0 18px 0;
-}
+  margin: 40px 0 18px 0; }
 
 .row3picBC {
-    height: 192px;
-    padding: 0;
-    margin: 0 0 12px 0;
-}
+  height: 192px;
+  padding: 0;
+  margin: 0 0 12px 0; }
 
 .row2picBC {
-    height: 192px;
-    width: 622px;
-    padding: 0;
-    margin: 0 auto;
-}
+  height: 192px;
+  width: 622px;
+  padding: 0;
+  margin: 0 auto; }
 
 .blockPC {
-    display: inline-block;
-}
+  display: inline-block; }
 
 .rightB {
-    margin: 0 0 0 12px;
-}
-/*Кінець Кроки*/
+  margin: 0 0 0 12px; }
 
+/*Кінець Кроки*/
 /*Початок Конструктора*/
 .constructor {
-    height: 352px;
-    padding: 30px;
-    background-color: #F8FABF;
-}
+  height: 352px;
+  padding: 30px;
+  background-color: #F8FABF; }
 
 .constructorHeader {
-    margin: 0 0 21px 0;
-}
+  margin: 0 0 21px 0; }
 
 .constructorBody {
-    height: 313px;
-    background-color: #A3D39C;
-}
-/*Кінець Конструктора*/
+  height: 313px;
+  background-color: #A3D39C; }
 
+/*Кінець Конструктора*/
 /*Початок Набори*/
 .packages {
-    padding: 30px;
-    height: 450px;
-    background-color: #c4df9b;
-}
+  padding: 30px;
+  height: 450px;
+  background-color: #c4df9b; }
 
 .packageHeader {
-    margin: 0 0 28px 0;
-}
+  margin: 0 0 28px 0; }
 
 .pack {
-    height: 400px;
-    width: 305px;
-    display: inline-block;
-    vertical-align: top;
-}
+  height: 400px;
+  width: 305px;
+  display: inline-block;
+  vertical-align: top; }
 
 .packCenter {
-    height: 400px;
-    width: 290px;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 20px;
-}
+  height: 400px;
+  width: 290px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 20px; }
 
 .packImg {
-   height: 214px;
-   width: 214px;
-   border-radius: 107px; 
-   margin: auto;
-   display: block;
-   margin-bottom: 18px;
-}
+  height: 214px;
+  width: 214px;
+  border-radius: 107px;
+  margin: auto;
+  display: block;
+  margin-bottom: 18px; }
 
 .packHead {
-    text-align: center;
-    line-height: 22px;
-    margin: 0 0 6px 0;
-}
+  text-align: center;
+  line-height: 22px;
+  margin: 0 0 6px 0; }
 
 .packText {
-    text-align: center;
-    line-height: 20px;
-}
-/*Кінець Набори*/
+  text-align: center;
+  line-height: 20px; }
 
+/*Кінець Набори*/
 /*Початок Гарантії*/
 .warranty {
-    height: 90px;
-    padding: 30px;
-    background-color: #ffffff;
-}
+  height: 90px;
+  padding: 30px;
+  background-color: #ffffff; }
 
 .warrHead {
-    margin: 0 0 22px 0;
-}
-/*Кінець Гарантії*/
+  margin: 0 0 22px 0; }
 
+/*Кінець Гарантії*/
 /*Початок Футер*/
 footer {
-    height: 145px;
-    padding: 30px;
-    background-color: #fbf4b3;
-}
+  height: 145px;
+  padding: 30px;
+  background-color: #fbf4b3; }
 
 .footBlock {
-    display: inline-block;
-    height: 145px;
-}
+  display: inline-block;
+  height: 145px; }
 
 .footLink {
-    border-bottom: 1px dashed #1f1e18;
-    text-decoration: none;
-}
+  border-bottom: 1px dashed #1f1e18;
+  text-decoration: none; }
 
 .footBlock {
-    width: 470px;
-}
+  width: 470px; }
 
 .footBlock:last-child {
-    text-align: right;
-}
-/*Кінець Футер*/
+  text-align: right; }
 
+/*Кінець Футер*/
 /**
 	constructor begin */
 .hidden {
-	display: none;
-}
+  display: none; }
+
 .constructor-navigator {
-	
-}
+  width: 292px;
+  padding: 10px;
+  border: 1px solid #999999;
+  display: inline-block; }
+  .constructor-navigator.step2 {
+    border-left: 0; }
+  .constructor-navigator.step3 {
+    border-left: 0; }
+  .constructor-navigator.active {
+    background: rgba(200, 105, 42, 0.8); }
+
 /**
 	constructor end */
+/** gallery*/
+#cboxOverlay {
+  background: rgba(0, 0, 0, 0.8) !important; }
+
+/** gallery */

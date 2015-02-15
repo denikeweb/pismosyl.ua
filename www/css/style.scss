@@ -358,23 +358,38 @@ footer {
 }
 /*Кінець Футер*/
 
+
+// colors
+$g3: #333333;
+$g6: #666666;
+$g9: #999999;
+
+
 /**
 	constructor begin */
+
 .hidden {
 	display: none;
 }
 .constructor-navigator {
+	width: 292px;
+	padding: 10px;
+	border: 1px solid $g9;
+	display: inline-block;
 	&.step1 {
 
 	}
 	&.step2 {
-
+		border-left: 0;
 	}
 	&.step3 {
-
+		border-left: 0;
 	}
 	&.active {
-
+		background: rgba(200,105,42,0.8);
+	}
+	&.steped {
+		
 	}
 }
 .constructor-steps {
