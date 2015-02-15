@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 	<head>
-
+        <title>Письмосыл</title>
 		<meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 		<meta http-equiv="content-language" content="ru"/>
@@ -15,6 +15,16 @@
 	</head>
 	<body>
 		<?= $content; ?>
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery.colorbox-min.js"></script>
+        <script>
+            $(document).ready(function(){
+                jQuery('.photoSetPic').colorbox({rel:'.photoSetPic'});
+                jQuery('.pictureSB').colorbox({rel:'.pictureSB'});
+                jQuery('.pictureC').colorbox({rel:'.pictureC'});
+            });
+        </script>
+        <script src="js/jquery-cookie.js"></script>
 		<script type="text/javascript" src="scripts.js"></script>
 	</body>
 </html>
