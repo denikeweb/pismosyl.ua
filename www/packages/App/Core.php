@@ -19,6 +19,8 @@
 				config::get_db_name()
 			);
 
+            self::$db->query ("SET NAMES 'utf8'");
+
 			// check connect
 			if (self::$db->connect_errno)
 				die ('MySQLi cann\'t connect with DataBase');

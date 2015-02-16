@@ -68,12 +68,12 @@
     </div>
     <footer>
         <div class="footBlock">
-            <div><a class="usualText footLink" href="/index.html">О сервисе</a></div>
-            <div><a class="usualText footLink" href="/index.html">Примеры писем</a></div>
-            <div><a class="usualText footLink" href="/index.html">Как делается</a></div>
-            <div><a class="usualText footLink" href="/index.html">Конструктор</a></div>
-            <div><a class="usualText footLink" href="/index.html">Пакеты</a></div>
-            <div><a class="usualText footLink" href="/index.html">Гарантии</a></div>
+            <div><span class="usualText footLink" >О сервисе</span></div>
+            <div><span class="usualText footLink" >Примеры писем</span></div>
+            <div><span class="usualText footLink" >Как делается</span></div>
+            <div><span class="usualText footLink" >Конструктор</span></div>
+            <div><span class="usualText footLink" >Пакеты</span></div>
+            <div><span class="usualText footLink" >Гарантии</span></div>
         </div><div class="footBlock">
             <p class="usualText">Письмосыл © 2015. Все права защищены<br/><br/>
                 Контакты:<br/>

@@ -23,7 +23,7 @@ class Orders {
 			RIGHT JOIN `users` ON `orders`.`users_id`=`users`.`users_id`
 			RIGHT JOIN `users` ON `orders`.`users_id`=`users`.`users_id`
 		 */
-		$result = $query->fetch_all (MYSQL_ASSOC);
+		$result = $query->fetch_all (MYSQLI_ASSOC);
 		return $result;
 	}
 } 
