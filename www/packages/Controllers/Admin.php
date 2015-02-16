@@ -33,6 +33,5 @@
 
 		public function getAdminPageData (&$data) {
 			$data ['orders'] = \Models\Orders::getAllOrders (\App\Router::$get ['page']);
-
 		}
 	}

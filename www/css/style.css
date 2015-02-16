@@ -215,7 +215,6 @@ p.ywCenter {
 /*Кінець Кроки*/
 /*Початок Конструктора*/
 .constructor {
-  height: 352px;
   padding: 30px;
   background-color: #F8FABF; }
 
@@ -304,19 +303,85 @@ footer {
   display: none; }
 
 .constructor-navigator {
-  width: 292px;
+  width: 293px;
   padding: 10px;
-  border: 1px solid white;
-  display: inline-block; }
+  display: inline-block;
+  background: rgba(200, 105, 42, 0.5);
+  cursor: default;
+  margin-bottom: 10px; }
   .constructor-navigator.step2 {
-    border-left: 0; }
+    border-left: 1px solid white; }
   .constructor-navigator.step3 {
-    border-left: 0; }
+    border-left: 1px solid white;
+    width: 292px; }
   .constructor-navigator.active {
     background: rgba(200, 105, 42, 0.8); }
   .constructor-navigator.stepped {
     background: rgba(200, 105, 42, 0.8);
-    color: #666666; }
+    color: #cccccc; }
+
+.constructor-steps {
+  background: #fcfcfb; }
+  .constructor-steps.step1 {
+    height: 570px; }
+
+.letters {
+  display: inline-block;
+  vertical-align: top;
+  height: 550px; }
+  .letters.categories {
+    width: 140px;
+    padding: 10px;
+    background: #fefefe;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #fefefe 0%, #eef1f2 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fefefe), color-stop(100%, #eef1f2));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #fefefe 0%, #eef1f2 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #fefefe 0%, #eef1f2 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #fefefe 0%, #eef1f2 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #fefefe 0%, #eef1f2 100%);
+    /* W3C */ }
+    .letters.categories .letters-item {
+      padding: 3px;
+      cursor: pointer;
+      border: 1px solid transparent; }
+      .letters.categories .letters-item.active {
+        background: #c1deec !important;
+        border: 1px solid #8bcbe8 !important; }
+      .letters.categories .letters-item:hover {
+        background: #eff8fe;
+        border: 1px solid #c3e5f5; }
+  .letters.previews {
+    width: 250px;
+    padding: 10px;
+    background: white;
+    max-height: 550px;
+    overflow: auto; }
+    .letters.previews .letters-item {
+      padding: 5px;
+      border: 1px solid transparent;
+      border-bottom: 1px solid #d8d8d8;
+      cursor: pointer; }
+      .letters.previews .letters-item .preview-title {
+        color: black; }
+      .letters.previews .letters-item .preview-text {
+        color: #666666;
+        white-space: pre-line; }
+      .letters.previews .letters-item.active {
+        background: #e6e6e6 !important;
+        border: 1px solid #d8d8d8 !important; }
+      .letters.previews .letters-item:hover {
+        background: #eff8fe;
+        border: 1px solid #c3e5f5; }
+  .letters.text {
+    padding: 10px;
+    width: 450px;
+    white-space: pre-line; }
 
 /**
 	constructor end */

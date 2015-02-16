@@ -12,19 +12,15 @@
 		<meta name="interkassa-verification" content="7374c6e625877e634f2c0a5cbf3f06a4" />
 		<!--<link rel="shortcut icon" href="//miradas.ru/favicon.ico">-->
 		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="css/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		<?= $content; ?>
         <script src="js/jquery-1.11.2.min.js"></script>
         <script src="js/jquery.colorbox-min.js"></script>
-        <script>
-            $(document).ready(function(){
-                jQuery('.photoSetPic').colorbox({rel:'.photoSetPic'});
-                jQuery('.pictureSB').colorbox({rel:'.pictureSB'});
-                jQuery('.pictureC').colorbox({rel:'.pictureC'});
-            });
-        </script>
-        <script src="js/jquery-cookie.js"></script>
-		<script type="text/javascript" src="scripts.js"></script>
+		<script src="js/jquery-cookie.js"></script>
+		<script src="js/jquery.scrollbar.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script>$(SmartCore.main);</script>
 	</body>
 </html>
