@@ -6,7 +6,7 @@ SmartCore = {
 		$('.ctgrList').on ('click', SmartCore.constructor.templates.openCatList);
 	},
 	globals : {
-		latOpenedSubCat : undefined
+		lastOpenedSubCat : undefined
 	},
 	libs : {
 		scrollBar : {
@@ -29,14 +29,18 @@ SmartCore = {
 				$(this).addClass('active');
 			},
 			openCatList : function () {
-				if (SmartCore.globals.latOpenedSubCat != undefined) {
-					SmartCore.globals.latOpenedSubCat.prev ('.ctgrList').removeClass('opened').addClass('closed');
-					SmartCore.globals.latOpenedSubCat.hide();
+				var $this = $(this),
+					thisCat = $this.next ('.subcategories')
+					isReturn = false;
+				if ($this.hasClass('opened')) isReturn = true;
+				if (SmartCore.globals.lastOpenedSubCat != undefined) {
+					SmartCore.globals.lastOpenedSubCat.prev ('.ctgrList').removeClass('opened').addClass('closed');
+					SmartCore.globals.lastOpenedSubCat.hide();
 				}
-				var $this = $(this);
-				SmartCore.globals.latOpenedSubCat = $this.next ('.subcategories');
+				if (isReturn) return;
+				SmartCore.globals.lastOpenedSubCat = thisCat;
 				$this.removeClass('closed').addClass('opened');
-				SmartCore.globals.latOpenedSubCat.show ();
+				SmartCore.globals.lastOpenedSubCat.show ();
 			}
 		}
 	}
