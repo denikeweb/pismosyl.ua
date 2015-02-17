@@ -8,6 +8,6 @@
 
 class GetText {
     public function run(){
-
+        \Anex::showArray($_REQUEST);
     }
 } 
