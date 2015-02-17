@@ -57,4 +57,14 @@ class Templates {
         $result = $query->fetch_all(MYSQL_ASSOC);
         return $result;
     }
+
+    public function getTemplateText($templateId)
+    {
+        $queryString = 'SELECT `templates_text`
+                    FROM  `templates`
+                    WHERE `templates`.`templates_id`='.$templateId;
+        $query = \App\Core::db()->query($queryString);
+        $queryRes = $query->fetch_all(MYSQL_ASSOC);
+        return $queryRes[0]['templates_text'];
+    }
 } 

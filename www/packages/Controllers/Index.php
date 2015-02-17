@@ -2,12 +2,19 @@
 
 	namespace Controllers;
 
-	use Models\Templates;
+	use Models\Services;
+    use Models\Templates;
 
     class Index {
 		public function run () {
             $template = new Templates();
-            $listTemplates = $template->getAllTemplatesCategoriesPreviews();
-			echo \App\View::getIndexView (['c' => $listTemplates]);
+            $templateText = $template->getTemplateText(1);
+            \Anex::showArray($templateText);
+
+            $services = new Services();
+            $servicesList = $services->getAllServicesList();
+            \Anex::showArray($servicesList);
+
+			echo \App\View::getIndexView ($template);
 		}
 	}
