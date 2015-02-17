@@ -16,7 +16,7 @@
 				'content'  => $page,
 				'template'  => $template
 			);
-			return self::getView ($files,$data);
+			return self::getView ($files, $data);
 		}
 
 		/**

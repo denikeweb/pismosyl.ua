@@ -8,6 +8,9 @@
 		public function run () {
             $template = new Templates();
             $listTemplates = $template->getAllTemplatesCategoriesPreviews();
-			echo \App\View::getIndexView (['c' => $listTemplates]);
+			$data = [
+				'c' => $listTemplates
+			];
+			echo \App\View::getIndexView ($data);
 		}
 	}
