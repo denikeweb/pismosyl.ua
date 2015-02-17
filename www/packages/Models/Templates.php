@@ -34,7 +34,7 @@ class Templates {
             if ($value['subcategory'] != null) {
                 foreach ($value['subcategory'] as $subKey => $subVal) {
                     $templates = $this->getTemplateCategoryPreview($subVal['templates_categories_id']);
-                    if (count($templates)!= 0)
+                    if (count($templates) != 0)
                         $categories[$key]['subcategory'][$subKey]['templatesData'] = $templates;
                 }
                 continue;
