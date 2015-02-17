@@ -119,12 +119,6 @@
 			Получится моя семья.
 		</div>
 	</div>
-	<script>
-		$data = {};
-		<?php foreach ($c as $cat) : ?>
-
-		<?php endforeach; ?>
-		<?php \Anex::showArray($c); ?>
-	</script>
+	<?php \Anex::showArray($c); ?>
 	<div class="constructor-steps step2 hidden">2</div>
 </div>

@@ -31,7 +31,7 @@ SmartCore = {
 			},
 			openCatList : function () {
 				var $this = $(this),
-					thisCat = $this.next ('.subcategories')
+					thisCat = $this.next ('.subcategories'),
 					isReturn = false;
 				if ($this.hasClass('opened')) isReturn = true;
 				if (SmartCore.globals.lastOpenedSubCat != undefined) {
