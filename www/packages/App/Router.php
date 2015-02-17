@@ -17,6 +17,7 @@
 
 		/**
 		 * function for routing ajax queries
+		 * // domain.net/ajax?action=GetText&id=12
 		 *
 		 * @param $request
 		 */
