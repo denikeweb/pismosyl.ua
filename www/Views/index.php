@@ -24,7 +24,7 @@
             <a class="photoSetPic" href="img/photos/img1.png"><img class="first" src="img/photos/img1.png"/></a><a class="photoSetPic" href="img/photos/img2.png"><img src="img/photos/img2.png"/></a><a class="photoSetPic" href="img/photos/img3.png"><img src="img/photos/img3.png"/></a><a class="photoSetPic" href="img/photos/img4.png"><img src="img/photos/img4.png"/></a><a class="photoSetPic" href="img/photos/img5.png"><img src="img/photos/img5.png"/></a>
         </div>
     </div>
-    <div class="youWant">
+    <div class="youWant" id="one">
         <h3 class="headerText">Наш сервис понадобится, если вы хотите</h3>
         <p class="usualText"><strong class="boldText">Сделать приятное своему парню/девушке</strong> и удивить своего любимого человека. Только представьте, сколько радости будет у них на глазах, когда они получат такой красивый и оригинальный подарок от вас.</p>
         <p class="usualText ywCenter"><strong class="boldText">Начать отношение с</strong> парнем/девушкой. Ведь признаться в симпатии,  отправив красивое и «живое» письмо намного  романтичнее, чем позвонить «544».</p>

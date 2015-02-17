@@ -4,6 +4,7 @@ SmartCore = {
 		SmartCore.libs.scrollBar.init();
 		$('.ctgr').on ('click', SmartCore.constructor.templates.catClick);
 		$('.ctgrList').on ('click', SmartCore.constructor.templates.openCatList);
+        SmartCore.navigation.menuAnimation();
 	},
 	globals : {
 		lastOpenedSubCat : undefined
@@ -43,5 +44,11 @@ SmartCore = {
 				SmartCore.globals.lastOpenedSubCat.show ();
 			}
 		}
-	}
+    },
+    navigation : {
+        menuAnimation : function(){
+            var target = '#one';
+            $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+        }
+    }
 };
