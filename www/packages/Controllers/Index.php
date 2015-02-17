@@ -10,18 +10,18 @@
             $template = new Templates();
             $listTemplates = $template->getAllTemplatesCategoriesPreviews();
 
-            $templateText = $template->getTemplateText(1);
+            //$templateText = $template->getTemplateText(1);
 
             $services = new Services();
             $servicesList = $services->getAllServicesList();
 
 			$data = [
 				'c' => $listTemplates,
-				'templateText' => $templateText,
+				//'templateText' => $templateText,
 				'servicesList' => $servicesList
 			];
 
-			\Anex::showArray($templateText);
+			//\Anex::showArray($templateText);
 			\Anex::showArray($servicesList);
 			echo \App\View::getIndexView ($data);
 		}

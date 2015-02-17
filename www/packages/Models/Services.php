@@ -16,7 +16,8 @@ class Services {
         $services['meal'] = [];
         $services['smell'] = [];
         $services['delivery'] = [];
-        $services['design'] = [];
+	    //$services['design'] = [];
+	    $services['burnt_edges'] = [];
 
         $surgutch = &$services['surgutch'];
         $surgutch[0]['id'] = 1;
@@ -71,10 +72,10 @@ class Services {
         $delivery[2]['name'] = 'Самовывоз';
         $delivery[2]['price'] = 0;
 
-        $design=&$services['design'];
-        $design[0]['id'] = 1;
-        $design[0]['name'] = 'Обожженные края';
-        $design[0]['price'] = 400;
+        $design=&$services['burnt_edges'];
+        $design ['id'] = 1;
+        $design ['name'] = 'Обожженные края';
+        $design ['price'] = 400;
 
         return $services;
     }
