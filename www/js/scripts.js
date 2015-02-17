@@ -26,8 +26,13 @@ SmartCore = {
 	constructor : {
 		templates : {
 			catClick : function () {
+				var $this = $(this),
+					dataId = $this.attr ('data-id'),
+					thisCatGroup = $('.catGroup.id' + dataId);
 				$('.ctgr').removeClass('active');
-				$(this).addClass('active');
+				$this.addClass('active');
+				$('.catGroup').addClass('hidden');
+				thisCatGroup.removeClass('hidden');
 			},
 			openCatList : function () {
 				var $this = $(this),

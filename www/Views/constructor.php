@@ -12,23 +12,45 @@
 		<div class="letters categories">
 			<?php
 				$active = 'active';
+				$i = 0;
 				foreach ($c as $item) :
-					if (isset ($item ['subcategory'])) $ctgr = 'ctgrList closed'; else $ctgr = 'ctgr';
+					$i ++;
+					if (isset ($item ['subcategory'])) {
+						$ctgr = 'ctgrList closed';
+					} else {
+						$ctgr = 'ctgr';
+						$i ++;
+						if (!isset ($item ['templatesData'])) continue;
+					}
 					if (isset ($item ['subcategory']) && $active == 'active') $active = ' '; ?>
-				<div class="letters-item <?= $ctgr ?> <?= $active ?>"><?= $item ['templates_categories_name'] ?></div>
-				<?php if (isset ($item ['subcategory'])) : ?>
+				<div data-id="<?= $i ?>" class="letters-item <?= $ctgr ?> <?= $active ?>"><?= $item ['templates_categories_name'] ?></div>
+				<?php if (isset ($item ['subcategory'])) :
+					?>
 						<div class="subcategories">
 						<?php
 							if ($active == ' ') $active = 'active';
-							foreach ($item ['subcategory'] as $subItem) : ?>
-							<div class="letters-item ctgr <?= $active ?>"><?= $subItem ['templates_categories_name'] ?></div>
+							foreach ($item ['subcategory'] as $subItem) :
+								if (!isset ($subItem ['templatesData'])) continue;
+								?>
+							<div data-id="<?= $i ?>" class="letters-item ctgr <?= $active ?>"><?= $subItem ['templates_categories_name'] ?></div>
 						<?php endforeach; ?>
 						</div>
 				<?php endif;
 				$active = '';
 				endforeach; ?>
 		</div><div class="letters previews scrollbar-inner">
-			<div class="letters-item active">
+			<?php
+				foreach ($c as $item) :
+				?>
+				<div class="catGroup id<?= $i ?>"></div>
+				<div class="letters-item">
+					<div class="preview-id hidden"><?= $item ['templates_id']?></div>
+					<div class="preview-title"><?= $item ['templates_title']?></div>
+					<div class="preview-desc"><?= $item ['templates_prev']?></div>
+					<div class="preview-text hidden"></div>
+				</div>
+			<?php endforeach; ?>
+			<!--div class="letters-item active">
 				<div class="preview-title">
 					Мадонна дней моих суровых
 				</div>
@@ -107,7 +129,7 @@
 					Которые боюсь озвучить снова,
 					Но, как ни как, люблю тебя.
 				</div>
-			</div>
+			</div-->
 		</div><div class="letters text">Мадонна дней моих суровых,
 			Ко мне во сне явилась ты,
 			И с блеском губ твоих бордовых

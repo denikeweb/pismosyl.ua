@@ -371,7 +371,7 @@ footer {
       cursor: pointer; }
       .letters.previews .letters-item .preview-title {
         color: black; }
-      .letters.previews .letters-item .preview-text {
+      .letters.previews .letters-item .preview-desc {
         color: #666666;
         white-space: pre-line; }
       .letters.previews .letters-item.active {
