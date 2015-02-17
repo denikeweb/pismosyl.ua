@@ -47,8 +47,11 @@ SmartCore = {
     },
     navigation : {
         menuAnimation : function(){
-            var target = '#one';
-            $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+	        $('.to-about').on('click', function () {
+		        var target = '.aboutBg';
+		        $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+	        });
+
         }
     }
 };

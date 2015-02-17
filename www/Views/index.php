@@ -67,7 +67,7 @@
     </div>
     <footer>
         <div class="footBlock">
-            <div><span class="usualText footLink" >О сервисе</span></div>
+            <div><span class="to-about usualText footLink" >О сервисе</span></div>
             <div><span class="usualText footLink" >Примеры писем</span></div>
             <div><span class="usualText footLink" >Как делается</span></div>
             <div><span class="usualText footLink" >Конструктор</span></div>
