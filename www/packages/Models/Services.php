@@ -59,18 +59,23 @@ class Services {
         $smell[2]['name'] = 'Мандарин';
         $smell[2]['price'] = 1000;
 
-        $delivery = &$services['delivery'];
-        $delivery[0]['id'] = 1;
-        $delivery[0]['name'] = 'Почта';
-        $delivery[0]['price'] = 300;
-
-        $delivery[1]['id'] = 2;
-        $delivery[1]['name'] = 'Курьер';
-        $delivery[1]['price'] = 2000;
-
-        $delivery[2]['id'] = 3;
-        $delivery[2]['name'] = 'Самовывоз';
-        $delivery[2]['price'] = 0;
+	    $services['delivery'] = [
+	        [
+		        'id' => 1,
+		        'name' => 'Почта',
+		        'price' => 300
+	        ],
+	        [
+		        'id' => 2,
+		        'name' => 'Курьер',
+		        'price' => 2000
+	        ],
+	        [
+		        'id' => 3,
+		        'name' => 'Самовывоз',
+		        'price' => 0
+	        ],
+        ];
 
         $design=&$services['burnt_edges'];
         $design ['id'] = 1;
