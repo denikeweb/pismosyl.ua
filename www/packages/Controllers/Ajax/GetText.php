@@ -8,8 +8,11 @@
 
 	namespace Controllers\Ajax;
 
-	class GetText {
+	use Models\Templates;
+
+    class GetText {
 	    public function run(){
-	        \Anex::showArray($_REQUEST);
+            $template = new Templates();
+            echo $template->getTemplateText($_REQUEST['id']);
 	    }
 	}
