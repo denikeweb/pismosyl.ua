@@ -5,19 +5,18 @@
 	class View {
 		/**
 		 * return default view template
-		 *
+		 * @param array
 		 * @return string
 		 */
-		public static function getIndexView () {
+		public static function getIndexView (&$data) {
 			$page = 'index';
 			$template = 'template';
-			
 			$files = array(
 				'constructor'  => 'constructor',
 				'content'  => $page,
 				'template'  => $template
 			);
-			return self::getView ($files);
+			return self::getView ($files,$data);
 		}
 
 		/**
