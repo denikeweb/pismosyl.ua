@@ -41,6 +41,9 @@
 		</div><div class="letters previews scrollbar-inner">
 			<?php
 				foreach ($c as $item) :
+					$i ++;
+					if (!isset ($item ['subcategory'])) $i ++;
+					if (isset ($item ['templatesData'])) :
 				?>
 				<div class="catGroup id<?= $i ?>"></div>
 				<div class="letters-item">
