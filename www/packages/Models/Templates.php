@@ -12,12 +12,14 @@ namespace Models;
 class Templates {
     public function getAllTemplatesCategoriesPreviews()
     {
-        $query = \App\Core::db()->query('SELECT *
+        $query = \App\Core::db()->query('SELECT `templates_categories_id`,
+                      `templates_categories_name`,
+                      `templates_categories_eventdate`
                     FROM  `templates_categories`
                     WHERE `templates_categories`.`templates_categories_parent_id` IS NULL');
         $tempCategoriesRep = $query->fetch_all(MYSQL_ASSOC);
-        $categories[] = array();
-        foreach ($tempCategoriesRep as $key => $value){
+        $categories = [];
+        foreach ($tempCategoriesRep as $key => $value) {
             $categories[$value['templates_categories_id']] = $value;
         }
         $query = \App\Core::db()->query('SELECT *
@@ -29,7 +31,6 @@ class Templates {
                 $categories[$value['templates_categories_parent_id']]['subcategory'] = array();
             array_push($categories[$value['templates_categories_parent_id']]['subcategory'],$value);
         }
-        unset($categories[0]);
         foreach ($categories as $key => $value) {
             if ($value['subcategory'] != null) {
                 foreach ($value['subcategory'] as $subKey => $subVal) {
@@ -44,7 +45,6 @@ class Templates {
                 $categories[$key]['templatesData'] = $templates;
 
         }
-        \Anex::showArray($categories);
         return $categories;
     }
 

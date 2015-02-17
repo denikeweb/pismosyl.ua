@@ -11,9 +11,8 @@
     <div class="aboutBg">
         <div class="blackoutBg">
             <div class="aboutText">
-                Письмосыл - это сервис, который поможет тебе воплотить свои самые тайные желания в реальность.<br/>
-                Сделай своей третьей половинке подарок и она будет без ума от тебя. Ми позволяем сделать прелюдию качественной, а процесс приятным.
-            </div>
+                Письмосыл – это сервис для отправки непростых писем,
+                где уже становится неважным, знакомы вы с ней или нет. Приглашай девушку в театр или на выставку, или просто впечатли её до глубины сердца приятными строками. А всё, что лень сочинять - мы придумаем за вас.         </div>
             <button class="buyButton">Сделать подарок</button>
             <button class="infoButton">Ознакомиться с сервисом</button>
         </div>
@@ -22,7 +21,7 @@
         <h3 class="headerText">Вот такие письма мы пишем...</h3>
         <p class="usualText">У нас разработаны стандарты для писем — это то, что гарантирует качество нашей работы. Посмотрите на то, что мы делаем:</p>
         <div class="photoSet">
-            <a class="photoSetPic" href="../img/photos/img1.png"><img class="first" src="../img/photos/img1.png"/></a><a class="photoSetPic" href="../img/photos/img2.png"><img src="../img/photos/img2.png"/></a><a class="photoSetPic" href="../img/photos/img3.png"><img src="../img/photos/img3.png"/></a><a class="photoSetPic" href="../img/photos/img4.png"><img src="../img/photos/img4.png"/></a><a class="photoSetPic" href="../img/photos/img5.png"><img src="../img/photos/img5.png"/></a>
+            <a class="photoSetPic" href="img/photos/img1.png"><img class="first" src="img/photos/img1.png"/></a><a class="photoSetPic" href="img/photos/img2.png"><img src="img/photos/img2.png"/></a><a class="photoSetPic" href="img/photos/img3.png"><img src="img/photos/img3.png"/></a><a class="photoSetPic" href="img/photos/img4.png"><img src="img/photos/img4.png"/></a><a class="photoSetPic" href="img/photos/img5.png"><img src="img/photos/img5.png"/></a>
         </div>
     </div>
     <div class="youWant">
@@ -34,22 +33,22 @@
     <div class="steps">
         <h3 class="headerText stepsHeader">Все делаем в 3 этапа:</h3>
         <div class="stepBlock">
-            <a class="pictureSB" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a>
+            <a class="pictureSB" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a>
             <p class="usualText textSB">Этап 1: конструируете письмо на сайте</p>
-        </div><div class="stepBlock centerB"><a class="pictureSB" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a><p class="usualText textSB">Этап 2: Оплачиваете заказ</p></div><div class="stepBlock">
-            <a class="pictureSB" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a>
+        </div><div class="stepBlock centerB"><a class="pictureSB" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a><p class="usualText textSB">Этап 2: Оплачиваете заказ</p></div><div class="stepBlock">
+            <a class="pictureSB" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a>
             <p class="usualText textSB">Этап 3: Получатель радуется</p>
         </div>
         <h3 class="headerText curierHeader">Схема с курьером</h3>
         <div class="row3picBC">
             <div class="blockPC">
-                <a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a>
-            </div><div class="blockPC centerB"><a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a></div><div class="blockPC">
-                <a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a></div>
+                <a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a>
+            </div><div class="blockPC centerB"><a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a></div><div class="blockPC">
+                <a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a></div>
         </div>
         <div class="row2picBC">
-            <div class="blockPC"><a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a></div><div class="blockPC rightB">
-                <a class="pictureC" href="../img/photos/none.jpg"><img src="../img/photos/none.jpg"/></a></div>
+            <div class="blockPC"><a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a></div><div class="blockPC rightB">
+                <a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a></div>
         </div>
     </div>
 

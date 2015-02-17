@@ -6,8 +6,8 @@
 
     class Index {
 		public function run () {
-            $temp = new Templates();
-            $temp->getAllTemplatesCategoriesPreviews();
-			echo \App\View::getIndexView ();
+            $template = new Templates();
+            $listTemplates = $template->getAllTemplatesCategoriesPreviews();
+			echo \App\View::getIndexView (['c' => $listTemplates]);
 		}
 	}
