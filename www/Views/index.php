@@ -2,10 +2,10 @@
     <nav class="nav">
         <a href="/" class="logo"></a>
         <ul class="menu">
-            <li class="menu-item"><span>О нас</span></li>
-            <li class="menu-item"><span>Гарантии</span></li>
-            <li class="menu-item"><span>Отправить письмо</span></li>
-            <li class="menu-item"><span>Контакты</span></li>
+            <li class="menu-item"><span class="to-about">О нас</span></li>
+            <li class="menu-item"><span class="to-warranty">Гарантии</span></li>
+            <li class="menu-item"><span class="to-constructor">Отправить письмо</span></li>
+            <li class="menu-item"><span class="to-contacts">Контакты</span></li>
         </ul>
     </nav>
     <div class="aboutBg">
@@ -68,11 +68,11 @@
     <footer>
         <div class="footBlock">
             <div><span class="to-about usualText footLink" >О сервисе</span></div>
-            <div><span class="usualText footLink" >Примеры писем</span></div>
-            <div><span class="usualText footLink" >Как делается</span></div>
-            <div><span class="usualText footLink" >Конструктор</span></div>
-            <div><span class="usualText footLink" >Пакеты</span></div>
-            <div><span class="usualText footLink" >Гарантии</span></div>
+            <div><span class="to-samples usualText footLink" >Примеры писем</span></div>
+            <div><span class="to-process usualText footLink" >Как делается</span></div>
+            <div><span class="to-constructor usualText footLink" >Конструктор</span></div>
+            <div><span class="to-package usualText footLink" >Пакеты</span></div>
+            <div><span class="to-warranty usualText footLink" >Гарантии</span></div>
         </div><div class="footBlock">
             <p class="usualText">Письмосыл © 2015. Все права защищены<br/><br/>
                 Контакты:<br/>

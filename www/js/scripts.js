@@ -52,6 +52,35 @@ SmartCore = {
 		        $('html, body').animate({scrollTop: $(target).offset().top}, 300);
 	        });
 
+            $('.to-warranty').on('click', function () {
+                var target = '.warranty';
+                $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+            });
+
+            $('.to-constructor').on('click', function () {
+                var target = '.constructor';
+                $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+            });
+
+            $('.to-contacts').on('click', function () {
+                var target = 'footer';
+                $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+            });
+
+            $('.to-samples').on('click', function () {
+                var target = '.photos';
+                $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+            });
+
+            $('.to-process').on('click', function () {
+                var target = '.steps';
+                $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+            });
+
+            $('.to-package').on('click', function () {
+                var target = '.packages';
+                $('html, body').animate({scrollTop: $(target).offset().top}, 300);
+            });
         }
     }
 };
