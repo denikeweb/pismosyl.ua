@@ -6,8 +6,10 @@
  * Time: 22:00
  */
 
-class GetText {
-    public function run(){
-        \Anex::showArray($_REQUEST);
-    }
-} 
+	namespace Controllers\Ajax;
+
+	class GetText {
+	    public function run(){
+	        \Anex::showArray($_REQUEST);
+	    }
+	}

@@ -22,7 +22,7 @@
 		 * @param $request
 		 */
 		private function ajaxRoute(&$ctrlName) {
-			$className = 'Ajax\\' . $this->action;
+			$ctrlName = 'Ajax\\' . $this->action;
 		}
 
 		/**
@@ -38,14 +38,14 @@
 			$ctrlName = $this->ctrls [$this->do];
 			if (is_null($ctrlName) or !isset ($ctrlName))
 				$ctrlName = $this->ctrls ['index'];
-				
+
 			if (!is_null($this->do) and $this->do == 'ajax')
 				$this->ajaxRoute ($ctrlName);
-			
+
 			self::$get = $_GET;
 			self::$post = $_POST;
 			unset (self::$get ['do']);
-			unset (self::$get ['ajax']);
+			unset (self::$get ['action']);
 			
 			$className = '\\Controllers\\' . $ctrlName;
 			$ctrl = new $className ();
