@@ -1,6 +1,6 @@
 <?php
 
-	$time = microtime(3);
+	#$time = microtime(3);
 	session_start();
 	define('DIRSEP', DIRECTORY_SEPARATOR);
 	define('EXT', '.php');
@@ -20,5 +20,5 @@
 	//db disconnect
 	\App\Core::disconnect();
 
-	$timeEnd = microtime(3);
-	echo '<script>console.log('.($timeEnd - $time).');</script>';
+	#$timeEnd = microtime(3);
+	#echo '<script>console.log('.($timeEnd - $time).');</script>';

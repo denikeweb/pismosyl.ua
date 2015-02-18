@@ -91,19 +91,17 @@ SmartCore = {
     testAndriy: {
         ajaxTest: function() {
             var sendData = 'action=GetText&id=1';
-            var response;
             $.ajax({
-                url: 'http://pismosyl.ua/ajax',
+                url: '//' + document.domain + '/ajax',
                 type: 'GET',
                 timeout: 5000,
                 data: sendData,
                 success : function (msg) {
-                    response = msg;
+                    var response = msg;
                     console.log(response);
                 }
             });
-            console.log(response);
-
+			return;
         }
     }
 };
