@@ -52,7 +52,7 @@
 					<div class="preview-desc"><?= $item ['templates_prev']?></div>
 					<div class="preview-text hidden"></div>
 				</div>
-			<?php endforeach; ?>
+			<?php endif; endforeach; ?>
 			<!--div class="letters-item active">
 				<div class="preview-title">
 					Мадонна дней моих суровых
