@@ -14,12 +14,10 @@
 				$active = 'active';
 				$i = 0;
 				foreach ($c as $item) :
-					$i ++;
 					if (isset ($item ['subcategory'])) {
 						$ctgr = 'ctgrList closed';
 					} else {
 						$ctgr = 'ctgr';
-						$i ++;
 						if (!isset ($item ['templatesData'])) continue;
 					}
 					if (isset ($item ['subcategory']) && $active == 'active') $active = ' '; ?>
@@ -30,6 +28,7 @@
 						<?php
 							if ($active == ' ') $active = 'active';
 							foreach ($item ['subcategory'] as $subItem) :
+								$i ++;
 								if (!isset ($subItem ['templatesData'])) continue;
 								?>
 							<div data-id="<?= $i ?>" class="letters-item ctgr <?= $active ?>"><?= $subItem ['templates_categories_name'] ?></div>
@@ -40,19 +39,40 @@
 				endforeach; ?>
 		</div><div class="letters previews scrollbar-inner">
 			<?php
-				foreach ($c as $item) :
-					$i ++;
-					if (!isset ($item ['subcategory'])) $i ++;
-					if (isset ($item ['templatesData'])) :
-				?>
-				<div class="catGroup id<?= $i ?>"></div>
-				<div class="letters-item">
-					<div class="preview-id hidden"><?= $item ['templates_id']?></div>
-					<div class="preview-title"><?= $item ['templates_title']?></div>
-					<div class="preview-desc"><?= $item ['templates_prev']?></div>
-					<div class="preview-text hidden"></div>
-				</div>
-			<?php endforeach; ?>
+				$i = -1;
+				$hidden = '';
+				foreach ($c as $catItem) :
+					$templatesList = [];
+					if (isset ($catItem ['subcategory'])) {
+						foreach ($catItem ['subcategory'] as $item)
+							$templatesList [] = $item ['templatesData'];
+					} else {
+						if (isset ($catItem ['templatesData']))
+							$templatesList [] = $catItem ['templatesData'];
+					}
+						?>
+					<?php
+						foreach ($templatesList as $templates) :
+							$i ++;
+							if (count ($templates) <= 0) continue; ?>
+						<div class="catGroup <?= $hidden ?> id<?= $i ?>">
+						<?php
+							$hidden = 'hidden';
+							foreach ($templates as $item) : ?>
+									<div class="letters-item">
+										<div class="preview-id hidden"><?= $item ['templates_id']?></div>
+										<div class="preview-title"><?= $item ['templates_title']?></div>
+										<div class="preview-desc"><?= $item ['templates_prev']?></div>
+										<div class="preview-text hidden"></div>
+									</div>
+					<?php
+							endforeach; ?>
+						</div>
+					<?php
+						endforeach;?>
+			<?php
+				endforeach;
+			?>
 			<!--div class="letters-item active">
 				<div class="preview-title">
 					Мадонна дней моих суровых
