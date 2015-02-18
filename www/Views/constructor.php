@@ -39,6 +39,7 @@
 				endforeach; ?>
 		</div><div class="letters previews scrollbar-inner">
 			<?php
+<<<<<<< HEAD
 				$i = -1;
 				$hidden = '';
 				foreach ($c as $catItem) :
@@ -73,6 +74,21 @@
 			<?php
 				endforeach;
 			?>
+=======
+				foreach ($c as $item) :
+					$i ++;
+					if (!isset ($item ['subcategory'])) $i ++;
+					if (isset ($item ['templatesData'])) :
+				?>
+				<div class="catGroup id<?= $i ?>"></div>
+				<div class="letters-item">
+					<div class="preview-id hidden"><?= $item ['templates_id']?></div>
+					<div class="preview-title"><?= $item ['templates_title']?></div>
+					<div class="preview-desc"><?= $item ['templates_prev']?></div>
+					<div class="preview-text hidden"></div>
+				</div>
+			<?php endif; endforeach; ?>
+>>>>>>> origin/master
 			<!--div class="letters-item active">
 				<div class="preview-title">
 					Мадонна дней моих суровых
