@@ -18,8 +18,6 @@
         <link href="css/colorbox.css" rel="stylesheet" type="text/css"/>
         <link href="css/workplace.css" rel="stylesheet" type="text/css"/>
 
-		<link href="css/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
-        <link href="css/colorbox.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		<?= $content; ?>

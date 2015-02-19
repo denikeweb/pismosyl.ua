@@ -22,7 +22,7 @@
 			];
 
 			//\Anex::showArray($templateText);
-			\Anex::showArray($servicesList);
+			//\Anex::showArray($servicesList);
 			echo \App\View::getIndexView ($data);
 		}
 	}
