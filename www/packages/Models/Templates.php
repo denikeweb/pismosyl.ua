@@ -52,7 +52,7 @@ class Templates {
     {
         $queryString = 'SELECT `templates_id`,`templates_title`,`templates_prev`,`templates_datetime`
                     FROM  `templates`
-                    WHERE `templates`.`templates_categories_id`='.$tempCatId;
+                    WHERE `templates`.`templates_categories_id`='.intval($tempCatId);
         $query = \App\Core::db()->query($queryString);
         $result = $query->fetch_all(MYSQL_ASSOC);
         return $result;
@@ -62,7 +62,7 @@ class Templates {
     {
         $queryString = 'SELECT `templates_text`
                     FROM  `templates`
-                    WHERE `templates`.`templates_id`='.$templateId;
+                    WHERE `templates`.`templates_id`='.intval($templateId);
         $query = \App\Core::db()->query($queryString);
         $queryRes = $query->fetch_all(MYSQL_ASSOC);
         return $queryRes[0]['templates_text'];

@@ -4,6 +4,9 @@ namespace Models;
 
 
 class Orders {
+
+    public $id;
+
 	public static function getAllOrders ($page = NULL) {
 		if (is_null($page)) $page = 1;
 		$count = 30;
@@ -59,6 +62,23 @@ class Orders {
     */
     public function createOrder($services, $letter, $price) {
 
+        //set $id;
         return true;
     }
+
+    public function getOrderPrice($id) {
+        $price = 0;
+        $queryString = 'SELECT `orders_data_price`
+                    FROM  `orders_data`
+                    WHERE `orders_data`.`orders_id`=?';
+        if ($stmt = \App\Core::db()->prepare($queryString)) {
+            $stmt->bind_param('i', $id);
+            $stmt->bind_result($price);
+            $stmt->execute();
+            $stmt->fetch();
+            $stmt->close();
+        }
+        return $price;
+    }
+
 } 

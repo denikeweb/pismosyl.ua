@@ -2,7 +2,8 @@
 
 	namespace Controllers;
 
-	use Models\Services;
+	use Models\Orders;
+    use Models\Services;
     use Models\Templates;
 
     class Index {
@@ -21,6 +22,9 @@
 				'servicesList' => $servicesList
 			];
 
+            $order = new Orders();
+            $price = $order->getOrderPrice(2);
+            \Anex::showArray($price);
 			//\Anex::showArray($templateText);
 			//\Anex::showArray($servicesList);
 			echo \App\View::getIndexView ($data);

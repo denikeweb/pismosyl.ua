@@ -10,6 +10,8 @@ namespace Models;
 
 
 class Services {
+    private $services;
+
     public function getAllServicesList()
     {
         $services['surgutch'] = [];
@@ -82,6 +84,7 @@ class Services {
         $design ['name'] = 'Обожженные края';
         $design ['price'] = 400;
 
+        $this->services = $services;
         return $services;
     }
 } 
