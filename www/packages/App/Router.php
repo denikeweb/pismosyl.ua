@@ -30,10 +30,10 @@
 		 */
 		public function runApp () {
 			// route ajax queries
-			if (isset ($_GET ['do']))
-				$this->do = $_GET ['do'];
-			if (isset ($_GET ['action']))
-				$this->action = $_GET ['action'];
+			if (isset ($_REQUEST ['do']))
+				$this->do = $_REQUEST ['do'];
+			if (isset ($_REQUEST ['action']))
+				$this->action = $_REQUEST ['action'];
 
 			$ctrlName = $this->ctrls [$this->do];
 			if (is_null($ctrlName) or !isset ($ctrlName))
