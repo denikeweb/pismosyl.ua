@@ -26,4 +26,39 @@ class Orders {
 		$result = $query->fetch_all (MYSQLI_ASSOC);
 		return $result;
 	}
+
+    /**
+     * function for creating a new order
+     * @param $request
+     *
+     * @param $services = [
+                'surgutch' =>
+                    ['id' => ],
+                'meal' =>
+                    ['id' => ],
+                'smell' =>
+                    ['id' => ],
+                'delivery' =>
+                    ['id' => ,
+                     'address' =>,
+                     'nameWhom' =>],
+                'burnt_edges' =>
+               ];
+
+     * @param $letter = [
+                'templateId' => ,
+                'customerText' => ,
+                'comments' => ,
+                'personalText' =>
+                    ['description' => ,
+                     'photo' => ,
+                     'socialNetwors' => ]
+                ];
+
+     * @param   $price
+    */
+    public function createOrder($services, $letter, $price) {
+
+        return true;
+    }
 } 
