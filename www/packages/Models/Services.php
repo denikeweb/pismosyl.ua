@@ -12,6 +12,10 @@ namespace Models;
 class Services {
     private $services;
 
+    public function __construct(){
+        $this->getAllServicesList();
+    }
+
     public function getAllServicesList()
     {
         $services['surgutch'] = [];
@@ -80,11 +84,17 @@ class Services {
         ];
 
         $design=&$services['burnt_edges'];
-        $design ['id'] = 1;
-        $design ['name'] = 'Обожженные края';
-        $design ['price'] = 400;
+        $design = [
+            ['id' => 1,
+            'name' => 'Обожженные края',
+            'price' => 400]
+        ];
 
         $this->services = $services;
         return $services;
+    }
+
+    public function getServiceById($serviceType,$id){
+        return $this->services[$serviceType][$id-1];
     }
 } 

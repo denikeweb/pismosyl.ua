@@ -24,6 +24,24 @@
 
             $order = new Orders();
             $price = $order->getOrderPrice(2);
+
+           $services = [
+                    'surgutch' =>
+                        ['id' => 1],
+                    'smell' =>
+                        ['id' => 1],
+                    'delivery' =>
+                        ['id' => 2],
+                    'burnt_edges' =>
+                        ['id' => 1]
+               ];
+
+            $letter = [
+                'templateId' => '1',
+                'personalText' =>
+                    ['description' => 'dfsfsdsdf']
+                ];
+            $price = $order->calculateOrderPrice($services,$letter,20);
             \Anex::showArray($price);
 			//\Anex::showArray($templateText);
 			//\Anex::showArray($servicesList);
