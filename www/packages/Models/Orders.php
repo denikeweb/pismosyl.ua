@@ -9,6 +9,7 @@ class Orders {
 
     private $services;
     private $letter;
+    private $user;
 
 	public static function getAllOrders ($page = NULL) {
 		if (is_null($page)) $page = 1;
@@ -33,9 +34,10 @@ class Orders {
 		return $result;
 	}
 
-    public function setOrderData($services, $letter){
+    public function setOrderData($services, $letter, $user){
         $this->services = $services;
         $this->letter = $letter;
+        $this->user = $user;
     }
 
     /**
@@ -73,7 +75,7 @@ class Orders {
      * @param   $price
     */
     public function createOrder($services, $letter, $customerContacts, $price) {
-
+        $insertUserQuery = 'INSERT INTO ';
         //set $id;
         return true;
     }
