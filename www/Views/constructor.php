@@ -79,7 +79,10 @@
 			?>
 		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"></div></div>
 	</div>
-	<div class="constructor-steps step2 hidden">2</div>
+	<div class="constructor-steps step2 hidde n">
+
+		<?php \Annex\Annex::showArray($servicesList); ?>
+	</div>
 	<div class="constructor-steps step3 hidden">3</div>
 
 

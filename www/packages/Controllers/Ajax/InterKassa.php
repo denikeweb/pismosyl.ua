@@ -32,6 +32,12 @@ class InterKassa {
 
 	public function method_redirect () {
 		$orders = new \Models\Orders ();
+		$hasErrors = $orders->checkCorrectness(
+			$this->jsonData ['services'],
+			$this->jsonData ['letter']
+		);
+		if ($hasErrors !== true)
+			exit ('Ошибка валидации!');
 		$price = $orders->getCalcPrice(
 			$this->jsonData ['services'],
 			$this->jsonData ['letter']
