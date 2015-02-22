@@ -35,7 +35,7 @@ SmartCore = {
 				$this.addClass('active');
 				$('.catGroup').addClass('hidden');
 				thisCatGroup.removeClass('hidden');
-				SmartCore.constructor.templates.showText(thisCatGroup.children [0]);
+				SmartCore.constructor.templates.showText(thisCatGroup);
 			},
 			openCatList : function () {
 				var $this = $(this),
@@ -53,10 +53,11 @@ SmartCore = {
 			},
 			showText : function (thisObj) {
 				var $thisCldrn = undefined;
+				console.log( thisObj );
 				if (thisObj == undefined)
 					$thisCldrn = $(this).children ();
 				else
-					$thisCldrn = thisObj.children ();
+					$thisCldrn = thisObj.children ().first ().children ();
 
 				var id = $thisCldrn.filter('.preview-id').html (),
 					textContainerObj = $thisCldrn.filter('.preview-text'),
