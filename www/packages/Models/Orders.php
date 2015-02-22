@@ -79,51 +79,51 @@ class Orders
         $userId = $this->createUser($customerContacts);
         if ($userId != 0) {
             $addOrderTableCols = 'INSERT INTO `orders_data`(`orders_data_status`,';
-            $addOrderValues = ' VALUES(0,';
+            $addOrderValues = ' VALUES(\'0\',';
 
             if (array_key_exists('surgutch', $services)) {
                 $addOrderTableCols .= '`surguch_id`,';
-                $addOrderValues .= $services['surgutch']['id'] . ',';
+                $addOrderValues .= '\''.$services['surgutch']['id'] . '\',';
             }
             if (array_key_exists('smell', $services)) {
                 $addOrderTableCols .= '`smell_id`,';
-                $addOrderValues .= $services['smell']['id'] . ', ';
+                $addOrderValues .= '\''.$services['smell']['id'] . '\', ';
             }
             if (array_key_exists('eat_id', $services)) {
                 $addOrderTableCols .= '`eat_id`,';
-                $addOrderValues .= $services['meal']['id'] . ', ';
+                $addOrderValues .= '\''.$services['meal']['id'] . '\', ';
             }
             if (array_key_exists('burnt_edges', $services)) {
                 $addOrderTableCols .= '`orders_data_burnt_edges`,';
-                $addOrderValues .= $services['burnt_edges']['id'] . ', ';
+                $addOrderValues .= '\''.$services['burnt_edges']['id'] .'\', ';
             }
 
             $addOrderTableCols .= '`delivery_id`, `orders_data_to`, `orders_data_whom`,';
-            $addOrderValues .= $services['delivery']['id'] . ',\'' . $services['delivery']['address'] . '\','
+            $addOrderValues .= '\''.$services['delivery']['id'] .'\',\'' . $services['delivery']['address'] . '\','
                 . '\'' . $services['delivery']['nameWhom'] . '\',';
 
             if (array_key_exists('templateId', $letter)) {
                 $addOrderTableCols .= '`templates_id`,';
-                $addOrderValues .= $letter['templateId'] . ',';
+                $addOrderValues .= '\''.$letter['templateId'] . '\',';
             }
 
             if (array_key_exists('customerText', $letter)) {
                 $addOrderTableCols .= '`orders_data_text`,';
-                $addOrderValues .= $letter['customerText'] . ',';
+                $addOrderValues .= '\''.$letter['customerText'] . '\',';
             }
 
             if (array_key_exists('commentsPersonalText', $letter)) {
                 $needCopywriting = 1;
                 $addOrderTableCols .= '`orders_data_details`, `orders_data_need_copywriting`,';
-                $addOrderValues .= $letter['commentsPersonalText'] . ',' . $needCopywriting . ',';
+                $addOrderValues .= '\''.$letter['commentsPersonalText'] . '\',\'' . $needCopywriting . '\',';
             }
 
             $payed = 0;
             $addOrderTableCols .= '`orders_data_price`,`orders_data_payed`,';
-            $addOrderValues .= ($price * 100) . ',' . $payed . ',';
+            $addOrderValues .= '\''.($price * 100) . '\',\'' . $payed . '\',';
 
             $addOrderTableCols .= '`user_id`) ';
-            $addOrderValues .= $userId . ')';
+            $addOrderValues .= '\''.$userId . '\')';
 
             $addOrderQuery = $addOrderTableCols . $addOrderValues;
         }
@@ -135,7 +135,7 @@ class Orders
     private function createUser($customerContacts)
     {
         $insertUserQuery = 'INSERT INTO `users`(`users_email`,`users_phone`, `users_name`)
-                            VALUES(?,?,?)';
+                            VALUES(\'?\',\'?\',\'?\')';
         if ($stmt = \App\Core::db()->prepare($insertUserQuery)) {
 	        $email = htmlspecialchars($customerContacts['email']);
 	        $phone = htmlspecialchars($customerContacts['phone']);
@@ -155,7 +155,7 @@ class Orders
         //$id = intval($id);
         $queryString = 'SELECT `orders_data_price`
                     FROM  `orders_data`
-                    WHERE `orders_data`.`orders_id`=?';
+                    WHERE `orders_data`.`orders_id`=\'?\'';
         if ($stmt = \App\Core::db()->prepare($queryString)) {
             $stmt->bind_param('i', $id);
             $stmt->bind_result($price);
@@ -277,12 +277,12 @@ class Orders
      *
      * @return - повертає 1, якщо вдалось здійснити оплату; 0 - якщо не вдалось
      */
-    public function getPaid($id)
+    public function setPaid($id)
     {
         $id = intval($id);
         $res = 0;
         $paidQuery = 'UPDATE `orders_data` SET `orders_data`.`orders_data_payed`=\'1\'
-                      WHERE `orders_data`.`orders_id`=?';
+                      WHERE `orders_data`.`orders_id`=\'?\'';
         if ($stmt = \App\Core::db()->prepare($paidQuery)) {
             $stmt->bind_param('i', $id);
             $stmt->execute();
