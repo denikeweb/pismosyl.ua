@@ -13,8 +13,8 @@
             <div class="aboutText">
                 Письмосыл – это сервис для отправки непростых писем,
                 где уже становится неважным, знакомы вы с ней или нет. Приглашай девушку в театр или на выставку, или просто впечатли её до глубины сердца приятными строками. А всё, что лень сочинять - мы придумаем за вас.         </div>
-            <button class="buyButton">Сделать подарок</button>
-            <button class="infoButton">Ознакомиться с сервисом</button>
+            <button class="buyButton to-constructor">Сделать подарок</button>
+            <button class="infoButton to-process">Ознакомиться с сервисом</button>
         </div>
     </div>
     <div class="photos">

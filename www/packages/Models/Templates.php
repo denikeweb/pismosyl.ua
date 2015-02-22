@@ -80,7 +80,7 @@ class Templates {
         $subStrings = explode('[$TEXT$]',$replacedString);
         $numSubStr = count($subStrings);
         if ($numSubStr > 1) {
-            $replacedString = implode("<textarea class='templateTextArea'></textarea> ", $subStrings);
+            $replacedString = implode("<textarea class='templateTextArea'></textarea>", $subStrings);
         }
         return $replacedString;
     }

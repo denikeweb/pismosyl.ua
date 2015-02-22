@@ -42,6 +42,7 @@ class InterKassa {
 			$this->jsonData ['customerContacts'],
 			$price
 		);
+		(new \Models\InterKassa())->redirect ($orderId, $price);
 	}
 
 	public function method_error () {
