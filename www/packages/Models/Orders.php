@@ -135,7 +135,7 @@ class Orders
     private function createUser($customerContacts)
     {
         $insertUserQuery = 'INSERT INTO `users`(`users_email`,`users_phone`, `users_name`)
-                            VALUES(\'?\',\'?\',\'?\')';
+                            VALUES(?,?,?)';
         if ($stmt = \App\Core::db()->prepare($insertUserQuery)) {
 	        $email = htmlspecialchars($customerContacts['email']);
 	        $phone = htmlspecialchars($customerContacts['phone']);
@@ -155,7 +155,7 @@ class Orders
         //$id = intval($id);
         $queryString = 'SELECT `orders_data_price`
                     FROM  `orders_data`
-                    WHERE `orders_data`.`orders_id`=\'?\'';
+                    WHERE `orders_data`.`orders_id`=?';
         if ($stmt = \App\Core::db()->prepare($queryString)) {
             $stmt->bind_param('i', $id);
             $stmt->bind_result($price);
@@ -280,7 +280,7 @@ class Orders
         $id = intval($id);
         $res = 0;
         $paidQuery = 'UPDATE `orders_data` SET `orders_data`.`orders_data_payed`=\'1\'
-                      WHERE `orders_data`.`orders_id`=\'?\'';
+                      WHERE `orders_data`.`orders_id`=?';
         if ($stmt = \App\Core::db()->prepare($paidQuery)) {
             $stmt->bind_param('i', $id);
             $stmt->execute();
