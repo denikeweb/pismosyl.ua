@@ -32,6 +32,13 @@ class InterKassa {
 
     private function dataConvert() {
         $customerData = json_decode($_GET ['jsonData']);
+
+//        $services = [
+//            'surgutch' => [
+//                'id' => $customerData['services']['surgutchId']
+//            ],
+//            'smell' => ['id'
+//        ]
         $services['surgutch']['id'] = $customerData['services']['surgutchId'];
         $services['smell']['id'] = $customerData['services']['smellId'];
         $services['meal']['id'] = $customerData['services']['mealId'];
