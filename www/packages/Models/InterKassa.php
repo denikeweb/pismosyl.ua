@@ -11,7 +11,8 @@ namespace Models;
 
 class InterKassa {
 	private $kassId = '';
-	private $secretKassId = '';
+	private $ik_key = '';
+	private $secret_ik_key = '';
 	private $cur = 'UAH';
 	private $desc = 'Оплата за письмо; Письмосыл.com';
 	const DEBUG = true;
@@ -50,4 +51,30 @@ class InterKassa {
 			</body>
 		</html>';
 	}
-} 
+
+	public function handle () {
+		$order = new \Models\Orders();
+		$ik_key = $this->ik_key;
+		$dataSet = $_POST;
+		$id = $dataSet['ik_pm_no'];
+		$price = $order->getOrderPrice($id);
+		if (!isset($dataSet ['ik_sign']))
+			die ('Error: input data not exist');
+		$ik_sign = $dataSet ['ik_sign'];
+		unset($dataSet['ik_sign']); // видаляємо з даних строку підпису
+		ksort ($dataSet, SORT_STRING); // сортуємо по ключам в алфавітному порядку елементи масиву
+		array_push ($dataSet, $ik_key); // додаємо в кінець масиву "секретний ключ"
+		$signString = implode (':', $dataSet); // конкатенуємо значення через символ ":"
+		$sign = base64_encode (md5 ($signString, true)); // беремо MD5 хеш в бінарному вигляді по
+		//сформованому рядку і кодуємо в BASE64
+		$status = $dataSet['ik_inv_st'] == 'success';
+		$result = $ik_sign == $sign;
+		$tmpSum = $price;
+		$correctSumm =  ($dataSet['ik_co_rfn'] > $tmpSum - 1 || $dataSet['ik_co_rfn'] < $tmpSum + 1);
+		if ($result && $status && $correctSumm) {
+			// notification about success payment, changes in database
+			$order->setPaid ($id);
+		} else
+			die  ('Error: faulty input data');
+	}
+}

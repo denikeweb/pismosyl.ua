@@ -170,6 +170,10 @@ class Orders
 		return 20;
 	}
 
+	public function getCalcPrice ($services = null, $letter = null) {
+		return $this->calculateOrderPrice($services = null, $letter = null) ['discount'];
+	}
+
     /**TEST. TODO: оплату на 100 символів начислять
      * function for calculating price for order
      * @param $discount знижка у відсотках - впливає на закреслену ціну

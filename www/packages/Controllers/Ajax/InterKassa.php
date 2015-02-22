@@ -32,10 +32,10 @@ class InterKassa {
 
 	public function method_redirect () {
 		$orders = new \Models\Orders ();
-		$price = $orders->calculateOrderPrice(
+		$price = $orders->getCalcPrice(
 			$this->jsonData ['services'],
 			$this->jsonData ['letter']
-		) ['discount'];
+		);
 		$orderId = $orders->createOrder (
 			$this->jsonData ['services'],
 			$this->jsonData ['letter'],
@@ -50,6 +50,6 @@ class InterKassa {
 	}
 
 	public function method_response_handler () {
-
+		(new \Models\InterKassa())->redirect ();
 	}
 }
