@@ -72,14 +72,6 @@ class Orders
      *                                'phone' => ,
      *                                'name' =>
      *                              ]
-<<<<<<< HEAD
-     * @param   $price
-    */
-    public function createOrder ($services, $letter, $customerContacts, $price) {
-        $insertUserQuery = 'INSERT INTO ';
-        //set $id;
-        return true;
-=======
      * @param   $price - ціна у гривнях з копійками
      */
     public function createOrder($services, $letter, $customerContacts, $price)
@@ -140,19 +132,20 @@ class Orders
         return $id;
     }
 
-    //TODO: Зробити перевірку всіх параметрів, щоб була безпечна робота із БД
     private function createUser($customerContacts)
     {
         $insertUserQuery = 'INSERT INTO `users`(`users_email`,`users_phone`, `users_name`)
                             VALUES(?,?,?)';
         if ($stmt = \App\Core::db()->prepare($insertUserQuery)) {
-            $stmt->bind_param('sss', $customerContacts['email'], $customerContacts['phone'], $customerContacts['name']);
+	        $email = htmlspecialchars($customerContacts['email']);
+	        $phone = htmlspecialchars($customerContacts['phone']);
+	        $name = htmlspecialchars($customerContacts['name']);
+            $stmt->bind_param('sss', $email, $phone, $name);
             $stmt->execute();
             $id = \App\Core::db()->insert_id;
             $stmt->close();
         }
         return $id;
->>>>>>> origin/master
     }
 
     //TODO: перевірити на помилки і зробити реакцію адекватну на них
@@ -185,13 +178,8 @@ class Orders
      *                   'discount' => , ціна, яку платить користувач
      *                    'usual' => ];  ціна, яка показується закресленою
      */
-<<<<<<< HEAD
-    public function calculateOrderPrice($services = null, $letter = null){
+    public function calculateOrderPrice($services = null, $letter = null) {
 	    $discount = $this->getDiscount();
-=======
-    public function calculateOrderPrice($discount, $services = null, $letter = null)
-    {
->>>>>>> origin/master
 
         if (is_null($services))
             $services = $this->services;
