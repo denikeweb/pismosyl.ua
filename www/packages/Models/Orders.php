@@ -264,11 +264,9 @@ class Orders
             }
         }
 
-//        if (count($errors)==0) {
-//            $error['code'] = '0';
-//            $error['description'] = 'Всё отлично!';
-//            array_push($errors, $error);
-//        }
+        if (count($errors)==0)
+            $errors = true;
+
         return $errors;
     }
 

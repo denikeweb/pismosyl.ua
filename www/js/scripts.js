@@ -259,13 +259,25 @@ SmartCore = {
 		InterKassa : {
 			dataStab : {
 				services : {
-
+                    surgutchId : 15,
+                    smellId : 15,
+                    mealId : -1, //не вибрано, значить -1
+                    burnt_edgesId : 1,
+                    delivery : {
+                        id : 2,
+                        address : 'м. Київ, вул. Київська 21',
+                        nameWhom : 'Софія Крушельницька'
+                    }
 				},
 				letter : {
-
+                    templateId : 3,
+                    customerText : 'Кохана, подай свій мобільний, я хочу побачить від кого прийшла смс-ка',
+                    commentsPersonalText : 'Напишіть мені лист'
 				},
 				customerContacts : {
-
+                    email : 'den@lux-blog.org',
+                    phone : '097 888 88 44',
+                    name : 'Lacosta'
 				}
 			},
 			redirect : function ($services, $letter, $customerContacts) {
