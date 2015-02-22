@@ -11,15 +11,19 @@
             $template = new Templates();
             $listTemplates = $template->getAllTemplatesCategoriesPreviews();
 
-            //$templateText = $template->getTemplateText(1);
+            $templateText = $template->getTemplateText(2);
 
             $services = new Services();
             $servicesList = $services->getAllServicesList();
 
+            //TODO:
+            $templatesText = $templateText;
+
 			$data = [
 				'c' => $listTemplates,
 				//'templateText' => $templateText,
-				'servicesList' => $servicesList
+				'servicesList' => $servicesList,
+                'firstText' => $templatesText
 			];
 
             $order = new Orders();
@@ -30,6 +34,8 @@
                         ['id' => 1],
                     'smell' =>
                         ['id' => 1],
+                    'meal' =>
+                        ['id' => 1],
                     'delivery' =>
                         ['id' => 2],
                     'burnt_edges' =>
@@ -37,12 +43,13 @@
                ];
 
             $letter = [
-                'templateId' => '1',
-                'personalText' =>
-                    ['description' => 'dfsfsdsdf']
+                'templateId' => '1'
                 ];
-            $price = $order->calculateOrderPrice($services,$letter,20);
-            \Anex::showArray($price);
+            $order->setOrderData($services,$letter);
+            $price = $order->calculateOrderPrice(20);
+            $errors = $order->checkCorrectness();
+            $templates = $template->substitutePattern($templatesText);
+            \Anex::showArray($templates);
 			//\Anex::showArray($templateText);
 			//\Anex::showArray($servicesList);
 			echo \App\View::getIndexView ($data);

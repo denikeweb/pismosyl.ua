@@ -21,7 +21,7 @@
         <h3 class="headerText">Вот такие письма мы пишем...</h3>
         <p class="usualText">У нас разработаны стандарты для писем — это то, что гарантирует качество нашей работы. Посмотрите на то, что мы делаем:</p>
         <div class="photoSet">
-            <a class="photoSetPic" href="img/photos/img1.png"><img class="first" src="img/photos/img1.png"/></a><a class="photoSetPic" href="img/photos/img2.png"><img src="img/photos/img2.png"/></a><a class="photoSetPic" href="img/photos/img3.png"><img src="img/photos/img3.png"/></a><a class="photoSetPic" href="img/photos/img4.png"><img src="img/photos/img4.png"/></a><a class="photoSetPic" href="img/photos/img5.png"><img src="img/photos/img5.png"/></a>
+            <a class="photoSetPic" href="img/photos/letterText.png"><img class="first" src="img/photos/letterTextSmall.png" alt="Письмо с текстом"/></a><a class="photoSetPic" href="img/photos/letterText2.png"><img src="img/photos/letterTextSmall2.png" alt="Письмо с текстом"/></a><a class="photoSetPic" href="img/photos/envelopeDesign.png"><img src="img/photos/envelopeDesignSmall.png" alt="Оформление конверта"/></a><a class="photoSetPic" href="img/photos/envelopeDesign2.png"><img src="img/photos/envelopeDesignSmall2.png" alt="Оформление конверта"/></a><a class="photoSetPic" href="img/photos/envelopeDesign3.png"><img src="img/photos/envelopeDesignSmall3.png" alt="Оформление конверта"/></a>
         </div>
     </div>
     <div class="youWant" id="one">
@@ -33,22 +33,22 @@
     <div class="steps">
         <h3 class="headerText stepsHeader">Все делаем в 3 этапа:</h3>
         <div class="stepBlock">
-            <a class="pictureSB" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a>
+            <a class="pictureSB" href="img/photos/constructLetter.jpg"><img src="img/photos/constructLetterS.jpg" alt="Конструируете письмо на сайте"/></a>
             <p class="usualText textSB">Этап 1: конструируете письмо на сайте</p>
-        </div><div class="stepBlock centerB"><a class="pictureSB" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a><p class="usualText textSB">Этап 2: Оплачиваете заказ</p></div><div class="stepBlock">
-            <a class="pictureSB" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a>
+        </div><div class="stepBlock centerB"><a class="pictureSB" href="img/photos/payOrder.jpg"><img src="img/photos/payOrderS.jpg" alt="Оплачиваете заказ"/></a><p class="usualText textSB">Этап 2: Оплачиваете заказ</p></div><div class="stepBlock">
+            <a class="pictureSB" href="img/photos/happyAddressee.jpg"><img src="img/photos/happyAddresseeS.jpg" alt="Получатель радуется"/></a>
             <p class="usualText textSB">Этап 3: Получатель радуется</p>
         </div>
         <h3 class="headerText curierHeader">Схема с курьером</h3>
         <div class="row3picBC">
             <div class="blockPC">
-                <a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a>
-            </div><div class="blockPC centerB"><a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a></div><div class="blockPC">
-                <a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a></div>
+                <a class="pictureC" href="img/photos/courierStep1.jpg"><img src="img/photos/courierStep1S.jpg" alt="Схема с курьером шаг 1"/></a>
+            </div><div class="blockPC centerB"><a class="pictureC" href="img/photos/courierStep2.jpg"><img src="img/photos/courierStep2S.jpg" alt="Схема с курьером шаг 2"/></a></div><div class="blockPC">
+                <a class="pictureC" href="img/photos/courierStep3.jpg"><img src="img/photos/courierStep3S.jpg" alt="Схема с курьером шаг 3"/></a></div>
         </div>
         <div class="row2picBC">
-            <div class="blockPC"><a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a></div><div class="blockPC rightB">
-                <a class="pictureC" href="img/photos/none.jpg"><img src="img/photos/none.jpg"/></a></div>
+            <div class="blockPC"><a class="pictureC" href="img/photos/courierStep4.jpg"><img src="img/photos/courierStep4S.jpg" alt="Схема с курьером шаг 4"/></a></div><div class="blockPC rightB">
+                <a class="pictureC" href="img/photos/courierStep5.jpg"><img src="img/photos/courierStep5S.jpg" alt="Схема с курьером шаг 5"/></a></div>
         </div>
     </div>
 
@@ -59,7 +59,7 @@
 
     <div class="packages">
         <h3 class="headerText packageHeader">Готовые пакеты</h3>
-        <div class="pack"><img class="packImg" src="img/packages.jpg"/><p class="headerText packHead">Для студентов</p><p class="usualText packText">стульчик<br/>печеньки<br/>чай</p></div><div class="packCenter"><img class="packImg" src="img/packages.jpg"/><p class="headerText packHead">Для студентов со стипендией</p><p  class="usualText packText">стульчик<br/>печеньки<br/>чай<br/>кофе</p></div><div class="pack"><img class="packImg" src="img/packages.jpg"/><p class="headerText packHead">Для мажоров</p><p  class="usualText packText">стульчик<br/>печеньки<br/>чай<br/>кофе<br/>сургуч<br/>инициалы на печати</p></div>
+        <div class="pack"><img class="packImg" src="img/photos/packMin.jpg" alt="Минимальный пакет"/><p class="headerText packHead">Для студентов</p><p class="usualText packText">стульчик<br/>печеньки<br/>чай</p></div><div class="packCenter"><img class="packImg" src="img/photos/packStandart.jpg" alt="Стандартный пакет"/><p class="headerText packHead">Для студентов со стипендией</p><p  class="usualText packText">стульчик<br/>печеньки<br/>чай<br/>кофе</p></div><div class="pack"><img class="packImg" src="img/photos/packMax.jpg" alt="Максимальный пакет"/><p class="headerText packHead">Для мажоров</p><p  class="usualText packText">стульчик<br/>печеньки<br/>чай<br/>кофе<br/>сургуч<br/>инициалы на печати</p></div>
     </div>
     <div class="warranty">
         <h3 class="headerText warrHead">Гарантии доставки</h3>

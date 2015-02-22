@@ -175,7 +175,7 @@ img.first{
 
 .photoSetPic {
 	line-height: 0;
-	width: 0;
+    font-size: 0;
 }
 /*Кінець Фотографії*/
 
@@ -253,6 +253,11 @@ p.ywCenter {
 
 .rightB {
 	margin: 0 0 0 12px;
+}
+
+.pictureSB, .pictureC {
+  line-height: 0;
+  font-size: 0;
 }
 /*Кінець Кроки*/
 

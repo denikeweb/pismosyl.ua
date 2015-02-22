@@ -6,6 +6,7 @@ namespace Models;
 class Orders {
 
     public $id;
+
     private $services;
     private $letter;
 
@@ -31,6 +32,11 @@ class Orders {
 		$result = $query->fetch_all (MYSQLI_ASSOC);
 		return $result;
 	}
+
+    public function setOrderData($services, $letter){
+        $this->services = $services;
+        $this->letter = $letter;
+    }
 
     /**
      * function for creating a new order
@@ -60,9 +66,13 @@ class Orders {
                      'socialNetwors' => ]
                 ];
 
+     * @param   $customerContacts = [ 'email' => ,
+     *                                'phone' => ,
+     *                                'name' =>
+     *                              ]
      * @param   $price
     */
-    public function createOrder($services, $letter, $price) {
+    public function createOrder($services, $letter, $customerContacts, $price) {
 
         //set $id;
         return true;
@@ -91,7 +101,13 @@ class Orders {
      *                   'discount' => , ціна, яку платить користувач
      *                    'usual' => ];  ціна, яка показується закресленою
      */
-    public function calculateOrderPrice($services, $letter,$discount){
+    public function calculateOrderPrice($discount,$services=null, $letter=null){
+
+        if (is_null($services))
+            $services = $this->services;
+        if (is_null($letter))
+            $letter = $this->letter;
+
         $START_PRICE = 300;
         $servicesList = new Services();
         $sum = 0;
@@ -126,5 +142,51 @@ class Orders {
         $price['discount'] = round($sum/100.0,2);
         $price['usual'] = round($sum/(100 - $discount),2);
         return $price;
+    }
+
+    /**
+     * @param null $services
+     * @param null $letter
+     * @return array список ошибок в формате
+     *         array = [
+     *                    [ 'code' =>, //Код ошибки
+     *                      'description' => ] //Описание
+     *                 ]
+     */
+    public function checkCorrectness($services=null, $letter=null){
+        if (is_null($services))
+            $services = $this->services;
+        if (is_null($letter))
+            $letter = $this->letter;
+
+        $errors = [];
+        $error = [];
+        if ($services['delivery']['id']==1) { //перевіряємо чи замовлення доставляється поштою
+            if (array_key_exists('surgutch', $services)) {
+                $error['code'] = '1';
+                $error['description'] = 'Нельзя выбирать сургуч, если доставка осуществляется почтой.';
+                array_push($errors, $error);
+            }
+            if (array_key_exists('meal', $services)) {
+                $error['code'] = '2';
+                $error['description'] = 'Нельзя выбирать еду, если доставка осуществляется почтой.';
+                array_push($errors, $error);
+            }
+        }
+        if (array_key_exists('personalText', $letter)){
+            if (array_key_exists('templateId', $letter))
+            {
+                $error['code'] = '3';
+                $error['description'] = 'Нельзя выбирать шаблон, если заказывается персональное письмо.';
+                array_push($errors, $error);
+            }
+        }
+
+//        if (count($errors)==0) {
+//            $error['code'] = '0';
+//            $error['description'] = 'Всё отлично!';
+//            array_push($errors, $error);
+//        }
+        return $errors;
     }
 } 

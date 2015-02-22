@@ -67,4 +67,20 @@ class Templates {
         $queryRes = $query->fetch_all(MYSQL_ASSOC);
         return $queryRes[0]['templates_text'];
     }
+
+    public function substitutePattern($templateText) {
+        $replacedString = $templateText;
+        $subStrings = explode('[$INPUT$]',$replacedString);
+        $numSubStr = count($subStrings);
+        if ($numSubStr > 1) {
+            $replacedString = implode("<input type='text'/>", $subStrings);
+        }
+
+        $subStrings = explode('[$TEXT$]',$replacedString);
+        $numSubStr = count($subStrings);
+        if ($numSubStr > 1) {
+            $replacedString = implode("<textarea></textarea> ", $subStrings);
+        }
+        return $replacedString;
+    }
 } 
