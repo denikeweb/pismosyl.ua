@@ -52,7 +52,8 @@ class Templates {
     {
         $queryString = 'SELECT `templates_id`,`templates_title`,`templates_prev`,`templates_datetime`
                     FROM  `templates`
-                    WHERE `templates`.`templates_categories_id`='.intval($tempCatId);
+                    WHERE `templates`.`templates_categories_id`=\''.intval($tempCatId)
+                    .'\' ORDER BY `templates_id` DESC';
         $query = \App\Core::db()->query($queryString);
         $result = $query->fetch_all(MYSQL_ASSOC);
         return $result;
