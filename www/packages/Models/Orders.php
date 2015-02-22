@@ -155,11 +155,7 @@ class Orders
         //$id = intval($id);
         $queryString = "SELECT `orders_data_price`
                     FROM  `orders_data`
-<<<<<<< HEAD
                     WHERE `orders_data`.`orders_id`=?";
-=======
-                    WHERE `orders_data`.`orders_id`=?';
->>>>>>> origin/master
         if ($stmt = \App\Core::db()->prepare($queryString)) {
             $stmt->bind_param('i', $id);
             $stmt->bind_result($price);
