@@ -107,7 +107,8 @@ SmartCore = {
 				step3 : undefined,
 				previous : undefined,
 				next : undefined,
-				toPay : undefined
+				toPay : undefined,
+				thisStep : 1
 			},
 			init : function () {
 				this.vars.step1     =  $('.constructor-navigator.step1');
@@ -116,6 +117,10 @@ SmartCore = {
 				this.vars.previous  =  $('.constructor-switcher.previous');
 				this.vars.next      =  $('.constructor-switcher.next');
 				this.vars.toPay     =  $('.constructor-switcher.toPay');
+
+				this.vars.previous.on ( 'click', this.previousHandler );
+				this.vars.next.on     ( 'click', this.nextHandler     );
+				this.vars.toPay.on    ( 'click', this.toPayHandler    );
 			},
 			previousHandler : function () {
 
@@ -124,6 +129,15 @@ SmartCore = {
 
 			},
 			toPayHandler : function () {
+
+			},
+			showStep1 : function () {
+
+			},
+			showStep2 : function () {
+
+			},
+			showStep3 : function () {
 
 			}
 		}

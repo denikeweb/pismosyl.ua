@@ -401,7 +401,7 @@ $prev-active-bdr: #D8D8D8;
 	constructor begin */
 
 .hidden {
-	display: none;
+	display: none !important;
 }
 .constructor-navigator {
 	width: 294px;
@@ -514,10 +514,12 @@ $prev-active-bdr: #D8D8D8;
 	&.closed:before {
 		content: '▼ ';
 		font-size: 10px;
+		font-family: Arial;
 	}
 	&.opened:before {
 		content: '▲ ';
 		font-size: 10px;
+		font-family: Arial;
 	}
 }
 .ctgr {

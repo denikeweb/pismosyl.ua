@@ -84,8 +84,8 @@
 
 
 	<div class="text-right constructor-switcher-bar">
-		<button class="button constructor-switcher previous">Назад</button>
+		<button class="button constructor-switcher previous hidden">Назад</button>
 		<button class="button constructor-switcher next">Далее</button>
-		<button class="button constructor-switcher toPay">Оплатить заказ</button>
+		<button class="button constructor-switcher toPay hidden">Оплатить заказ</button>
 	</div>
 </div>

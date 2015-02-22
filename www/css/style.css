@@ -305,7 +305,7 @@ footer {
 /**
 	constructor begin */
 .hidden {
-  display: none; }
+  display: none !important; }
 
 .constructor-navigator {
   width: 294px;
@@ -393,10 +393,12 @@ footer {
   color: #666666; }
   .ctgrList.closed:before {
     content: '▼ ';
-    font-size: 10px; }
+    font-size: 10px;
+    font-family: Arial; }
   .ctgrList.opened:before {
     content: '▲ ';
-    font-size: 10px; }
+    font-size: 10px;
+    font-family: Arial; }
 
 .ctgr:before {
   font-size: 10px; }
