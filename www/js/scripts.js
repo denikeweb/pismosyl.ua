@@ -5,9 +5,11 @@ SmartCore = {
 		$('.ctgr').on ('click', SmartCore.constructor.templates.catClick);
 		$('.ctgrList').on ('click', SmartCore.constructor.templates.openCatList);
         SmartCore.navigation.menuAnimation();
+		$('.preview-box').on ('click', SmartCore.constructor.templates.showText);
 	},
 	globals : {
-		lastOpenedSubCat : undefined
+		lastOpenedSubCat : undefined,
+		thisTemplateId : 0
 	},
 	libs : {
 		scrollBar : {
@@ -47,6 +49,41 @@ SmartCore = {
 				SmartCore.globals.lastOpenedSubCat = thisCat;
 				$this.removeClass('closed').addClass('opened');
 				SmartCore.globals.lastOpenedSubCat.show ();
+			},
+			showText : function () {
+				var $thisCldrn = $(this).children (),
+					id = $thisCldrn.filter('.preview-id').html (),
+					textContainerObj = $thisCldrn.filter('.preview-text'),
+					text = textContainerObj.html ();
+				if (text.length > 0)
+					SmartCore.constructor.templates.viewText(id, text, textContainerObj);
+				else
+					SmartCore.constructor.templates.getText(id, textContainerObj);
+			},
+			getText: function (id, textContainerObj) {
+				var sendData = 'action=GetText&id=' + id,
+					successFunc = function (text) {
+						SmartCore.constructor.templates.saveText(textContainerObj, text);
+						SmartCore.constructor.templates.viewText(id, text, textContainerObj);
+					};
+				$.ajax({
+					url: '//' + document.domain + '/ajax',
+					type: 'GET',
+					timeout: 5000,
+					data: sendData,
+					success : successFunc
+				});
+				return true;
+			},
+			saveText : function (textContainerObj, data) {
+				textContainerObj.html (data);
+			},
+			viewText : function (id, text, textContainerObj) {
+				var active = 'active';
+				$('.letters.text').html (text);
+				$('.preview-box.active').removeClass(active);
+				textContainerObj.parent().addClass (active);
+				SmartCore.globals.thisTemplateId = id;
 			}
 		}
     },

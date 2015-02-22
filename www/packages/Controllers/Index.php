@@ -29,7 +29,7 @@
             $order = new Orders();
             $price = $order->getOrderPrice(2);
 
-           $services = [
+            $services = [
                     'surgutch' =>
                         ['id' => 1],
                     'smell' =>
@@ -49,7 +49,7 @@
             $price = $order->calculateOrderPrice(20);
             $errors = $order->checkCorrectness();
             $templates = $template->substitutePattern($templatesText);
-            \Anex::showArray($templates);
+            //\Anex::showArray($templates);
 			//\Anex::showArray($templateText);
 			//\Anex::showArray($servicesList);
 			echo \App\View::getIndexView ($data);

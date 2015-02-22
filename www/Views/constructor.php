@@ -41,6 +41,7 @@
 			<?php
 				$i = -1;
 				$hidden = '';
+				$active= 'active';
 				foreach ($c as $catItem) :
 					$templatesList = [];
 					if (isset ($catItem ['subcategory'])) {
@@ -59,13 +60,14 @@
 						<?php
 							$hidden = 'hidden';
 							foreach ($templates as $item) : ?>
-									<div class="letters-item">
+									<div class="letters-item preview-box boxId<?= $item ['templates_id']?> <?=$active?>">
 										<div class="preview-id hidden"><?= $item ['templates_id']?></div>
 										<div class="preview-title"><?= $item ['templates_title']?></div>
 										<div class="preview-desc"><?= $item ['templates_prev']?></div>
 										<div class="preview-text hidden"></div>
 									</div>
 					<?php
+								$active= '';
 							endforeach; ?>
 						</div>
 					<?php
@@ -73,89 +75,7 @@
 			<?php
 				endforeach;
 			?>
-			<!--div class="letters-item active">
-				<div class="preview-title">
-					Мадонна дней моих суровых
-				</div>
-				<div class="preview-text">Мадонна дней моих суровых,
-					Ко мне во сне явилась ты,
-					И с блеском губ твоих бордовых
-					Творила все мои мечты.
-				</div>
-			</div>
-			<div class="letters-item">
-				<div class="preview-title">
-					Подруга дней моих понтовых
-				</div>
-				<div class="preview-text">Подруга дней моих понтовых,
-					Как по тебе лелею я,
-					По временам бухла, гандонов,
-					Когда еще была моя.
-				</div>
-			</div>
-			<div class="letters-item">
-				<div class="preview-title">
-					Хочу сказать тебе три слова...
-				</div>
-				<div class="preview-text">Хочу сказать тебе три слова,
-					Которые внутри меня,
-					Которые боюсь озвучить снова,
-					Но, как ни как, люблю тебя.
-				</div>
-			</div>
-			<div class="letters-item">
-				<div class="preview-title">
-					Хочу сказать тебе три слова...
-				</div>
-				<div class="preview-text">Хочу сказать тебе три слова,
-					Которые внутри меня,
-					Которые боюсь озвучить снова,
-					Но, как ни как, люблю тебя.
-				</div>
-			</div>
-			<div class="letters-item">
-				<div class="preview-title">
-					Хочу сказать тебе три слова...
-				</div>
-				<div class="preview-text">Хочу сказать тебе три слова,
-					Которые внутри меня,
-					Которые боюсь озвучить снова,
-					Но, как ни как, люблю тебя.
-				</div>
-			</div>
-			<div class="letters-item">
-				<div class="preview-title">
-					Хочу сказать тебе три слова...
-				</div>
-				<div class="preview-text">Хочу сказать тебе три слова,
-					Которые внутри меня,
-					Которые боюсь озвучить снова,
-					Но, как ни как, люблю тебя.
-				</div>
-			</div>
-			<div class="letters-item">
-				<div class="preview-title">
-					Хочу сказать тебе три слова...
-				</div>
-				<div class="preview-text">Хочу сказать тебе три слова,
-					Которые внутри меня,
-					Которые боюсь озвучить снова,
-					Но, как ни как, люблю тебя.
-				</div>
-			</div>
-			<div class="letters-item">
-				<div class="preview-title">
-					Хочу сказать тебе три слова...
-				</div>
-				<div class="preview-text">Хочу сказать тебе три слова,
-					Которые внутри меня,
-					Которые боюсь озвучить снова,
-					Но, как ни как, люблю тебя.
-				</div>
-			</div-->
-		</div><div class="letters text">
-            <?= $firstText ?>
-		</div>
+		</div><div class="letters text"><?= $firstText ?></div>
 	</div>
 	<?php \Anex::showArray($c); ?>
 	<div class="constructor-steps step2 hidden">2</div>
