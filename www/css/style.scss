@@ -121,8 +121,10 @@ button {
 	outline: none;
 }
 
+$ps-green: #609A34;
+$ps-red: #c8692a;
 .buyButton {
-	background-color: #609A34;
+	background-color: $ps-green;
 	border: 0;
 	border-radius: 3px;
 	margin-bottom: 15px;
@@ -423,8 +425,9 @@ $prev-active-bdr: #D8D8D8;
 }
 .constructor-steps {
 	background: $steps-bg;
+	border-bottom: 1px solid $c;
 	&.step1 {
-		height: 570px;
+		height: 470px;
 	}
 	&.step2 {
 
@@ -433,7 +436,7 @@ $prev-active-bdr: #D8D8D8;
 .letters { //width 940px
 	display: inline-block;
 	vertical-align: top;
-	height: 550px;
+	height: 450px;
 	&.categories {
 		width: 140px;
 		padding: 10px;
@@ -463,7 +466,7 @@ $prev-active-bdr: #D8D8D8;
 		padding-right: 20px;
 		background: $prev-bg;
 		//overflow-y: scroll;
-		max-height: 550px;
+		max-height: 450px;
 		overflow: auto;
 		.letters-item {
 			width: 250px;
@@ -490,7 +493,7 @@ $prev-active-bdr: #D8D8D8;
 	}
 	&.text {
 		padding: 10px;
-		width: 450px;
+		width: 465px;
 		white-space: pre-line;
 	}
 }
@@ -516,20 +519,35 @@ $prev-active-bdr: #D8D8D8;
 	}
 }
 .template {
+	&Input, &TextArea {
+		border: 1px solid $cat-active-bdr;
+		font-family: "PT Sans";
+	}
 	&Input {
-
+		padding: 2px 3px;
 	}
 	&TextArea {
 		resize: none;
-		width: 470px;
-		height: 200px;
+		width: 460px;
+		height: 120px;
+		display: block;
+		margin: 3px 0;
 	}
+}
+.constructor-next {
+	display: inline-block;
+	border: none;
+	background: $ps-green;
+	width: 200px;
+	height: 40px;
+	color: $w;
+}
+.text-right {
+	text-align: right;
 }
 	/**
 		constructor end */
 
-	/** gallery*/
-
+/** gallery*/
 	#cboxOverlay {background: rgba(0,0,0,0.8) !important;}
-}
 /** gallery */

@@ -75,8 +75,9 @@
 			<?php
 				endforeach;
 			?>
-		</div><div class="letters text"><?= $firstText ?></div>
+		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"><?= $firstText ?></div></div>
 	</div>
-	<?php \Annex\Annex::showArray($c); ?>
 	<div class="constructor-steps step2 hidden">2</div>
+	<div class="constructor-steps step3 hidden">3</div>
+	<div class="text-right"><button class="button constructor-next">Далее</button></div>
 </div>

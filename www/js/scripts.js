@@ -52,13 +52,9 @@ SmartCore = {
 				SmartCore.globals.lastOpenedSubCat.show ();
 			},
 			showText : function (thisObj) {
-				var $thisCldrn = undefined;
-				console.log( thisObj );
-				if (thisObj == undefined)
-					$thisCldrn = $(this).children ();
-				else
-					$thisCldrn = thisObj.children ().first ().children ();
-
+				var $thisCldrn = $(this).children ();
+				if (thisObj.length != undefined)
+					$thisCldrn = SmartCore.constructor.templates.getPrevObjForFirstCat(thisObj);
 				var id = $thisCldrn.filter('.preview-id').html (),
 					textContainerObj = $thisCldrn.filter('.preview-text'),
 					text = textContainerObj.html ();
@@ -66,6 +62,9 @@ SmartCore = {
 					SmartCore.constructor.templates.viewText(id, text, textContainerObj);
 				else
 					SmartCore.constructor.templates.getText(id, textContainerObj);
+			},
+			getPrevObjForFirstCat : function (thisObj) {
+				return thisObj.children ().first ().children ();
 			},
 			getText: function (id, textContainerObj) {
 				var sendData = 'action=GetText&id=' + id,
@@ -87,7 +86,7 @@ SmartCore = {
 			},
 			viewText : function (id, text, textContainerObj) {
 				var active = 'active';
-				$('.letters.text').html (text);
+				$('.text-letter-content').html (text);
 				$('.preview-box.active').removeClass(active);
 				textContainerObj.parent().addClass (active);
 				SmartCore.globals.thisTemplateId = id;
