@@ -49,9 +49,15 @@
             $price = $order->calculateOrderPrice(20);
             $errors = $order->checkCorrectness();
             $templates = $template->substitutePattern($templatesText);
+<<<<<<< HEAD
             //\Anex::showArray($templates);
 			//\Anex::showArray($templateText);
 			//\Anex::showArray($servicesList);
+=======
+            \Annex::showArray($templates);
+			//\Annex::showArray($templateText);
+			//\Annex::showArray($servicesList);
+>>>>>>> origin/master
 			echo \App\View::getIndexView ($data);
 		}
 	}

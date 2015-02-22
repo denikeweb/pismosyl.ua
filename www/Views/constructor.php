@@ -77,6 +77,6 @@
 			?>
 		</div><div class="letters text"><?= $firstText ?></div>
 	</div>
-	<?php \Anex::showArray($c); ?>
+	<?php \Annex::showArray($c); ?>
 	<div class="constructor-steps step2 hidden">2</div>
 </div>
