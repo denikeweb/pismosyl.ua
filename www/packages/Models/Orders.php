@@ -153,9 +153,9 @@ class Orders
     {
         $price = 0;
         //$id = intval($id);
-        $queryString = 'SELECT `orders_data_price`
+        $queryString = "SELECT `orders_data_price`
                     FROM  `orders_data`
-                    WHERE `orders_data`.`orders_id`=\'?\'';
+                    WHERE `orders_data`.`orders_id`=?";
         if ($stmt = \App\Core::db()->prepare($queryString)) {
             $stmt->bind_param('i', $id);
             $stmt->bind_result($price);

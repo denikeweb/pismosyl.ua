@@ -23,7 +23,8 @@ class InterKassa {
 
 	public function run () {
 		if (isset ($_GET ['method']) and isset ($_GET ['jsonData'])) {
-			$this->jsonData = json_decode($_GET ['jsonData']);
+			$this->jsonData = json_decode($_GET ['jsonData'], true);
+			\Annex\Annex::showArray($this->jsonData);
 			$method = 'method_' . $_GET ['method'];
 			$this->$method ();
 		} else
