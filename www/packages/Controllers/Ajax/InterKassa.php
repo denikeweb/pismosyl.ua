@@ -24,6 +24,7 @@ class InterKassa {
 	public function run () {
 		if (isset ($_GET ['method']) and isset ($_GET ['jsonData'])) {
 			$this->dataConvert();
+			\Annex\Annex::showArray($this->jsonData);
 			$method = 'method_' . $_GET ['method'];
 			$this->$method ();
 		} else
@@ -31,6 +32,7 @@ class InterKassa {
 	}
 
     private function dataConvert() {
+<<<<<<< HEAD
         $customerData = json_decode($_GET ['jsonData']);
 
 //        $services = [
@@ -39,6 +41,9 @@ class InterKassa {
 //            ],
 //            'smell' => ['id'
 //        ]
+=======
+        $customerData = json_decode($_GET ['jsonData'], true);
+>>>>>>> origin/master
         $services['surgutch']['id'] = $customerData['services']['surgutchId'];
         $services['smell']['id'] = $customerData['services']['smellId'];
         $services['meal']['id'] = $customerData['services']['mealId'];
