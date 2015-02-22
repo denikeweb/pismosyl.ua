@@ -440,6 +440,13 @@ $prev-active-bdr: #D8D8D8;
 	&.step2 {
 
 	}
+	&.step3 {
+
+	}
+	&.step2, &.step3 {
+		padding: 10px;
+
+	}
 }
 .letters { //width 940px
 	display: inline-block;
@@ -551,11 +558,18 @@ $prev-active-bdr: #D8D8D8;
 	height: 25px;
 	color: $w;
 	font-size: 16px;
+	background-color: $ps-red;
+	box-shadow: 0 3px $ps-shadow-red;
 	&.previous {
 		float: left;
 	}
 	&.next {
 		float: right;
+	}
+	&.toPay {
+		float: right;
+		background-color: $ps-green;
+		box-shadow: 0 3px $ps-shadow-green;
 	}
 }
 .text-right {

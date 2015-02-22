@@ -2,12 +2,12 @@
 
 
 
-	<div class="constructor-navigator step1 stepped">
+	<div class="constructor-navigator step1 active">
 		Шаг 1: Выбор письма
-	</div><div class="constructor-navigator step2 active">
-		Шаг 2: Параметры отправки
+	</div><div class="constructor-navigator step2">
+		Шаг 2: Свойства письма
 	</div><div class="constructor-navigator step3">
-		Шаг 3: Оплата
+		Шаг 3: Параметры отправителя
 	</div>
 
 	<div class="constructor-steps step1">

@@ -74,7 +74,7 @@ class Orders {
      *                              ]
      * @param   $price
     */
-    public function createOrder($services, $letter, $customerContacts, $price) {
+    public function createOrder ($services, $letter, $customerContacts, $price) {
         $insertUserQuery = 'INSERT INTO ';
         //set $id;
         return true;
@@ -95,6 +95,10 @@ class Orders {
         return $price;
     }
 
+	private function getDiscount () {
+		return 20;
+	}
+
     /**TEST. TODO: оплату на 100 символів начислять
      * function for calculating price for order
      * @param $discount знижка у відсотках - впливає на закреслену ціну
@@ -103,7 +107,8 @@ class Orders {
      *                   'discount' => , ціна, яку платить користувач
      *                    'usual' => ];  ціна, яка показується закресленою
      */
-    public function calculateOrderPrice($discount,$services=null, $letter=null){
+    public function calculateOrderPrice($services = null, $letter = null){
+	    $discount = $this->getDiscount();
 
         if (is_null($services))
             $services = $this->services;

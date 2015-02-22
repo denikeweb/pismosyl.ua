@@ -325,6 +325,8 @@ footer {
   border-bottom: 1px solid #eeeeee; }
   .constructor-steps.step1 {
     height: 470px; }
+  .constructor-steps.step2, .constructor-steps.step3 {
+    padding: 10px; }
 
 .letters {
   display: inline-block;
@@ -421,11 +423,17 @@ footer {
   width: 120px;
   height: 25px;
   color: white;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #c8692a;
+  box-shadow: 0 3px #612e0d; }
   .constructor-switcher.previous {
     float: left; }
   .constructor-switcher.next {
     float: right; }
+  .constructor-switcher.toPay {
+    float: right;
+    background-color: #609a34;
+    box-shadow: 0 3px #2b4e12; }
 
 .text-right {
   text-align: right; }

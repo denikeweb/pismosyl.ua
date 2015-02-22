@@ -102,43 +102,114 @@ SmartCore = {
 		},
 		switcher : {
 			vars : {
-				step1 : undefined,
-				step2 : undefined,
-				step3 : undefined,
+				nav1 : undefined,
+				nav2 : undefined,
+				nav3 : undefined,
+
 				previous : undefined,
 				next : undefined,
 				toPay : undefined,
+
+				step1 : undefined,
+				step2 : undefined,
+				step3 : undefined,
+
 				thisStep : 1
 			},
+			classes : {
+				active : 'active',
+				stepped : 'stepped',
+				hidden : 'hidden'
+			},
 			init : function () {
-				this.vars.step1     =  $('.constructor-navigator.step1');
-				this.vars.step2     =  $('.constructor-navigator.step2');
-				this.vars.step3     =  $('.constructor-navigator.step3');
+				this.vars.nav1     =  $('.constructor-navigator.step1');
+				this.vars.nav2     =  $('.constructor-navigator.step2');
+				this.vars.nav3     =  $('.constructor-navigator.step3');
 				this.vars.previous  =  $('.constructor-switcher.previous');
 				this.vars.next      =  $('.constructor-switcher.next');
 				this.vars.toPay     =  $('.constructor-switcher.toPay');
+
+				this.vars.step1     =  $('.constructor-steps.step1');
+				this.vars.step2     =  $('.constructor-steps.step2');
+				this.vars.step3     =  $('.constructor-steps.step3');
 
 				this.vars.previous.on ( 'click', this.previousHandler );
 				this.vars.next.on     ( 'click', this.nextHandler     );
 				this.vars.toPay.on    ( 'click', this.toPayHandler    );
 			},
 			previousHandler : function () {
-
+				var a = SmartCore.constructor.switcher,
+					b = a.vars;
+				if (b.thisStep == 2)
+					a.showStep1 ();
+				else
+					a.showStep2 ();
 			},
 			nextHandler : function () {
-
+				var a = SmartCore.constructor.switcher,
+					b = a.vars;
+				if (b.thisStep == 1)
+					a.showStep2 ();
+				else
+					a.showStep3 ();
 			},
 			toPayHandler : function () {
-
+				
 			},
 			showStep1 : function () {
+				var a = SmartCore.constructor.switcher,
+					b = a.vars,
+					c = a.classes;
+				b.nav1.addClass(c.active);
+				b.nav1.removeClass(c.stepped);
 
+				b.nav2.removeClass(c.active);
+
+				b.previous.addClass(c.hidden);
+				b.next.removeClass(c.hidden);
+
+				b.thisStep = 1;
+				b.step1.removeClass(c.hidden);
+				b.step2.addClass(c.hidden);
 			},
 			showStep2 : function () {
+				var a = SmartCore.constructor.switcher,
+					b = a.vars,
+					c = a.classes;
+				b.nav2.addClass(c.active);
+				b.nav2.removeClass(c.stepped);
 
+				b.nav1.removeClass(c.active);
+				b.nav1.addClass(c.stepped);
+				b.nav3.removeClass(c.active);
+
+				b.previous.removeClass(c.hidden);
+				b.next.removeClass(c.hidden);
+				b.toPay.addClass(c.hidden);
+
+				b.thisStep = 2;
+				b.step1.addClass(c.hidden);
+				b.step2.removeClass(c.hidden);
+				b.step3.addClass(c.hidden);
 			},
 			showStep3 : function () {
+				var a = SmartCore.constructor.switcher,
+					b = a.vars,
+					c = a.classes;
+				b.nav3.addClass(c.active);
+				b.nav3.removeClass(c.stepped);
 
+				b.nav2.removeClass(c.active);
+				b.nav2.addClass(c.stepped);
+				b.nav3.addClass(c.active);
+
+				b.previous.removeClass(c.hidden);
+				b.next.addClass(c.hidden);
+				b.toPay.removeClass(c.hidden);
+
+				b.thisStep = 3;
+				b.step2.addClass(c.hidden);
+				b.step3.removeClass(c.hidden);
 			}
 		}
     },
