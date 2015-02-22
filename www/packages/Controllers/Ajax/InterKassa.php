@@ -23,13 +23,30 @@ class InterKassa {
 
 	public function run () {
 		if (isset ($_GET ['method']) and isset ($_GET ['jsonData'])) {
+<<<<<<< HEAD
 			$this->jsonData = json_decode($_GET ['jsonData'], true);
 			\Annex\Annex::showArray($this->jsonData);
+=======
+			$this->dataConvert();
+>>>>>>> origin/master
 			$method = 'method_' . $_GET ['method'];
 			$this->$method ();
 		} else
 			exit ('Access error!');
 	}
+
+    private function dataConvert() {
+        $customerData = json_decode($_GET ['jsonData']);
+        $services['surgutch']['id'] = $customerData['services']['surgutchId'];
+        $services['smell']['id'] = $customerData['services']['smellId'];
+        $services['meal']['id'] = $customerData['services']['mealId'];
+        $services['burnt_edges']['id'] = $customerData['services']['burnt_edgesId'];
+        $services['delivery'] = $customerData['services']['delivery'];
+
+        $this->jsonData['services'] = $services;
+        $this->jsonData['letter'] = $customerData['letter'];
+        $this->jsonData['customerContacts'] = $customerData['customerContacts'];
+    }
 
 	public function method_redirect () {
 		$orders = new \Models\Orders ();
