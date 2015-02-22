@@ -10,9 +10,9 @@ namespace Models;
 
 
 class InterKassa {
-	private $kassId = '';
-	private $ik_key = '';
-	private $secret_ik_key = '';
+	private $kassId = '54d4da12bf4efcbf0d441ccf';
+	private $ik_key = 'TyFQbIgXHFgXKhBm';
+	private $test_ik_key = 'gYNvFFaiEmFBR7WN';
 	private $cur = 'UAH';
 	private $desc = 'Оплата за письмо; Письмосыл.com';
 	const DEBUG = true;

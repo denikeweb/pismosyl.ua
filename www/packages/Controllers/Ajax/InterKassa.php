@@ -50,6 +50,6 @@ class InterKassa {
 	}
 
 	public function method_response_handler () {
-		(new \Models\InterKassa())->redirect ();
+		(new \Models\InterKassa())->handle ();
 	}
 }

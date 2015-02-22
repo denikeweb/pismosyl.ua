@@ -154,7 +154,11 @@ SmartCore = {
 					a.showStep3 ();
 			},
 			toPayHandler : function () {
-				
+				SmartCore.services.InterKassa.redirect(
+					SmartCore.services.InterKassa.dataStab.services,
+					SmartCore.services.InterKassa.dataStab.letter,
+					SmartCore.services.InterKassa.dataStab.customerContacts
+				);
 			},
 			showStep1 : function () {
 				var a = SmartCore.constructor.switcher,
@@ -251,20 +255,35 @@ SmartCore = {
             });
         }
     },
-    testAndriy: {
-        ajaxTest: function() {
-            var sendData = 'action=GetText&id=1';
-            $.ajax({
-                url: '//' + document.domain + '/ajax',
-                type: 'GET',
-                timeout: 5000,
-                data: sendData,
-                success : function (msg) {
-                    var response = msg;
-                    console.log(response);
-                }
-            });
-			return;
-        }
-    }
+	services : {
+		InterKassa : {
+			dataStab : {
+				services : {
+
+				},
+				letter : {
+
+				},
+				customerContacts : {
+
+				}
+			},
+			redirect : function ($services, $letter, $customerContacts) {
+				var url = '//' + document.domain + '/ajax?action=InterKassa&method=redirect&jsonData=',
+					jsonDataArray = {
+						services: $services,
+						letter: $letter,
+						customerContacts: $customerContacts
+					};
+				var jsonData = JSON.stringify(jsonDataArray);
+				window.location.href = url + jsonData;
+			},
+			respTrue : function () {
+
+			},
+			respFalse : function () {
+
+			}
+		}
+	}
 };
