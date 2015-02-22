@@ -113,33 +113,36 @@ body {
 	text-align: justify;
 }
 
+$ps-green: #609A34;
+$ps-red: #c8692a;
+$ps-shadow-green: #2b4e12;
+$ps-shadow-red: #612e0d;
+$btn-color: #fbf4b3;
 button {
-	width: 315px;
-	height: 68px;
 	display: block;
 	cursor: pointer;
 	outline: none;
-}
-
-$ps-green: #609A34;
-$ps-red: #c8692a;
-.buyButton {
-	background-color: $ps-green;
 	border: 0;
 	border-radius: 3px;
-	margin-bottom: 15px;
-	box-shadow: 0 3px #2b4e12;
+	color: $btn-color;
 	font: 14pt "PTSansRegular";
-	color: #fbf4b3;
+	background-color: $ps-green;
+	box-shadow: 0 3px $ps-shadow-green;
+}
+
+.buyButton {
+	width: 315px;
+	height: 68px;
+	background-color: $ps-green;
+	box-shadow: 0 3px $ps-shadow-green;
+	margin-bottom: 15px;
 }
 
 .infoButton {
-	background-color: #c8692a;
-	border: 0;
-	border-radius: 3px;
-	box-shadow: 0 3px #612e0d;
-	font: 14pt "PTSansRegular";
-	color: #fbf4b3;
+	width: 315px;
+	height: 68px;
+	background-color: $ps-red;
+	box-shadow: 0 3px $ps-shadow-red;
 }
 /*Кінець Про послугу*/
 
@@ -536,8 +539,7 @@ $prev-active-bdr: #D8D8D8;
 }
 .constructor-next {
 	display: inline-block;
-	border: none;
-	background: $ps-green;
+	border-radius: 0px;
 	width: 200px;
 	height: 40px;
 	color: $w;
