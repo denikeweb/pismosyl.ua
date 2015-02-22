@@ -11,19 +11,13 @@
             $template = new Templates();
             $listTemplates = $template->getAllTemplatesCategoriesPreviews();
 
-            $templateText = $template->getTemplateText(2);
-
             $services = new Services();
             $servicesList = $services->getAllServicesList();
-
-            //TODO:
-            $templatesText = $templateText;
 
 			$data = [
 				'c' => $listTemplates,
 				//'templateText' => $templateText,
-				'servicesList' => $servicesList,
-                'firstText' => $templatesText
+				'servicesList' => $servicesList
 			];
 
             $order = new Orders();
@@ -37,7 +31,9 @@
                     'meal' =>
                         ['id' => 1],
                     'delivery' =>
-                        ['id' => 2],
+                        ['id' => 2,
+                         'address' => 'м. Київ, вул. Київська 21',
+                         'nameWhom' => 'Софія Крушельницька'],
                     'burnt_edges' =>
                         ['id' => 1]
                ];
@@ -46,13 +42,14 @@
                 'templateId' => '1'
                 ];
 			$userData = [  'email' => 'den@lux-blog.org',
-	                        'phone' => '097 854 82 45',
+	                        'phone' => '097 888 88 44',
 	                        'name' => 'Lacosta'
 	                      ];
             $order->setOrderData ($services, $letter, $userData);
-            $price = $order->calculateOrderPrice(20);
-            $errors = $order->checkCorrectness();
-            $templates = $template->substitutePattern($templatesText);
+            //$discount = 20;
+            //$query = $order->createOrder($services, $letter,$userData,$discount);
+            //\Annex\Annex::showArray($query);
+            //$errors = $order->checkCorrectness();
             //\Anex::showArray($templates);
 			//\Anex::showArray($templateText);
 			//\Anex::showArray($servicesList);

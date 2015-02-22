@@ -40,6 +40,10 @@ class Orders {
         $this->user = $user;
     }
 
+    //TODO: Зробити перевірку всіх параметрів, щоб була безпечна робота із БД
+    //TODO: 1) Поставить у Values кавички
+    //TODO: 2) у всіх рядках проеккранувати дані (створити змінні)
+    //TODO: 3) у всіх рядках проеккранувати дані (створити змінні)
     /**
      * function for creating a new order
      *
@@ -61,27 +65,91 @@ class Orders {
      * @param $letter = [
                 'templateId' => ,
                 'customerText' => ,
-                'comments' => ,
-                'personalText' =>
-                    ['description' => ,
-                     'photo' => ,
-                     'socialNetwors' => ]
+                'commentsPersonalText' => ,
                 ];
 
      * @param   $customerContacts = [ 'email' => ,
      *                                'phone' => ,
      *                                'name' =>
      *                              ]
+     * @param   $discountProc - величина знижки
      * @param   $price
     */
-    public function createOrder($services, $letter, $customerContacts, $price) {
-        $insertUserQuery = 'INSERT INTO ';
-        //set $id;
-        return true;
+    public function createOrder($services, $letter, $customerContacts, $discountProc=20) {
+        $userId = $this->createUser($customerContacts);
+        if ($userId != 0) {
+            $addOrderTableCols = 'INSERT INTO `orders_data`(`orders_data_status`,';
+            $addOrderValues = ' VALUES(0,';
+
+            if (array_key_exists('surgutch',$services)) {
+                $addOrderTableCols.='`surguch_id`,';
+                $addOrderValues.=$services['surgutch']['id'].',';
+            }
+            if (array_key_exists('smell',$services)) {
+                $addOrderTableCols.='`smell_id`,';
+                $addOrderValues.=$services['smell']['id'].', ';
+            }
+            if (array_key_exists('eat_id',$services)) {
+                $addOrderTableCols.='`eat_id`,';
+                $addOrderValues.=$services['meal']['id'].', ';
+            }
+            if (array_key_exists('burnt_edges',$services)) {
+                $addOrderTableCols.='`orders_data_burnt_edges`,';
+                $addOrderValues.=$services['burnt_edges']['id'].', ';
+            }
+
+            $addOrderTableCols.='`delivery_id`, `orders_data_to`, `orders_data_whom`,';
+            $addOrderValues.=$services['delivery']['id'].',\''.$services['delivery']['address'].'\','
+                             .'\''.$services['delivery']['nameWhom'].'\',';
+
+            if (array_key_exists('templateId',$letter)) {
+                $addOrderTableCols.='`templates_id`,';
+                $addOrderValues.=$letter['templateId'].',';
+            }
+
+            if (array_key_exists('customerText',$letter)) {
+                $addOrderTableCols .= '`orders_data_text`,';
+                $addOrderValues .= $letter['customerText'].',';
+            }
+
+            if (array_key_exists('commentsPersonalText',$letter)) {
+                $needCopywriting = 1;
+                $addOrderTableCols .= '`orders_data_details`, `orders_data_need_copywriting`,';
+                $addOrderValues .= $letter['commentsPersonalText'].','.$needCopywriting.',';
+            }
+
+            $payed = 0;
+            $price = $this->calculateOrderPrice($discountProc,$services,$letter);
+            $addOrderTableCols.='`orders_data_price`,`orders_data_payed`,';
+            $addOrderValues.= ($price['discount']*100).','.$payed.',';
+
+            $addOrderTableCols.= '`user_id`) ';
+            $addOrderValues.= $userId.')';
+
+            $addOrderQuery = $addOrderTableCols.$addOrderValues;
+        }
+        $res = \App\Core::db()->query($addOrderQuery);
+        $id = \App\Core::db()->insert_id;
+        return $id;
     }
 
+    //TODO: Зробити перевірку всіх параметрів, щоб була безпечна робота із БД
+    private function createUser($customerContacts){
+        $insertUserQuery = 'INSERT INTO `users`(`users_email`,`users_phone`, `users_name`)
+                            VALUES(?,?,?)';
+        if ($stmt = \App\Core::db()->prepare($insertUserQuery)) {
+            $stmt->bind_param('sss', $customerContacts['email'],$customerContacts['phone'],$customerContacts['name']);
+            $stmt->execute();
+            $id = \App\Core::db()->insert_id;
+            $stmt->close();
+        }
+        return $id;
+    }
+
+    //TODO: перевірити на помилки і зробити реакцію адекватну на них
     public function getOrderPrice($id) {
         $price = 0;
+        //$id = intval($id);
         $queryString = 'SELECT `orders_data_price`
                     FROM  `orders_data`
                     WHERE `orders_data`.`orders_id`=?';
