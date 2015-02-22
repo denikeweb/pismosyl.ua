@@ -1,4 +1,7 @@
 <div>
+
+
+
 	<div class="constructor-navigator step1 stepped">
 		Шаг 1: Выбор письма
 	</div><div class="constructor-navigator step2 active">
@@ -6,7 +9,6 @@
 	</div><div class="constructor-navigator step3">
 		Шаг 3: Оплата
 	</div>
-
 
 	<div class="constructor-steps step1">
 		<div class="letters categories">
@@ -75,9 +77,15 @@
 			<?php
 				endforeach;
 			?>
-		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"><?= $firstText ?></div></div>
+		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"></div></div>
 	</div>
 	<div class="constructor-steps step2 hidden">2</div>
 	<div class="constructor-steps step3 hidden">3</div>
-	<div class="text-right"><button class="button constructor-next">Далее</button></div>
+
+
+	<div class="text-right constructor-switcher-bar">
+		<button class="button constructor-switcher previous">Назад</button>
+		<button class="button constructor-switcher next">Далее</button>
+		<button class="button constructor-switcher toPay">Оплатить заказ</button>
+	</div>
 </div>

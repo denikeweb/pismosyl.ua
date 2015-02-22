@@ -308,26 +308,21 @@ footer {
   display: none; }
 
 .constructor-navigator {
-  width: 293px;
-  padding: 10px;
+  width: 294px;
+  padding: 5px 10px;
   display: inline-block;
-  background: rgba(200, 105, 42, 0.5);
   cursor: default;
-  margin-bottom: 10px; }
-  .constructor-navigator.step2 {
-    border-left: 1px solid white; }
+  text-align: center; }
   .constructor-navigator.step3 {
-    border-left: 1px solid white;
     width: 292px; }
   .constructor-navigator.active {
-    background: rgba(200, 105, 42, 0.8); }
+    font-weight: bold; }
   .constructor-navigator.stepped {
-    background: rgba(200, 105, 42, 0.8);
-    color: #cccccc; }
+    color: #999999; }
 
 .constructor-steps {
   background: #fcfcfb;
-  border-bottom: 1px solid #cccccc; }
+  border-bottom: 1px solid #eeeeee; }
   .constructor-steps.step1 {
     height: 470px; }
 
@@ -418,15 +413,25 @@ footer {
   display: block;
   margin: 3px 0; }
 
-.constructor-next {
+.constructor-switcher {
   display: inline-block;
-  border-radius: 0px;
-  width: 200px;
-  height: 40px;
-  color: white; }
+  border-radius: 2px;
+  width: 120px;
+  height: 25px;
+  color: white;
+  font-size: 16px; }
+  .constructor-switcher.previous {
+    float: left; }
+  .constructor-switcher.next {
+    float: right; }
 
 .text-right {
   text-align: right; }
+
+.constructor-switcher-bar {
+  background: #fcfcfb;
+  padding: 10px;
+  height: 27px; }
 
 /**
 	constructor end */

@@ -1,11 +1,16 @@
 SmartCore = {
 	main : function () {
-		SmartCore.libs.gallery.init();
-		SmartCore.libs.scrollBar.init();
+		SmartCore.libs.gallery.init ();
+		SmartCore.libs.scrollBar.init ();
+
+		SmartCore.navigation.menuAnimation ();
+
 		$('.ctgr').on ('click', SmartCore.constructor.templates.catClick);
 		$('.ctgrList').on ('click', SmartCore.constructor.templates.openCatList);
-        SmartCore.navigation.menuAnimation();
 		$('.preview-box').on ('click', SmartCore.constructor.templates.showText);
+
+		SmartCore.constructor.templates.init ();
+		SmartCore.constructor.switcher.init ();
 	},
 	globals : {
 		lastOpenedSubCat : undefined,
@@ -27,6 +32,9 @@ SmartCore = {
 	},
 	constructor : {
 		templates : {
+			init : function () {
+				$('.letters.categories').children ().first().click ();
+			},
 			catClick : function () {
 				var $this = $(this),
 					dataId = $this.attr ('data-id'),
@@ -90,6 +98,33 @@ SmartCore = {
 				$('.preview-box.active').removeClass(active);
 				textContainerObj.parent().addClass (active);
 				SmartCore.globals.thisTemplateId = id;
+			}
+		},
+		switcher : {
+			vars : {
+				step1 : undefined,
+				step2 : undefined,
+				step3 : undefined,
+				previous : undefined,
+				next : undefined,
+				toPay : undefined
+			},
+			init : function () {
+				this.vars.step1     =  $('.constructor-navigator.step1');
+				this.vars.step2     =  $('.constructor-navigator.step2');
+				this.vars.step3     =  $('.constructor-navigator.step3');
+				this.vars.previous  =  $('.constructor-switcher.previous');
+				this.vars.next      =  $('.constructor-switcher.next');
+				this.vars.toPay     =  $('.constructor-switcher.toPay');
+			},
+			previousHandler : function () {
+
+			},
+			nextHandler : function () {
+
+			},
+			toPayHandler : function () {
+
 			}
 		}
     },

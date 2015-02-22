@@ -375,6 +375,8 @@ $g3: #333333;
 $g6: #666666;
 $g9: #999999;
 $c: #cccccc;
+$d: #ddd;
+$e: #eee;
 $w: white;
 $tsp: rgba(0,0,0,0);
 
@@ -402,33 +404,36 @@ $prev-active-bdr: #D8D8D8;
 	display: none;
 }
 .constructor-navigator {
-	width: 293px;
-	padding: 10px;
+	width: 294px;
+	padding: 5px 10px;
 	display: inline-block;
-	background: rgba(200,105,42,0.5);
 	cursor: default;
-	margin-bottom: 10px;
+	text-align: center;
+	//	background: $steps-bg;
+	//	border-top: 1px solid $e;
+	//	border-bottom: 1px solid $e;
 	&.step1 {
 
 	}
 	&.step2 {
-		border-left: 1px solid $w;
+		//border-left: 1px solid $w;
 	}
 	&.step3 {
-		border-left: 1px solid $w;
+		//border-left: 1px solid $w;
 		width: 292px;
 	}
 	&.active {
-		background: rgba(200,105,42,0.8);
+		//background: $cat-active-bg;
+		font-weight: bold;
 	}
 	&.stepped {
-		background: rgba(200,105,42,0.8);
-		color: $c;
+		//background: $e;
+		color: $g9;
 	}
 }
 .constructor-steps {
 	background: $steps-bg;
-	border-bottom: 1px solid $c;
+	border-bottom: 1px solid $e;
 	&.step1 {
 		height: 470px;
 	}
@@ -537,15 +542,27 @@ $prev-active-bdr: #D8D8D8;
 		margin: 3px 0;
 	}
 }
-.constructor-next {
+.constructor-switcher {
 	display: inline-block;
-	border-radius: 0px;
-	width: 200px;
-	height: 40px;
+	border-radius: 2px;
+	width: 120px;
+	height: 25px;
 	color: $w;
+	font-size: 16px;
+	&.previous {
+		float: left;
+	}
+	&.next {
+		float: right;
+	}
 }
 .text-right {
 	text-align: right;
+}
+.constructor-switcher-bar {
+	background: $steps-bg;
+	padding: 10px;
+	height: 27px;
 }
 	/**
 		constructor end */
