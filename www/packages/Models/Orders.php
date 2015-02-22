@@ -126,10 +126,12 @@ class Orders
             $addOrderValues .= '\''.$userId . '\')';
 
             $addOrderQuery = $addOrderTableCols . $addOrderValues;
+	        $res = \App\Core::db()->query($addOrderQuery);
+	        $id = \App\Core::db()->insert_id;
+	        return $id;
+        } else {
+	        echo 'DB connection error!';
         }
-        $res = \App\Core::db()->query($addOrderQuery);
-        $id = \App\Core::db()->insert_id;
-        return $id;
     }
 
     private function createUser($customerContacts)
@@ -170,8 +172,8 @@ class Orders
 		return 20;
 	}
 
-	public function getCalcPrice ($services = null, $letter = null) {
-		return $this->calculateOrderPrice($services = null, $letter = null) ['discount'];
+	public function getCalcPrice ($services, $letter) {
+		return $this->calculateOrderPrice($services, $letter) ['discount'];
 	}
 
     /**TEST. TODO: оплату на 100 символів начислять

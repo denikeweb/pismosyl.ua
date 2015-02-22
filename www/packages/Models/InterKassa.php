@@ -28,7 +28,7 @@ class InterKassa {
 		];
 		if (self::DEBUG) {
 			$comment = '//';
-			\Annex\Dev::showArray ($params);
+			\Annex\Annex::showArray ($params);
 		}
 		echo '<html>
 			<head>
