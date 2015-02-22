@@ -515,10 +515,21 @@ $prev-active-bdr: #D8D8D8;
 		font-size: 10px;
 	}
 }
-/**
-	constructor end */
+.template {
+	&Input {
 
-/** gallery*/
+	}
+	&TextArea {
+		resize: none;
+		width: 470px;
+		height: 200px;
+	}
+}
+	/**
+		constructor end */
 
-#cboxOverlay {background: rgba(0,0,0,0.8) !important;}
+	/** gallery*/
+
+	#cboxOverlay {background: rgba(0,0,0,0.8) !important;}
+}
 /** gallery */

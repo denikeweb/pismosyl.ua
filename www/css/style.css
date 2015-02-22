@@ -147,8 +147,7 @@ img.first {
 
 .photoSetPic {
   line-height: 0;
-  font-size: 0;
-}
+  font-size: 0; }
 
 /*Кінець Фотографії*/
 /*Початок Для кого*/
@@ -214,9 +213,9 @@ p.ywCenter {
   margin: 0 0 0 12px; }
 
 .pictureSB, .pictureC {
-    line-height: 0;
-    font-size: 0;
-}
+  line-height: 0;
+  font-size: 0; }
+
 /*Кінець Кроки*/
 /*Початок Конструктора*/
 .constructor {
@@ -406,10 +405,13 @@ footer {
 .ctgr:before {
   font-size: 10px; }
 
-/**
-	constructor end */
-/** gallery*/
-#cboxOverlay {
-  background: rgba(0, 0, 0, 0.8) !important; }
+.template {
+  /**
+  	constructor end */
+  /** gallery*/ }
+  .templateTextArea {
+    resize: none; }
+  .template #cboxOverlay {
+    background: rgba(0, 0, 0, 0.8) !important; }
 
 /** gallery */
