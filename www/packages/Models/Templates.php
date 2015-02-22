@@ -74,13 +74,13 @@ class Templates {
         $subStrings = explode('[$INPUT$]',$replacedString);
         $numSubStr = count($subStrings);
         if ($numSubStr > 1) {
-            $replacedString = implode("<input class='.templateInput' type='text'/>", $subStrings);
+            $replacedString = implode("<input class='templateInput' type='text'/>", $subStrings);
         }
 
         $subStrings = explode('[$TEXT$]',$replacedString);
         $numSubStr = count($subStrings);
         if ($numSubStr > 1) {
-            $replacedString = implode("<textarea class='.templateTextArea'></textarea> ", $subStrings);
+            $replacedString = implode("<textarea class='templateTextArea'></textarea> ", $subStrings);
         }
         return $replacedString;
     }
