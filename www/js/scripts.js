@@ -35,6 +35,7 @@ SmartCore = {
 				$this.addClass('active');
 				$('.catGroup').addClass('hidden');
 				thisCatGroup.removeClass('hidden');
+				SmartCore.constructor.templates.showText(thisCatGroup.children [0]);
 			},
 			openCatList : function () {
 				var $this = $(this),
@@ -50,9 +51,14 @@ SmartCore = {
 				$this.removeClass('closed').addClass('opened');
 				SmartCore.globals.lastOpenedSubCat.show ();
 			},
-			showText : function () {
-				var $thisCldrn = $(this).children (),
-					id = $thisCldrn.filter('.preview-id').html (),
+			showText : function (thisObj) {
+				var $thisCldrn = undefined;
+				if (thisObj == undefined)
+					$thisCldrn = $(this).children ();
+				else
+					$thisCldrn = thisObj.children ();
+
+				var id = $thisCldrn.filter('.preview-id').html (),
 					textContainerObj = $thisCldrn.filter('.preview-text'),
 					text = textContainerObj.html ();
 				if (text.length > 0)
