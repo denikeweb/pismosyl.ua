@@ -280,6 +280,11 @@ class Orders
         return $errors;
     }
 
+    /**
+     * @param $id - id замовлення, за яке здійснили оплату
+     *
+     * @return - повертає 1, якщо вдалось здійснити оплату; 0 - якщо не вдалось
+     */
     public function getPaid($id)
     {
         $id = intval($id);
@@ -289,9 +294,9 @@ class Orders
         if ($stmt = \App\Core::db()->prepare($paidQuery)) {
             $stmt->bind_param('i', $id);
             $stmt->execute();
-            affected_rows;
+            $res = $stmt->affected_rows;
             $stmt->close();
         }
-        echo $res;
+        return $res;
     }
 }
