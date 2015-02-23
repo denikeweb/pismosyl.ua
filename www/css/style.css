@@ -352,7 +352,8 @@ footer {
     .letters.categories .letters-item {
       padding: 3px;
       cursor: pointer;
-      border: 1px solid transparent; }
+      border: 1px solid transparent;
+      padding-left: 15px; }
       .letters.categories .letters-item.active {
         background: #c1deec !important;
         border: 1px solid #8bcbe8 !important; }
@@ -392,15 +393,14 @@ footer {
   display: none; }
 
 .ctgrList {
-  color: #666666; }
-  .ctgrList.closed:before {
-    content: '▼ ';
-    font-size: 10px;
-    font-family: Arial; }
-  .ctgrList.opened:before {
-    content: '▲ ';
-    font-size: 10px;
-    font-family: Arial; }
+  color: #666666;
+  }
+  .ctgrList.closed {
+      background: url("../img/down.png") no-repeat;
+    }
+  .ctgrList.opened {
+    background: url("../img/up.png") no-repeat;
+     }
 
 .ctgr:before {
   font-size: 10px; }
