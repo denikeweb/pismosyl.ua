@@ -92,7 +92,9 @@
 		</div>
 		<?php \Annex\Annex::showArray($servicesList); ?>
 	</div>
-	<div class="constructor-steps step3 hidden">3</div>
+	<div class="constructor-steps step3 hidden center">
+		
+	</div>
 
 
 	<div class="text-right constructor-switcher-bar">

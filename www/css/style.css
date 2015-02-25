@@ -1,3 +1,8 @@
+@charset "IBM866";
+body, div, a, p, span, ul, li, strong, em, del {
+  font-family: "PT Sans", Tahoma, Arial, sans-serif;
+  font-size: 14px; }
+
 body {
   background-color: #201A1A;
   margin: 0;
@@ -497,6 +502,9 @@ input {
     input:focus:-ms-input-placeholder {
       text-indent: 500px;
       transition: text-indent 0.5s ease; }
+
+.center {
+  text-align: center; }
 
 /**
 	forms begin

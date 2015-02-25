@@ -11,6 +11,7 @@ SmartCore = {
 
 		SmartCore.constructor.templates.init ();
 		SmartCore.constructor.switcher.init ();
+		$('.constructorVisitor').on ('change', SmartCore.constructor.validator.visitor);
 	},
 	globals : {
 		lastOpenedSubCat : undefined,
@@ -215,6 +216,68 @@ SmartCore = {
 				b.step2.addClass(c.hidden);
 				b.step3.removeClass(c.hidden);
 			}
+		},
+		validator : {
+			valid_all : function ($services, $letter) {
+				var jsonDataArray = {
+					services: $services,
+					letter: $letter
+				};
+				var jsonData = JSON.stringify(jsonDataArray);
+				var sendData = 'action=GetText&jsonData=' + jsonData,
+					successFunc = function (text) {
+						SmartCore.constructor.templates.saveText(textContainerObj, text);
+						SmartCore.constructor.templates.viewText(id, text, textContainerObj);
+					};
+				$.ajax({
+					url: '//' + document.domain + '/ajax',
+					type: 'GET',
+					timeout: 5000,
+					data: sendData,
+					success : successFunc
+				});
+			},
+			get_price : function () {
+
+			},
+			generate_services : function () {
+				var rows = {};
+				rows = {
+					surgutchId : 1,
+					smellId : 1,
+					mealId : -1, //не вибрано, значить -1
+					burnt_edgesId : 1,
+					delivery : {
+						id : 2,
+						address : 'м. Київ, вул. Київська 21',
+						nameWhom : 'Софія Крушельницька'
+					}
+				};
+				return rows;
+			},
+			generate_letter : function () {
+				var rows = {};
+				rows = {
+					templateId : 3,
+					customerText : 'Кохана, подай свій мобільний, я хочу побачить від кого прийшла смс-ка',
+					commentsPersonalText : 'Напишіть мені лист'
+				};
+				return rows;
+			},
+			generate_contacts : function () {
+				var rows = {};
+				rows = {
+					email : 'den@lux-blog.org',
+					phone : '097 888 88 44',
+					name : 'Lacosta'
+				};
+				return rows;
+			},
+			visitor : function () {
+				var $services = SmartCore.constructor.validator.generate_services(),
+					$letter = SmartCore.constructor.validator.generate_letter();
+				SmartCore.constructor.validator.valid_all($services, $letter);
+			}
 		}
     },
     navigation : {
@@ -294,6 +357,9 @@ SmartCore = {
 
 			},
 			respFalse : function () {
+
+			},
+			respPending : function () {
 
 			}
 		}
