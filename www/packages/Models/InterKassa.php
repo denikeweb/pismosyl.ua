@@ -15,7 +15,8 @@ class InterKassa {
 	private $test_ik_key = 'gYNvFFaiEmFBR7WN';
 	private $cur = 'UAH';
 	private $desc = 'Оплата за письмо; Письмосыл.com';
-	const DEBUG = true;
+	const DEBUG = false;
+	const TEST_MODE = true;
 
 	public function redirect ($id, $price) {
 		$comment = '';
@@ -50,12 +51,18 @@ class InterKassa {
 				</script>
 			</body>
 		</html>';
+		\Annex\Files::writeToEnd('logs_ik.txt', 'one successfull');
 	}
 
 	public function handle () {
 		$order = new \Models\Orders();
-		$ik_key = $this->ik_key;
+		$ik_key = (!self::TEST_MODE) ? $this->ik_key : $this->test_ik_key;
 		$dataSet = $_POST;
+		ob_start();
+		print_r($_POST);
+		$content = ob_get_clean();
+		\Annex\Files::writeToEnd('logs_ik.txt', $content);
+		\Annex\Files::writeToEnd('logs_ik.txt', '1ds');
 		$id = $dataSet['ik_pm_no'];
 		$price = $order->getOrderPrice($id);
 		if (!isset($dataSet ['ik_sign']))

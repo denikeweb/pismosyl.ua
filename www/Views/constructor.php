@@ -80,7 +80,16 @@
 		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"></div></div>
 	</div>
 	<div class="constructor-steps step2 hidde n">
+		<div class="form-blocks-2">
+			<div><label for="delivery">Доставка:</label></div>
+			<select name="server_id" id="delivery">
+				<option value="1">Азерот</option>
+				<option value="2">Калимдор</option>
+				<option value="3">Драенор</option>
+			</select>
+		</div><div class="form-blocks-2">
 
+		</div>
 		<?php \Annex\Annex::showArray($servicesList); ?>
 	</div>
 	<div class="constructor-steps step3 hidden">3</div>

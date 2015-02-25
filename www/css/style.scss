@@ -561,6 +561,82 @@ $prev-active-bdr: #D8D8D8;
 	/**
 		constructor end */
 
+/**
+	forms begin
+	*/
+$red : #cc3322;
+$input-color : #333;
+$input-bg : #f9f9f9;
+$input-bdr : #eee;
+$placeholder-color : $input-color * 0.9;
+@mixin ib ($width) {
+	display: inline-block;
+	vertical-align: top;
+	width: $width;
+}
+.form {
+	&-block-2 {
+		@include ib(455px);
+		cursor: default;
+		color: inherit;
+		&:first-of-type {
+			margin-right: 10px;
+			text-align: right;
+		}
+		&.no-text-align {
+			text-align: inherit;
+		}
+	}
+	&-line {
+		padding-bottom: 10px;
+		color: inherit;
+	}
+	&-required {
+		&:after {
+			content: '*';
+			color: $red;
+			font-weight: bold;
+		}
+	}
+}
+select,button,input {
+	outline: none;
+	width: 220px;
+	padding: 3px;
+	font-family: 'Roboto Slab';
+	font-size: 14px;
+}
+select,input {
+	padding: 3px;
+	color: $input-color;
+	background: $input-bg;
+	border: 1px solid $input-bdr;
+}
+@mixin plhdr-action ($ti) {
+	text-indent: $ti;
+	transition: text-indent 0.5s ease;
+}
+
+input {
+	width: 204px;
+	padding: 4px 7px;
+	&::-webkit-input-placeholder {@include plhdr-action (0); color: $placeholder-color;}
+	&::-moz-placeholder          {@include plhdr-action (0); color: $placeholder-color;}/* Firefox 19+ */
+	&:-moz-placeholder           {@include plhdr-action (0); color: $placeholder-color;}/* Firefox 18- */
+	&:-ms-input-placeholder      {@include plhdr-action (0); color: $placeholder-color;}
+	&:focus {
+		&::-webkit-input-placeholder {@include plhdr-action (500px);}
+		&::-moz-placeholder          {@include plhdr-action (500px);}/* Firefox 19+ */
+		&:-moz-placeholder           {@include plhdr-action (500px);}/* Firefox 18- */
+		&:-ms-input-placeholder      {@include plhdr-action (500px);}
+	}
+}
+
+/**
+	forms begin
+	*/
+
+
 /** gallery*/
 	#cboxOverlay {background: rgba(0,0,0,0.8) !important;}
 /** gallery */

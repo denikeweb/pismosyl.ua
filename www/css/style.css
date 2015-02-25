@@ -333,8 +333,7 @@ footer {
     .letters.categories .letters-item {
       padding: 3px;
       cursor: pointer;
-      border: 1px solid transparent;
-      padding-left: 15px; }
+      border: 1px solid transparent; }
       .letters.categories .letters-item.active {
         background: #c1deec !important;
         border: 1px solid #8bcbe8 !important; }
@@ -374,14 +373,15 @@ footer {
   display: none; }
 
 .ctgrList {
-  color: #666666;
-  }
-  .ctgrList.closed {
-      background: url("../img/down.png") no-repeat;
-    }
-  .ctgrList.opened {
-    background: url("../img/up.png") no-repeat;
-     }
+  color: #666666; }
+  .ctgrList.closed:before {
+    content: '▼ ';
+    font-size: 10px;
+    font-family: Arial; }
+  .ctgrList.opened:before {
+    content: '▲ ';
+    font-size: 10px;
+    font-family: Arial; }
 
 .ctgr:before {
   font-size: 10px; }
@@ -426,6 +426,81 @@ footer {
 
 /**
 	constructor end */
+/**
+	forms begin
+	*/
+.form-block-2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 455px;
+  cursor: default;
+  color: inherit; }
+  .form-block-2:first-of-type {
+    margin-right: 10px;
+    text-align: right; }
+  .form-block-2.no-text-align {
+    text-align: inherit; }
+.form-line {
+  padding-bottom: 10px;
+  color: inherit; }
+.form-required:after {
+  content: '*';
+  color: #cc3322;
+  font-weight: bold; }
+
+select, button, input {
+  outline: none;
+  width: 220px;
+  padding: 3px;
+  font-family: 'Roboto Slab';
+  font-size: 14px; }
+
+select, input {
+  padding: 3px;
+  color: #333333;
+  background: #f9f9f9;
+  border: 1px solid #eeeeee; }
+
+input {
+  width: 204px;
+  padding: 4px 7px;
+  /* Firefox 19+ */
+  /* Firefox 18- */ }
+  input::-webkit-input-placeholder {
+    text-indent: 0;
+    transition: text-indent 0.5s ease;
+    color: #2d2d2d; }
+  input::-moz-placeholder {
+    text-indent: 0;
+    transition: text-indent 0.5s ease;
+    color: #2d2d2d; }
+  input:-moz-placeholder {
+    text-indent: 0;
+    transition: text-indent 0.5s ease;
+    color: #2d2d2d; }
+  input:-ms-input-placeholder {
+    text-indent: 0;
+    transition: text-indent 0.5s ease;
+    color: #2d2d2d; }
+  input:focus {
+    /* Firefox 19+ */
+    /* Firefox 18- */ }
+    input:focus::-webkit-input-placeholder {
+      text-indent: 500px;
+      transition: text-indent 0.5s ease; }
+    input:focus::-moz-placeholder {
+      text-indent: 500px;
+      transition: text-indent 0.5s ease; }
+    input:focus:-moz-placeholder {
+      text-indent: 500px;
+      transition: text-indent 0.5s ease; }
+    input:focus:-ms-input-placeholder {
+      text-indent: 500px;
+      transition: text-indent 0.5s ease; }
+
+/**
+	forms begin
+	*/
 /** gallery*/
 #cboxOverlay {
   background: rgba(0, 0, 0, 0.8) !important; }
