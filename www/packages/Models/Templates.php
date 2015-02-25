@@ -17,7 +17,7 @@ class Templates {
                       `templates_categories_eventdate`
                     FROM  `templates_categories`
                     WHERE `templates_categories`.`templates_categories_parent_id` IS NULL');
-        $tempCategoriesRep = $query->fetch_all(MYSQL_ASSOC);
+        $tempCategoriesRep = \App\Core::fetch_all($query);
         $categories = [];
         foreach ($tempCategoriesRep as $key => $value) {
             $categories[$value['templates_categories_id']] = $value;
@@ -25,7 +25,7 @@ class Templates {
         $query = \App\Core::db()->query('SELECT *
                     FROM  `templates_categories`
                     WHERE `templates_categories`.`templates_categories_parent_id` IS NOT NULL');
-        $tempCategoriesRep = $query->fetch_all(MYSQL_ASSOC);
+        $tempCategoriesRep = \App\Core::fetch_all($query);
         foreach ($tempCategoriesRep as $key => $value){
             if ($categories[$value['templates_categories_parent_id']]['subcategory'] == null)
                 $categories[$value['templates_categories_parent_id']]['subcategory'] = array();
@@ -55,7 +55,7 @@ class Templates {
                     WHERE `templates`.`templates_categories_id`=\''.intval($tempCatId)
                     .'\' ORDER BY `templates_id` DESC';
         $query = \App\Core::db()->query($queryString);
-        $result = $query->fetch_all(MYSQL_ASSOC);
+        $result = \App\Core::fetch_all($query);
         return $result;
     }
 
@@ -65,7 +65,7 @@ class Templates {
                     FROM  `templates`
                     WHERE `templates`.`templates_id`='.intval($templateId);
         $query = \App\Core::db()->query($queryString);
-        $queryRes = $query->fetch_all(MYSQL_ASSOC);
+        $queryRes = \App\Core::fetch_all($query);
         $templateText = $this->substitutePattern($queryRes[0]['templates_text']);
         return $templateText;
     }
