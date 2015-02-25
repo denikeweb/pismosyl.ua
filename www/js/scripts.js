@@ -259,8 +259,8 @@ SmartCore = {
 		InterKassa : {
 			dataStab : {
 				services : {
-                    surgutchId : 15,
-                    smellId : 15,
+                    surgutchId : 1,
+                    smellId : 1,
                     mealId : -1, //не вибрано, значить -1
                     burnt_edgesId : 1,
                     delivery : {

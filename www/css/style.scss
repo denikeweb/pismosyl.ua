@@ -1,27 +1,5 @@
-/* font-family: "PTSansRegular"; */
-@font-face {
-	font-family: "PTSansRegular";
-	src: url("../fonts/PTSansRegular/PTSansRegular.eot");
-	src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/PTSansRegular/PTSansRegular.woff") format("woff"),
-	url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: "PTSansBold";
-	src: url("../fonts/PTSansBold/PTSansBold.eot");
-	src: url("../fonts/PTSansBold/PTSansBold.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/PTSansBold/PTSansBold.woff") format("woff"),
-	url("../fonts/PTSansBold/PTSansBold.ttf") format("truetype");
-	font-style: normal;
-	font-weight: normal;
-}
-/* font-family: "PTSansRegular"; */
-
 body, div, a, p, span, ul, li, strong, em, del {
-	font-family: "PTSansRegular", Tahoma, Arial, sans-serif;
+	font-family: "PT Sans", Tahoma, Arial, sans-serif;
 	font-size: 14px; }
 
 body {
@@ -37,20 +15,20 @@ body {
 }
 
 .headerText {
-	font: 18pt "PTSansRegular";
+	font: 18pt "PT Sans";
 	color: #1f1e18;
 	line-height: 18px;
 	margin: 0;
 }
 
 .usualText {
-	font: 14pt "PTSansRegular";
+	font: 14pt "PT Sans";
 	color: #1f1e18;
 	margin: 0;
 }
 
 .boldText {
-	font: 14pt "PTSansBold";
+	font: bold 14pt "PT Sans";
 	color: #1f1e18;
 	margin: 0;
 }
@@ -108,7 +86,7 @@ body {
 	color: #F9F5CF;
 	width: 456px;
 	margin-bottom: 30px;
-	font: 14pt "PTSansRegular";
+	font: 14pt "PT Sans";
 	color: #fbf4b3;
 	text-align: justify;
 }
@@ -125,7 +103,7 @@ button {
 	border: 0;
 	border-radius: 3px;
 	color: $btn-color;
-	font: 14pt "PTSansRegular";
+	font: 14pt "PT Sans";
 	background-color: $ps-green;
 	box-shadow: 0 3px $ps-shadow-green;
 }
