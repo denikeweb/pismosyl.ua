@@ -15,7 +15,8 @@ SmartCore = {
 	},
 	globals : {
 		lastOpenedSubCat : undefined,
-		thisTemplateId : 0
+		thisTemplateId : 0,
+		personalText : false
 	},
 	libs : {
 		scrollBar : {
@@ -220,11 +221,11 @@ SmartCore = {
 		validator : {
 			valid_all : function ($services, $letter) {
 				var jsonDataArray = {
-					services: $services,
-					letter: $letter
-				};
-				var jsonData = JSON.stringify(jsonDataArray);
-				var sendData = 'action=GetText&jsonData=' + jsonData,
+						services: $services,
+						letter: $letter
+					},
+				jsonData = JSON.stringify(jsonDataArray),
+				sendData = 'action=Validator&jsonData=' + jsonData,
 					successFunc = function (text) {
 						SmartCore.constructor.templates.saveText(textContainerObj, text);
 						SmartCore.constructor.templates.viewText(id, text, textContainerObj);
@@ -258,10 +259,15 @@ SmartCore = {
 			generate_letter : function () {
 				var rows = {};
 				rows = {
-					templateId : 3,
-					customerText : 'Кохана, подай свій мобільний, я хочу побачить від кого прийшла смс-ка',
-					commentsPersonalText : 'Напишіть мені лист'
+					templateId : SmartCore.globals.thisTemplateId,
+					customerText : $('.text-letter-content').html (),
+					commentsPersonalText : $('.text-letter-content').html ()
 				};
+
+				if (SmartCore.globals.personalText === true)
+					rows.commentsPersonalText = '';
+				else
+					rows.customerText = '';
 				return rows;
 			},
 			generate_contacts : function () {
