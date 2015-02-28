@@ -88,14 +88,14 @@
 				<option value="3">Драенор</option>
 			</select>
             <div class="smellBlock"><div><label><input type="checkbox" name="smellCB" class="form2cb"/>С запахом</label></div>
-                <select name="se_id" id="smell">
+                <select name="se_id" id="smell" class="constructorVisitor">
                     <option value="1">Яндекс</option>
                     <option value="2">Розы</option>
                     <option value="3">Казмандур</option>
                 </select>
             </div>
             <div class="price">
-                <p>Конечная цена: 32,16 грн.</p>
+                <p>Конечная цена: <span class="currentPrice">32,16</span> грн.</p>
             </div>
         </div><div class="form-blocks-2">
             <div class="surgutch">

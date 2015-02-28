@@ -224,11 +224,10 @@ SmartCore = {
 						services: $services,
 						letter: $letter
 					},
-				jsonData = JSON.stringify(jsonDataArray),
+				jsonData = JSON.stringify (jsonDataArray),
 				sendData = 'action=Validator&jsonData=' + jsonData,
 					successFunc = function (text) {
-						SmartCore.constructor.templates.saveText(textContainerObj, text);
-						SmartCore.constructor.templates.viewText(id, text, textContainerObj);
+						// TODO: sth action
 					};
 				$.ajax ({
 					url: '//' + document.domain + '/ajax',
@@ -238,15 +237,30 @@ SmartCore = {
 					success : successFunc
 				});
 			},
-			get_price : function () {
-
+			get_price : function ($services, $letter) {
+				var jsonDataArray = {
+						services: $services,
+						letter: $letter
+					},
+					jsonData = JSON.stringify (jsonDataArray),
+					sendData = 'action=GetPrice&jsonData=' + jsonData,
+					successFunc = function (text) {
+						$('.currentPrice').text (text);
+					};
+				$.ajax ({
+					url: '//' + document.domain + '/ajax',
+					type: 'GET',
+					timeout: 5000,
+					data: sendData,
+					success : successFunc
+				});
 			},
 			generate_services : function () {
 				var rows = {};
 				rows = {
 					surgutchId : 1,
 					smellId : 1,
-					mealId : -1, //не вибрано, значить -1
+					mealId : -1, // не вибрано, значить -1
 					burnt_edgesId : 1,
 					delivery : {
 						id : 2,
@@ -280,9 +294,12 @@ SmartCore = {
 				return rows;
 			},
 			visitor : function () {
+				// stubs
 				var $services = SmartCore.constructor.validator.generate_services(),
 					$letter = SmartCore.constructor.validator.generate_letter();
+
 				SmartCore.constructor.validator.valid_all($services, $letter);
+				SmartCore.constructor.validator.get_price($services, $letter);
 			}
 		}
     },
