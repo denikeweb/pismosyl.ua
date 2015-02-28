@@ -100,11 +100,11 @@
         </div><div class="form-blocks-2">
             <div class="surgutch">
                 <p>Сургуч</p>
-                <div><input class="surgutchRb" name="surgutchType" type="radio"/><img src="/img/photos/letterText.png"/></div>
-                <div><input class="surgutchRb" name="surgutchType" type="radio"/></div>
-                <div><input class="surgutchRb" name="surgutchType" type="radio"/></div>
-                <div><input class="surgutchRb" name="surgutchType" type="radio"/></div>
-                <!-- input inline-block та img inline-block та вирівнювання вертикальне -->
+                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
+                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
+                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
+                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
+                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/></div>
             </div>
 		</div>
 		<?php \Annex\Annex::showArray($servicesList); ?>

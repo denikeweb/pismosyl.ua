@@ -29,6 +29,7 @@ SmartCore = {
 				$('.photoSetPic').colorbox({rel:'.photoSetPic'});
 				$('.pictureSB').colorbox({rel:'.pictureSB'});
 				$('.pictureC').colorbox({rel:'.pictureC'});
+                $('.surgutchGal').colorbox({rel:'.surgutchGal'});
 			}
 		}
 	},

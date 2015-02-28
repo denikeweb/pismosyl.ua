@@ -524,6 +524,29 @@ input {
     width: 20px;
 }
 
+.surgutchRb {
+    width: 20px;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.surgutchBlock {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px;
+    height: 40px;
+}
+
+.surgutchImg {
+    width : 40px;
+    height: 40px;
+}
+
+.surgutchBlock .surgutchGal{
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /** gallery*/
 #cboxOverlay {
