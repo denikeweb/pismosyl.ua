@@ -102,8 +102,8 @@ button {
 .infoButton {
   width: 315px;
   height: 68px;
-  background-color: #c8692a;
   color: #fbf4b3;
+  background-color: #c8692a;
   box-shadow: 0 3px #612e0d; }
 
 /*Кінець Про послугу*/
@@ -476,19 +476,19 @@ input {
   input::-webkit-input-placeholder {
     text-indent: 0;
     transition: text-indent 0.5s ease;
-    color: #2d2d2d; }
+    color: #cccccc; }
   input::-moz-placeholder {
     text-indent: 0;
     transition: text-indent 0.5s ease;
-    color: #2d2d2d; }
+    color: #cccccc; }
   input:-moz-placeholder {
     text-indent: 0;
     transition: text-indent 0.5s ease;
-    color: #2d2d2d; }
+    color: #cccccc; }
   input:-ms-input-placeholder {
     text-indent: 0;
     transition: text-indent 0.5s ease;
-    color: #2d2d2d; }
+    color: #cccccc; }
   input:focus {
     /* Firefox 19+ */
     /* Firefox 18- */ }
@@ -512,10 +512,9 @@ input {
 	forms begin
 	*/
 .form-blocks-2 {
-    display: inline-block;
-    width: 460px ;
-    vertical-align: top;
-}
+  display: inline-block;
+  width: 460px;
+  vertical-align: top; }
 
 .serviceElBlock {
     margin: 10px 0;
@@ -545,11 +544,10 @@ input {
     vertical-align: middle;
 }
 
-.smellBlock {
-  margin: 10px 0; }
-
-.form2cb {
-  width: 20px; }
+.surgutchRb {
+  width: 20px;
+  vertical-align: middle;
+  margin: 0; }
 
 .myTextWrite:before {
   content: '';
@@ -561,18 +559,31 @@ input {
   margin-right: 3px;
   margin-top: -1px; }
 
+.surgutchBlock {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 5px 0 0;
+  height: 40px; }
+
+.surgutchImg {
+  width: 40px;
+  height: 40px; }
+
+.surgutchBlock .surgutchGal {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle; }
+
 .surgutchInitsBlock {
-    margin: 10px 0 0 0;
-}
+  margin: 10px 0 0 0; }
 
 .initials {
-   width: 15px;
-}
+  width: 15px; }
 
 .paramsCB {
-    width: 20px;
-    margin: 0
-}
+  width: 20px;
+  margin: 0; }
+
 /** gallery*/
 #cboxOverlay {
   background: rgba(0, 0, 0, 0.8) !important; }
