@@ -230,7 +230,7 @@ SmartCore = {
 						SmartCore.constructor.templates.saveText(textContainerObj, text);
 						SmartCore.constructor.templates.viewText(id, text, textContainerObj);
 					};
-				$.ajax({
+				$.ajax ({
 					url: '//' + document.domain + '/ajax',
 					type: 'GET',
 					timeout: 5000,
