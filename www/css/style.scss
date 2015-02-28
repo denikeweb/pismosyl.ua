@@ -111,6 +111,7 @@ button {
 .buyButton {
 	width: 315px;
 	height: 68px;
+    color: $btn-color;
 	background-color: $ps-green;
 	box-shadow: 0 3px $ps-shadow-green;
 	margin-bottom: 15px;
@@ -119,6 +120,7 @@ button {
 .infoButton {
 	width: 315px;
 	height: 68px;
+    color: $btn-color;
 	background-color: $ps-red;
 	box-shadow: 0 3px $ps-shadow-red;
 }
@@ -640,20 +642,50 @@ input {
 	*/
 .form-blocks-2 {
   display: inline-block;
-  width: 400px ;
+  width: 460px ;
   vertical-align: top;
 }
 
-.smellBlock {
+.serviceElBlock {
   margin: 10px 0;
 }
 
-.form2cb {
+.surgutchRb {
   width: 20px;
+  vertical-align: middle;
+  margin: 0;
 }
 
+.surgutchBlock {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 5px 0 0;
+  height: 40px;
+}
 
+.surgutchImg {
+  width : 40px;
+  height: 40px;
+}
 
+.surgutchBlock .surgutchGal{
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.surgutchInitsBlock {
+  margin: 10px 0 0 0;
+}
+
+.initials {
+  width: 15px;
+}
+
+.paramsCB {
+  width: 20px;
+  margin: 0
+}
 /** gallery*/
 	#cboxOverlay {background: rgba(0,0,0,0.8) !important;}
 /** gallery */

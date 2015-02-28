@@ -82,12 +82,12 @@
 	<div class="constructor-steps step2 hidde n">
 		<div class="form-blocks-2">
 			<div><label for="delivery">Доставка:</label></div>
-			<select name="server_id" id="delivery">
+			<select name="server_id" id="delivery" class="constructorVisitor">
 				<option value="1">Азерот</option>
 				<option value="2">Калимдор</option>
 				<option value="3">Драенор</option>
 			</select>
-            <div class="smellBlock"><div><label><input type="checkbox" name="smellCB" class="form2cb"/>С запахом</label></div>
+            <div class="serviceElBlock"><div><label><input type="checkbox" name="smellCB" class="paramsCB constructorVisitor"/>С запахом</label></div>
                 <select name="se_id" id="smell" class="constructorVisitor">
                     <option value="1">Яндекс</option>
                     <option value="2">Розы</option>
@@ -99,14 +99,35 @@
             </div>
         </div><div class="form-blocks-2">
             <div class="surgutch">
-                <p>Сургуч</p>
-                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
-                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
-                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
-                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
-                <div class="surgutchInitsBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><span>С ининциалами</span></div>
+                <div>Сургуч</div>
+                <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
+                <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
+                <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
+                <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
+                <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
+
+                <div class="surgutchInitsBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><span>С ининциалами</span>
+                    <input class="initials constructorVisitor" type="text" name="initial1" maxlength="1"/><input class="initials constructorVisitor" type="text" name="initial2" maxlength="1"/></div>
+                <datalist id="initialsList">
+                    <option value="А"></option><option value="Б"></option><option value="Б"></option><option value="В"></option>
+                    <option value="Г"></option><option value="Д"></option><option value="Е"></option><option value="Є"></option>
+                    <option value="Ж"></option><option value="З"></option><option value="І"></option><option value="Ї"></option>
+                    <option value="Й"></option><option value="К"></option><option value="Л"></option><option value="М"></option>
+                    <option value="Н"></option><option value="О"></option><option value="П"></option><option value="Р"></option>
+                    <option value="С"></option><option value="Т"></option><option value="У"></option><option value="Ф"></option>
+                    <option value="Х"></option><option value="Ц"></option><option value="Ч"></option><option value="Ш"></option>
+                    <option value="Щ"></option><option value="Ю"></option><option value="Я"></option>
+                </datalist>
             </div>
-		</div>
+            <div class="serviceElBlock"><label><input type="checkbox" name="burntEdgesCB" class="paramsCB constructorVisitor"/>Обжигать края</label></div>
+            <div class="serviceElBlock"><div><label><input type="checkbox" name="mealCB" class="paramsCB constructorVisitor"/>Со вкусным сюрпризом</label></div>
+                <select name="mealId" id="mealSelect" class="constructorVisitor">
+                    <option value="1">Сникерс</option>
+                    <option value="2">Баунти</option>
+                    <option value="3">Казмандур</option>
+                </select>
+            </div>
+        </div>
 		<?php \Annex\Annex::showArray($servicesList); ?>
 	</div>
 	<div class="constructor-steps step3 hidden center">

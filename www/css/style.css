@@ -94,6 +94,7 @@ button {
 .buyButton {
   width: 315px;
   height: 68px;
+  color: #fbf4b3;
   background-color: #609a34;
   box-shadow: 0 3px #2b4e12;
   margin-bottom: 15px; }
@@ -102,6 +103,7 @@ button {
   width: 315px;
   height: 68px;
   background-color: #c8692a;
+  color: #fbf4b3;
   box-shadow: 0 3px #612e0d; }
 
 /*Кінець Про послугу*/
@@ -512,16 +514,12 @@ input {
 	*/
 .form-blocks-2 {
     display: inline-block;
-    width: 400px ;
+    width: 460px ;
     vertical-align: top;
 }
 
-.smellBlock {
+.serviceElBlock {
     margin: 10px 0;
-}
-
-.form2cb {
-    width: 20px;
 }
 
 .surgutchRb {
@@ -533,7 +531,7 @@ input {
 .surgutchBlock {
     display: inline-block;
     vertical-align: top;
-    margin: 5px;
+    margin: 10px 5px 0 0;
     height: 40px;
 }
 
@@ -548,6 +546,18 @@ input {
     vertical-align: middle;
 }
 
+.surgutchInitsBlock {
+    margin: 10px 0 0 0;
+}
+
+.initials {
+   width: 15px;
+}
+
+.paramsCB {
+    width: 20px;
+    margin: 0
+}
 /** gallery*/
 #cboxOverlay {
   background: rgba(0, 0, 0, 0.8) !important; }
