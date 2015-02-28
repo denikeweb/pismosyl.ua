@@ -570,7 +570,7 @@ $red : #cc3322;
 $input-color : #333;
 $input-bg : #f9f9f9;
 $input-bdr : #eee;
-$placeholder-color : $input-color * 0.9;
+$placeholder-color : $c;
 @mixin ib ($width) {
 	display: inline-block;
 	vertical-align: top;
