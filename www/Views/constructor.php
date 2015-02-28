@@ -39,6 +39,7 @@
 				<?php endif;
 				$active = '';
 				endforeach; ?>
+			<div data-id="-1" class="letters-item ctgr myTextWrite">Написать свое</div>
 		</div><div class="letters previews scrollbar-inner">
 			<?php
 				$i = -1;
@@ -78,6 +79,9 @@
 				endforeach;
 			?>
 		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"></div></div>
+	</div>
+	<div class="myTextField hidden">
+		<textarea name="ownText" id="ownText" cols="30" rows="10" class="templateTextArea"></textarea>
 	</div>
 	<div class="constructor-steps step2 hidde n">
 		<div class="form-blocks-2">

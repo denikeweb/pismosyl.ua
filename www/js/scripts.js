@@ -12,6 +12,8 @@ SmartCore = {
 		SmartCore.constructor.templates.init ();
 		SmartCore.constructor.switcher.init ();
 		$('.constructorVisitor').on ('change', SmartCore.constructor.validator.visitor);
+
+		$('.myTextWrite').on ('click', SmartCore.constructor.templates.myTextWrite);
 	},
 	globals : {
 		lastOpenedSubCat : undefined,
@@ -68,7 +70,7 @@ SmartCore = {
 					$thisCldrn = SmartCore.constructor.templates.getPrevObjForFirstCat(thisObj);
 				var id = $thisCldrn.filter('.preview-id').html (),
 					textContainerObj = $thisCldrn.filter('.preview-text'),
-					text = textContainerObj.html ();
+					text = (textContainerObj.html () === undefined) ? '' : textContainerObj.html ();
 				if (text.length > 0)
 					SmartCore.constructor.templates.viewText(id, text, textContainerObj);
 				else
@@ -97,10 +99,16 @@ SmartCore = {
 			},
 			viewText : function (id, text, textContainerObj) {
 				var active = 'active';
+				if (textContainerObj !== undefined && text.length < 1) return true;
 				$('.text-letter-content').html (text);
 				$('.preview-box.active').removeClass(active);
-				textContainerObj.parent().addClass (active);
+				if (textContainerObj !== undefined)
+					textContainerObj.parent().addClass (active);
 				SmartCore.globals.thisTemplateId = id;
+			},
+			myTextWrite : function () {
+				var text = $('.myTextField').html ();
+				SmartCore.constructor.templates.viewText('-1', text, undefined);
 			}
 		},
 		switcher : {

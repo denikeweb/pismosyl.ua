@@ -510,7 +510,6 @@ input {
 
 /**
 	forms begin
-
 	*/
 .form-blocks-2 {
     display: inline-block;
@@ -544,7 +543,23 @@ input {
     font-size: 0;
     display: inline-block;
     vertical-align: middle;
-}
+}  
+
+.smellBlock {
+  margin: 10px 0; }
+
+.form2cb {
+  width: 20px; }
+
+.myTextWrite:before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/pencil_16.png") no-repeat;
+  vertical-align: middle;
+  margin-right: 3px;
+  margin-top: -1px; }
 
 .surgutchInitsBlock {
     margin: 10px 0 0 0;
