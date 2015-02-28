@@ -87,8 +87,25 @@
 				<option value="2">Калимдор</option>
 				<option value="3">Драенор</option>
 			</select>
-		</div><div class="form-blocks-2">
-
+            <div class="smellBlock"><div><label><input type="checkbox" name="smellCB" class="form2cb"/>С запахом</label></div>
+                <select name="se_id" id="smell">
+                    <option value="1">Яндекс</option>
+                    <option value="2">Розы</option>
+                    <option value="3">Казмандур</option>
+                </select>
+            </div>
+            <div class="price">
+                <p>Конечная цена: 32,16 грн.</p>
+            </div>
+        </div><div class="form-blocks-2">
+            <div class="surgutch">
+                <p>Сургуч</p>
+                <div><input class="surgutchRb" name="surgutchType" type="radio"/><img src="/img/photos/letterText.png"/></div>
+                <div><input class="surgutchRb" name="surgutchType" type="radio"/></div>
+                <div><input class="surgutchRb" name="surgutchType" type="radio"/></div>
+                <div><input class="surgutchRb" name="surgutchType" type="radio"/></div>
+                <!-- input inline-block та img inline-block та вирівнювання вертикальне -->
+            </div>
 		</div>
 		<?php \Annex\Annex::showArray($servicesList); ?>
 	</div>

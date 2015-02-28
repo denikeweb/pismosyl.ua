@@ -258,13 +258,16 @@ class Orders
                 array_push($errors, $error);
             }
         }
-        if (array_key_exists('personalText', $letter)) {
+       /* if (array_key_exists('personalText', $letter)) {
             if (array_key_exists('templateId', $letter)) {
                 $error['code'] = '3';
                 $error['description'] = 'Нельзя выбирать шаблон, если заказывается персональное письмо.';
                 array_push($errors, $error);
             }
         }
+       Якщо є Personal_text, то customer_text бути не може, але є templateId, який ми не рахуємо
+
+       */
 
         if (count($errors)==0)
             $errors = true;
