@@ -104,7 +104,7 @@
                 <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
-                <div class="surgutchBlock"><input class="surgutchRb" name="surgutchType" type="radio"/></div>
+                <div class="surgutchInitsBlock"><input class="surgutchRb" name="surgutchType" type="radio"/><span>С ининциалами</span></div>
             </div>
 		</div>
 		<?php \Annex\Annex::showArray($servicesList); ?>
