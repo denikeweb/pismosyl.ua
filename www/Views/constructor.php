@@ -111,7 +111,7 @@
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
 
                 <div class="surgutchInitsBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><span>С ининциалами</span>
-                    <input class="initials constructorVisitor" type="text" name="initial1" maxlength="1"/><input class="initials constructorVisitor" type="text" name="initial2" maxlength="1"/></div>
+                    <input class="initials constructorVisitor" type="text" name="initial1" placeholder="А" maxlength="1"/><input class="initials constructorVisitor" type="text" name="initial2" placeholder="А" maxlength="1"/></div>
                 <datalist id="initialsList">
                     <option value="А"></option><option value="Б"></option><option value="Б"></option><option value="В"></option>
                     <option value="Г"></option><option value="Д"></option><option value="Е"></option><option value="Є"></option>
