@@ -651,6 +651,18 @@ input {
 .form2cb {
   width: 20px;
 }
+.myTextWrite {
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background: url("../img/pencil_16.png") no-repeat;
+		vertical-align: middle;
+		margin-right: 3px;
+		margin-top: -1px;
+	}
+}
 
 
 
