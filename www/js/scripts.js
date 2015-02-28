@@ -14,6 +14,8 @@ SmartCore = {
 		$('.constructorVisitor').on ('change', SmartCore.constructor.validator.visitor);
 
 		$('.myTextWrite').on ('click', SmartCore.constructor.templates.myTextWrite);
+        $('.surgutchImg').on ('click',SmartCore.constructor.templates.surgutchImgCheck);
+        $('.initials').on ('click',SmartCore.constructor.templates.surgutchInputCheck);
 	},
 	globals : {
 		lastOpenedSubCat : undefined,
@@ -109,7 +111,17 @@ SmartCore = {
 			myTextWrite : function () {
 				var text = $('.myTextField').html ();
 				SmartCore.constructor.templates.viewText('-1', text, undefined);
-			}
+			},
+            surgutchImgCheck : function () {
+                var $this = $(this);
+                var $radioButton = $this.parent().parent().children('.surgutchRb');
+                $radioButton.click();
+            },
+            surgutchInputCheck : function () {
+                var $this = $(this);
+                var $radioButton = $this.parent().children('.surgutchRb');
+                $radioButton.click();
+            }
 		},
 		switcher : {
 			vars : {

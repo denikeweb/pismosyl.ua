@@ -103,25 +103,15 @@
             </div>
         </div><div class="form-blocks-2">
             <div class="surgutch">
-                <div>Сургуч</div>
+                <div><label><input type="checkbox" name="surgutchCB" class="paramsCB constructorVisitor"/>Сургуч</label></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
-
-                <div class="surgutchInitsBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><span>С ининциалами</span>
-                    <input class="initials constructorVisitor" type="text" name="initial1" placeholder="А" maxlength="1"/><input class="initials constructorVisitor" type="text" name="initial2" placeholder="А" maxlength="1"/></div>
-                <datalist id="initialsList">
-                    <option value="А"></option><option value="Б"></option><option value="Б"></option><option value="В"></option>
-                    <option value="Г"></option><option value="Д"></option><option value="Е"></option><option value="Є"></option>
-                    <option value="Ж"></option><option value="З"></option><option value="І"></option><option value="Ї"></option>
-                    <option value="Й"></option><option value="К"></option><option value="Л"></option><option value="М"></option>
-                    <option value="Н"></option><option value="О"></option><option value="П"></option><option value="Р"></option>
-                    <option value="С"></option><option value="Т"></option><option value="У"></option><option value="Ф"></option>
-                    <option value="Х"></option><option value="Ц"></option><option value="Ч"></option><option value="Ш"></option>
-                    <option value="Щ"></option><option value="Ю"></option><option value="Я"></option>
-                </datalist>
+                <div class="surgutchInitsBlock"><label><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><span>С ининциалами </span>
+                    <input class="initials constructorVisitor" type="text" name="initial1" placeholder="И" maxlength="1"/><input class="initials constructorVisitor" type="text" name="initial2" placeholder="В" maxlength="1"/></label>
+                </div>
             </div>
             <div class="serviceElBlock"><label><input type="checkbox" name="burntEdgesCB" class="paramsCB constructorVisitor"/>Обжигать края</label></div>
             <div class="serviceElBlock"><div><label><input type="checkbox" name="mealCB" class="paramsCB constructorVisitor"/>Со вкусным сюрпризом</label></div>
@@ -135,7 +125,17 @@
 		<?php \Annex\Annex::showArray($servicesList); ?>
 	</div>
 	<div class="constructor-steps step3 hidden center">
-
+        <div class="form-blocks-3">
+            <div><label>Адрес для доставки:<br/><input class="constructorVisitor" type="text" name="address" placeholder="м.Київ, вул.Паркова 39, кв. 7"/></label></div>
+            <div><label>Кому:<br/><input class="constructorVisitor" type="text" name="whomName" placeholder="София Прекрасная"/></label></div>
+            <div class="commentBlock">
+                <label>Примечание:<br/><textarea class="userCommentTA constructorVisitor" name="comments"></textarea></label>
+            </div>
+        </div><div class="form-blocks-3">
+            <div><label>Ваше имя:<br/><input class="constructorVisitor" type="text" name="userName" placeholder="Славик Студент"/></label></div>
+            <div><label>Ваш e-mail:<br/><input class="constructorVisitor" type="text" name="userEmail" placeholder="student.goloden@edy.net"/></label></div>
+            <div><label>Ваш телефон:<br/><input class="constructorVisitor" type="text" name="userPhone" placeholder="099 123-45-67"/></label></div>
+        </div>
 	</div>
 
 
