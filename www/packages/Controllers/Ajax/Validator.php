@@ -13,11 +13,10 @@ class Validator {
     public function run () {
         if (isset ($_GET ['jsonData'])) {
             $this->dataConvert();
-            \Annex\Annex::showArray($this->jsonData);
             //$method = 'method_' . $_GET ['method'];
             //$this->$method ();
             $res = $this->validateOrder();
-            \Annex\Annex::showArray($res);
+            echo $res;
         } else
             exit ('Access error!');
     }

@@ -87,15 +87,17 @@
 		<div class="form-blocks-2">
 			<div><label for="delivery">Доставка:</label></div>
 			<select name="server_id" id="delivery" class="constructorVisitor">
-				<option value="1">Азерот</option>
-				<option value="2">Калимдор</option>
-				<option value="3">Драенор</option>
+             <?php $deliveryType = $servicesList['delivery'];
+             foreach ($deliveryType as $type) : ?>
+				<option value="<?= $type['id']?>"><?=  $type['name']?></option>
+             <?php endforeach;?>
 			</select>
             <div class="serviceElBlock"><div><label><input type="checkbox" name="smellCB" class="paramsCB constructorVisitor"/>С запахом</label></div>
                 <select name="se_id" id="smell" class="constructorVisitor">
-                    <option value="1">Яндекс</option>
-                    <option value="2">Розы</option>
-                    <option value="3">Казмандур</option>
+                <?php $smellType = $servicesList['smell'];
+                foreach ($smellType as $type) : ?>
+                    <option value="<?= $type['id']?>"><?=  $type['name']?></option>
+                <?php endforeach;?>
                 </select>
             </div>
             <div class="price">
