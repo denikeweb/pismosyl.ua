@@ -93,8 +93,8 @@
 				<option value="<?= $type['id']?>"><?=  $type['name']?></option>
              <?php endforeach;?>
 			</select>
-            <div class="serviceElBlock"><div><label><input type="checkbox" name="smellCB" class="paramsCB constructorVisitor"/>С запахом</label></div>
-                <select name="se_id" id="smell" class="leftFormIndent constructorVisitor">
+            <div class="serviceElBlock"><div><label><input type="checkbox" id="smellCheck" name="smellCB" class="paramsCB constructorVisitor"/>С запахом</label></div>
+                <select name="smell_id" id="smell" class="leftFormIndent constructorVisitor">
                 <?php $smellType = $servicesList['smell'];
                 foreach ($smellType as $type) : ?>
                     <option value="<?= $type['id']?>"><?=  $type['name']?></option>
@@ -106,7 +106,7 @@
             </div>
         </div><div class="form-blocks-2">
             <div class="surgutch">
-                <div><label><input type="checkbox" name="surgutchCB" class="paramsCB constructorVisitor"/>Сургуч</label></div>
+                <div><label><input type="checkbox" id="surgutchCheck" name="surgutchCB" class="paramsCB constructorVisitor"/>Сургуч</label></div>
                 <div class="leftFormIndent surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
@@ -116,8 +116,8 @@
                     <input class="initials constructorVisitor" type="text" name="initial1" placeholder="И" maxlength="1"/><input class="initials constructorVisitor" type="text" name="initial2" placeholder="В" maxlength="1"/></label>
                 </div>
             </div>
-            <div class="serviceElBlock"><label><input type="checkbox" name="burntEdgesCB" class="paramsCB constructorVisitor"/>Обжигать края</label></div>
-            <div class="serviceElBlock"><div><label><input type="checkbox" name="mealCB" class="paramsCB constructorVisitor"/>Со вкусным сюрпризом</label></div>
+            <div class="serviceElBlock"><label><input type="checkbox" id="burntEdges" name="burntEdgesCB" class="paramsCB constructorVisitor"/>Обжигать края</label></div>
+            <div class="serviceElBlock"><div><label><input type="checkbox" id="mealCheck" name="mealCB" class="paramsCB constructorVisitor"/>Со вкусным сюрпризом</label></div>
                 <select name="mealId" id="mealSelect" class="leftFormIndent constructorVisitor">
                     <?php $mealType = $servicesList['meal'];
                     foreach ($mealType as $type) : ?>
@@ -129,15 +129,15 @@
 	</div>
 	<div class="constructor-steps step3 hidden center">
         <div class="form-blocks-3">
-            <div><label>Адрес для доставки:<br/><input class="constructorVisitor" type="text" name="address" placeholder="м.Київ, вул.Паркова 39, кв. 7"/></label></div>
-            <div><label>Кому:<br/><input class="constructorVisitor" type="text" name="whomName" placeholder="София Прекрасная"/></label></div>
+            <div><label>Адрес для доставки:<br/><input class="constructorVisitor" id="address" type="text" name="address" placeholder="м.Київ, вул.Паркова 39, кв. 7"/></label></div>
+            <div><label>Кому:<br/><input class="constructorVisitor" id="whomName" type="text" name="whomName" placeholder="София Прекрасная"/></label></div>
             <div class="commentBlock">
-                <label>Примечание:<br/><textarea class="userCommentTA constructorVisitor" name="comments" placeholder="Вы можете добавить примечание к заказу"></textarea></label>
+                <label>Примечание:<br/><textarea class="userCommentTA constructorVisitor" id="comments" name="comments" placeholder="Вы можете добавить примечание к заказу"></textarea></label>
             </div>
         </div><div class="form-blocks-3">
-            <div><label>Ваше имя:<br/><input class="constructorVisitor" type="text" name="userName" placeholder="Славик Студент"/></label></div>
-            <div><label>Ваш e-mail:<br/><input class="constructorVisitor" type="text" name="userEmail" placeholder="student.goloden@edy.net"/></label></div>
-            <div><label>Ваш телефон:<br/><input class="constructorVisitor" type="text" name="userPhone" placeholder="099 123-45-67"/></label></div>
+            <div><label>Ваше имя:<br/><input class="constructorVisitor" id="userName" type="text" name="userName" placeholder="Славик Студент"/></label></div>
+            <div><label>Ваш e-mail:<br/><input class="constructorVisitor" id="userEmail" type="text" name="userEmail" placeholder="student.goloden@edy.net"/></label></div>
+            <div><label>Ваш телефон:<br/><input class="constructorVisitor" id="userPhone" type="text" name="userPhone" placeholder="099 123-45-67"/></label></div>
         </div>
 	</div>
 
