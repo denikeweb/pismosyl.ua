@@ -44,7 +44,7 @@ class Orders
     }
 
     //TODO: Зробити перевірку всіх параметрів, щоб була безпечна робота із БД
-    //TODO: 1) Поставить у Values кавички
+
     //TODO: 2) у всіх рядках проеккранувати дані (створити змінні)
     /**
      * function for creating a new order
@@ -192,6 +192,7 @@ class Orders
         if (is_null($letter))
             $letter = $this->letter;
 
+        $this->checkCorrectness($services,$letter);
         $START_PRICE = 300;
         $servicesList = new Services();
         $sum = 0;
@@ -200,12 +201,14 @@ class Orders
             $sum += $servicesList->getServiceById($key, $value['id'])['price'];
         }
 
-        $PRICE_TEMPLATE_LETTER = 2.67;
-        $templateData = new Templates();
-        $templateText = $templateData->getTemplateText($letter['templateId']);
-        $templateLength = iconv_strlen($templateText, 'UTF-8') - 2;
-        $priceForTemplate = $templateLength * $PRICE_TEMPLATE_LETTER;
-        $sum += $priceForTemplate;
+        if (array_key_exists('templateId',$letter)) {
+            $PRICE_TEMPLATE_LETTER = 2.67;
+            $templateData = new Templates();
+            $templateText = $templateData->getTemplateText($letter['templateId']);
+            $templateLength = iconv_strlen($templateText, 'UTF-8') - 2;
+            $priceForTemplate = $templateLength * $PRICE_TEMPLATE_LETTER;
+            $sum += $priceForTemplate;
+        }
 
         if (array_key_exists('customerText', $letter)) {
             $PRICE_CUSTOMER_LETTER = 5;
@@ -237,15 +240,30 @@ class Orders
      *                      'description' => ] //Описание
      *                 ]
      */
-    public function checkCorrectness($services = null, $letter = null)
+    public function checkCorrectness(&$services = null, &$letter = null)
     {
         if (is_null($services))
-            $services = $this->services;
+            $services = &$this->services;
         if (is_null($letter))
-            $letter = $this->letter;
+            $letter = &$this->letter;
 
         $errors = [];
         $error = [];
+        //повидаляти всі елементи із мінусовими значеннями. +
+        //перевірити чи всі id числові і якщо не числові, то видаляти +
+        // Якщо є Personal_text то треба видалити елемент із templateId+
+        foreach ($services as $key => $value) {
+            $services[$key]['id'] = intval($services[$key]['id']);
+            if ($services[$key]['id']<=0) {
+                unset($services[$key]['id']);
+                continue;
+            }
+        }
+
+        if (($letter['commentsPersonalText']==-1) && (count($letter['commentsPersonalText'])>3)) {
+            unset($letter['templateId']);
+        }
+
         if ($services['delivery']['id'] == 1) { //перевіряємо чи замовлення доставляється поштою
             if (array_key_exists('surgutch', $services)) {
                 $error['code'] = '1';
@@ -258,16 +276,6 @@ class Orders
                 array_push($errors, $error);
             }
         }
-       /* if (array_key_exists('personalText', $letter)) {
-            if (array_key_exists('templateId', $letter)) {
-                $error['code'] = '3';
-                $error['description'] = 'Нельзя выбирать шаблон, если заказывается персональное письмо.';
-                array_push($errors, $error);
-            }
-        }
-       Якщо є Personal_text, то customer_text бути не може, але є templateId, який ми не рахуємо
-
-       */
 
         if (count($errors)==0)
             $errors = true;
