@@ -34,7 +34,7 @@ class GetPrice {
 
     private function validateOrder(){
         $orders = new \Models\Orders();
-	    return $price = $orders->getCalcPrice(
+	    return $price = $orders->calculateOrderPrice(
 		    $this->jsonData ['services'],
 		    $this->jsonData ['letter']
 	    );

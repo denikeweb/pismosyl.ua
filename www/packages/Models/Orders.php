@@ -173,7 +173,7 @@ class Orders
 	}
 
 	public function getCalcPrice ($services, $letter) {
-		return $this->calculateOrderPrice($services, $letter);
+		return $this->calculateOrderPrice($services, $letter)['discount'];
 	}
 
     /**TEST. TODO: оплату на 100 символів начислять

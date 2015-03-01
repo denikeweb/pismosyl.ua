@@ -60,7 +60,7 @@ class InterKassa {
 			$this->jsonData ['services'],
 			$this->jsonData ['letter'],
 			$this->jsonData ['customerContacts'],
-			$price['discount']
+			$price
 		);
 		(new \Models\InterKassa())->redirect ($orderId, $price);
 	}
