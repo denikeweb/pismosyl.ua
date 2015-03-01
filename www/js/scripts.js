@@ -20,6 +20,7 @@ SmartCore = {
 	globals : {
 		lastOpenedSubCat : undefined,
 		thisTemplateId : 0,
+		thisTextContainerObj : undefined,
 		personalText : false
 	},
 	libs : {
@@ -99,18 +100,38 @@ SmartCore = {
 			saveText : function (textContainerObj, data) {
 				textContainerObj.html (data);
 			},
-			viewText : function (id, text, textContainerObj) {
-				var active = 'active';
+			viewText : function (id, text, textContainerObj, own) {
 				if (textContainerObj !== undefined && text.length < 1) return true;
-				$('.text-letter-content').html (text);
+
+				var active = 'active',
+					$content = $('.text-letter-content'),
+					$thisContentText = $content.html ();
+				if (SmartCore.globals.thisTextContainerObj != undefined)
+					SmartCore.globals.thisTextContainerObj.html ($thisContentText);
+				$content.html (text);
 				$('.preview-box.active').removeClass(active);
 				if (textContainerObj !== undefined)
 					textContainerObj.parent().addClass (active);
 				SmartCore.globals.thisTemplateId = id;
+				SmartCore.globals.thisTextContainerObj =
+					(own == undefined) ? textContainerObj : $('.myTextField').first ();
+
+				$('.templateTextArea').on ('keyup', SmartCore.constructor.templates.onKeyUp.textarea);
+				$('.templateInput').on ('keyup', SmartCore.constructor.templates.onKeyUp.input);
+			},
+			onKeyUp : {
+				textarea : function () {
+					$this = $(this);
+					$this.html ( $this.val () );
+				},
+				input : function () {
+					$this = $(this);
+					$this.attr ( 'value', $this.val () );
+				}
 			},
 			myTextWrite : function () {
 				var text = $('.myTextField').html ();
-				SmartCore.constructor.templates.viewText('-1', text, undefined);
+				SmartCore.constructor.templates.viewText('-1', text, undefined, true);
 			},
             surgutchImgCheck : function () {
                 var $this = $(this);
@@ -292,17 +313,19 @@ SmartCore = {
 				return rows;
 			},
 			generate_letter : function () {
-				var rows = {};
+				var rows = {},
+					text = $('.text-letter-content').html ();
 				rows = {
 					templateId : SmartCore.globals.thisTemplateId,
-					customerText : $('.text-letter-content').html (),
-					commentsPersonalText : $('.text-letter-content').html ()
+					customerText : text,
+					commentsPersonalText : text
 				};
 
-				if (SmartCore.globals.personalText === true)
-					rows.commentsPersonalText = '';
-				else
+				if (SmartCore.globals.personalText === true && SmartCore.globals.thisTemplateId == -1)
 					rows.customerText = '';
+				else
+					rows.commentsPersonalText = '';
+				console.log(rows);
 				return rows;
 			},
 			generate_contacts : function () {

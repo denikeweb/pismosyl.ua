@@ -404,6 +404,8 @@ footer {
   height: 120px;
   display: block;
   margin: 3px 0; }
+  .templateTextArea.x2 {
+    height: 200%; }
 
 .constructor-switcher {
   display: inline-block;
@@ -517,32 +519,7 @@ input {
   vertical-align: top; }
 
 .serviceElBlock {
-    margin: 10px 0;
-}
-
-.surgutchRb {
-    width: 20px;
-    vertical-align: middle;
-    margin: 0;
-}
-
-.surgutchBlock {
-    display: inline-block;
-    vertical-align: top;
-    margin: 10px 5px 0 0;
-    height: 40px;
-}
-
-.surgutchImg {
-    width : 40px;
-    height: 40px;
-}
-
-.surgutchBlock .surgutchGal{
-    font-size: 0;
-    display: inline-block;
-    vertical-align: middle;
-}
+  margin: 10px 0; }
 
 .surgutchRb {
   width: 20px;
@@ -588,20 +565,18 @@ input {
   display: inline-block;
   width: 460px;
   vertical-align: top;
-  text-align: left;
-}
+  text-align: left; }
 
-.commentBlock{
-  text-align: left;
-}
+.commentBlock {
+  text-align: left; }
 
 .userCommentTA {
   resize: none;
-  width: 410px;
+  width: 460px;
   height: 120px;
   display: block;
-  margin: 3px 0;
-}
+  margin: 3px 0; }
+
 /** gallery*/
 #cboxOverlay {
   background: rgba(0, 0, 0, 0.8) !important; }

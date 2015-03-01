@@ -80,8 +80,8 @@
 			?>
 		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"></div></div>
 	</div>
-	<div class="myTextField hidden">
-		<textarea name="ownText" id="ownText" cols="30" rows="10" class="templateTextArea"></textarea>
+	<div class="myTextField hidden">Вы можете написать свой собственный текст, который наши калиграфы напишут в письме:
+		<textarea cols="30" rows="20" class="templateTextArea x2 ownText"></textarea>
 	</div>
 	<div class="constructor-steps step2 hidde n">
 		<div class="form-blocks-2">

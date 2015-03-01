@@ -529,6 +529,9 @@ $prev-active-bdr: #D8D8D8;
 		height: 120px;
 		display: block;
 		margin: 3px 0;
+		&.x2 {
+			height: 200%;
+		}
 	}
 }
 .constructor-switcher {
