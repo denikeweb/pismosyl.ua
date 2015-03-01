@@ -15,7 +15,10 @@ SmartCore = {
 
 		$('.myTextWrite').on ('click', SmartCore.constructor.templates.myTextWrite);
         $('.surgutchImg').on ('click',SmartCore.constructor.templates.surgutchImgCheck);
-        $('.initials').on ('click',SmartCore.constructor.templates.surgutchInputCheck);
+		$('.initials').on ('click',SmartCore.constructor.templates.surgutchInputCheck);
+
+		SmartCore.constructor.templates.ownText.init ();
+
 	},
 	globals : {
 		lastOpenedSubCat : undefined,
@@ -142,7 +145,23 @@ SmartCore = {
                 var $this = $(this);
                 var $radioButton = $this.parent().children('.surgutchRb');
                 $radioButton.click();
-            }
+            },
+			ownText : {
+				init : function () {
+					$('.myTextCreateHelp').on ('click', SmartCore.constructor.templates.ownText.myTextCreateHelp);
+					$('.myTextCreate').off ('click', SmartCore.constructor.templates.catClick)
+						.on ('click', SmartCore.constructor.templates.ownText.myTextCreate);
+				},
+				myTextCreate : function () {
+					SmartCore.globals.personalText = true;
+					SmartCore.constructor.switcher.showStep2();
+					return false;
+				},
+				myTextCreateHelp : function () {
+					$.la ('Написание текста письма', 'Написание текста можно поручить нашим филологам. Стоимость услуги — 80 гривен — включает работу автора и цену за объем письма; Чтобы мы поняли, что именно Вам необходимо, пожалуйста, напишите в примечании к заказу (на третьем этапе), с какой целью пишите письмо, какие чувства хотите выразить, расскажите об адресате, возможно какие-то подробности, которые нам стоит учесть. Дополнительно можете прикрепить ссылку на страницу в соцсети.');
+					return false;
+				}
+			}
 		},
 		switcher : {
 			vars : {

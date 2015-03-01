@@ -16,7 +16,8 @@
 		<link href="/css/jquery.scrollbar.css" rel="stylesheet" type="text/css"/>
 
         <link href="/css/colorbox.css" rel="stylesheet" type="text/css"/>
-        <link href="/css/workplace.css" rel="stylesheet" type="text/css"/>
+		<link href="/css/workplace.css" rel="stylesheet" type="text/css"/>
+		<link href="/css/lite-alert.css" rel="stylesheet" type="text/css"/>
 
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 
@@ -26,6 +27,7 @@
         <script src="js/jquery-1.11.2.min.js"></script>
         <script src="js/jquery.colorbox-min.js"></script>
 		<script src="js/jquery-cookie.js"></script>
+		<script src="js/jquery-lite-alert.js"></script>
 		<script src="js/jquery.scrollbar.min.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
 		<script>$(SmartCore.main);</script>

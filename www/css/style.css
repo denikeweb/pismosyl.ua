@@ -405,7 +405,7 @@ footer {
   display: block;
   margin: 3px 0; }
   .templateTextArea.x2 {
-    height: 200%; }
+    height: 280px; }
 
 .constructor-switcher {
   display: inline-block;
@@ -535,6 +535,38 @@ input {
   vertical-align: middle;
   margin-right: 3px;
   margin-top: -1px; }
+
+.myTextCreate {
+  /*&:before {
+  	content: '';
+  	display: inline-block;
+  	width: 16px;
+  	height: 16px;
+  	background: url("../img/pencil_16.png") no-repeat;
+  	vertical-align: middle;
+  	margin-right: 3px;
+  	margin-top: -1px;
+  }*/ }
+
+.myTextCreateHelp {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../img/info_16.png") no-repeat;
+  vertical-align: middle;
+  margin-right: 3px;
+  opacity: 0.7; }
+  .myTextCreateHelp:hover {
+    opacity: 1;
+    -moz-transform: scale(1.2);
+    /* Для Firefox */
+    -ms-transform: scale(1.2);
+    /* Для IE */
+    -webkit-transform: scale(1.2);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: scale(1.2);
+    /* Для Opera */
+    transform: scale(1.2); }
 
 .surgutchBlock {
   display: inline-block;
