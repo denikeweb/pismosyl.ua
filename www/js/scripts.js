@@ -286,14 +286,20 @@ SmartCore = {
 					},
 					jsonData = JSON.stringify (jsonDataArray),
 					sendData = 'action=GetPrice&jsonData=' + jsonData,
-					successFunc = function (text) {
-						$('.currentPrice').text (text);
+					successFunc = function (jprice) {
+                        var priceHtml = '<span class="oldPrice">';
+                        priceHtml += jprice.usual;
+                        priceHtml += 'грн.</span> <span class="newPrice">';
+                        priceHtml += jprice.discount;
+                        priceHtml += 'грн.</span>';
+						$('.currentPrice').html (priceHtml);
 					};
 				$.ajax ({
 					url: '//' + document.domain + '/ajax',
 					type: 'GET',
 					timeout: 5000,
 					data: sendData,
+                    dataType: 'json',
 					success : successFunc
 				});
 			},

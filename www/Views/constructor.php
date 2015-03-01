@@ -99,7 +99,7 @@
                 </select>
             </div>
             <div class="price">
-                <p>Конечная цена: <span class="currentPrice">32,16</span> грн.</p>
+                <p>Конечная цена: <span class="currentPrice">32,16</span></p>
             </div>
         </div><div class="form-blocks-2">
             <div class="surgutch">

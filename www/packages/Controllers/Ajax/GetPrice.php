@@ -13,7 +13,8 @@ class GetPrice {
     public function run () {
         if (isset ($_GET ['jsonData'])) {
             $this->dataConvert();
-            echo $this->validateOrder();
+            $prices = $this->validateOrder();
+            echo json_encode($prices);
         } else
             exit ('Access error!');
     }

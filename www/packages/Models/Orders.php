@@ -192,9 +192,7 @@ class Orders
         if (is_null($letter))
             $letter = $this->letter;
 
-        \Annex\Annex::showArray($letter);
         $this->checkCorrectness($services,$letter);
-        \Annex\Annex::showArray($letter);
         $START_PRICE = 300;
         $servicesList = new Services();
         $sum = 0;
@@ -259,14 +257,11 @@ class Orders
             }
         }
 
-        echo $letter['commentsPersonalText'];
-        echo intval($letter['commentsPersonalText']!=-1);
-        echo (count($letter['commentsPersonalText'])>3);
-        if (($letter['commentsPersonalText']!=-1) && (count($letter['commentsPersonalText'])>3)) {
+        if (($letter['commentsPersonalText']!=-1) && (iconv_strlen($letter['commentsPersonalText'])>3)) {
             $error['code'] = '3';
             $error['description'] = 'Не нужно выбирать шаблон, если выбран персональный текст.';
             array_push($errors, $error);
-            unset($letter['templateId']);
+            //unset($letter['templateId']);
         }
 
         if ($services['delivery']['id'] == 1) { //перевіряємо чи замовлення доставляється поштою

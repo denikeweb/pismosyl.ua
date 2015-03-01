@@ -577,6 +577,14 @@ input {
   display: block;
   margin: 3px 0; }
 
+.oldPrice {
+    text-decoration: line-through;
+    color: tomato;
+}
+
+.newPrice {
+    color:#609A34;
+}
 /** gallery*/
 #cboxOverlay {
   background: rgba(0, 0, 0, 0.8) !important; }
