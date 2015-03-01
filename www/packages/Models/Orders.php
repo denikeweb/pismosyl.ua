@@ -192,7 +192,9 @@ class Orders
         if (is_null($letter))
             $letter = $this->letter;
 
+        \Annex\Annex::showArray($services);
         $this->checkCorrectness($services,$letter);
+        \Annex\Annex::showArray($services);
         $START_PRICE = 300;
         $servicesList = new Services();
         $sum = 0;
@@ -222,7 +224,7 @@ class Orders
         $sum += $PROFIT;
 
         if (array_key_exists('personalText', $letter)) {
-            $PRICE_PERSONAL_TEXT = 4000;
+            $PRICE_PERSONAL_TEXT = 8000;
             $sum += $PRICE_PERSONAL_TEXT;
         }
 
@@ -255,7 +257,7 @@ class Orders
         foreach ($services as $key => $value) {
             $services[$key]['id'] = intval($services[$key]['id']);
             if ($services[$key]['id']<=0) {
-                unset($services[$key]['id']);
+                unset($services[$key]);
                 continue;
             }
         }
