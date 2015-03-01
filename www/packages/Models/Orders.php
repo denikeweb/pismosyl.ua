@@ -173,7 +173,7 @@ class Orders
 	}
 
 	public function getCalcPrice ($services, $letter) {
-		return $this->calculateOrderPrice($services, $letter) ['discount'];
+		return $this->calculateOrderPrice($services, $letter);
 	}
 
     /**TEST. TODO: оплату на 100 символів начислять
@@ -192,9 +192,9 @@ class Orders
         if (is_null($letter))
             $letter = $this->letter;
 
-        \Annex\Annex::showArray($services);
+        \Annex\Annex::showArray($letter);
         $this->checkCorrectness($services,$letter);
-        \Annex\Annex::showArray($services);
+        \Annex\Annex::showArray($letter);
         $START_PRICE = 300;
         $servicesList = new Services();
         $sum = 0;
@@ -251,9 +251,6 @@ class Orders
 
         $errors = [];
         $error = [];
-        //повидаляти всі елементи із мінусовими значеннями. +
-        //перевірити чи всі id числові і якщо не числові, то видаляти +
-        // Якщо є Personal_text то треба видалити елемент із templateId+
         foreach ($services as $key => $value) {
             $services[$key]['id'] = intval($services[$key]['id']);
             if ($services[$key]['id']<=0) {
@@ -262,7 +259,13 @@ class Orders
             }
         }
 
-        if (($letter['commentsPersonalText']==-1) && (count($letter['commentsPersonalText'])>3)) {
+        echo $letter['commentsPersonalText'];
+        echo intval($letter['commentsPersonalText']!=-1);
+        echo (count($letter['commentsPersonalText'])>3);
+        if (($letter['commentsPersonalText']!=-1) && (count($letter['commentsPersonalText'])>3)) {
+            $error['code'] = '3';
+            $error['description'] = 'Не нужно выбирать шаблон, если выбран персональный текст.';
+            array_push($errors, $error);
             unset($letter['templateId']);
         }
 

@@ -83,7 +83,7 @@
 	<div class="myTextField hidden">Вы можете написать свой собственный текст, который наши калиграфы напишут в письме:
 		<textarea cols="30" rows="20" class="templateTextArea x2 ownText"></textarea>
 	</div>
-	<div class="constructor-steps step2 hidde n">
+	<div class="constructor-steps step2 hidden">
 		<div class="form-blocks-2">
 			<div><label for="delivery">Доставка:</label></div>
 			<select name="server_id" id="delivery" class="constructorVisitor">
@@ -122,14 +122,13 @@
                 </select>
             </div>
         </div>
-		<?php \Annex\Annex::showArray($servicesList); ?>
 	</div>
 	<div class="constructor-steps step3 hidden center">
         <div class="form-blocks-3">
             <div><label>Адрес для доставки:<br/><input class="constructorVisitor" type="text" name="address" placeholder="м.Київ, вул.Паркова 39, кв. 7"/></label></div>
             <div><label>Кому:<br/><input class="constructorVisitor" type="text" name="whomName" placeholder="София Прекрасная"/></label></div>
             <div class="commentBlock">
-                <label>Примечание:<br/><textarea class="userCommentTA constructorVisitor" name="comments"></textarea></label>
+                <label>Примечание:<br/><textarea class="userCommentTA constructorVisitor" name="comments" placeholder="Вы можете добавить примечание к заказу"></textarea></label>
             </div>
         </div><div class="form-blocks-3">
             <div><label>Ваше имя:<br/><input class="constructorVisitor" type="text" name="userName" placeholder="Славик Студент"/></label></div>
@@ -138,10 +137,10 @@
         </div>
 	</div>
 
-
 	<div class="text-right constructor-switcher-bar">
 		<button class="button constructor-switcher previous hidden">Назад</button>
 		<button class="button constructor-switcher next">Далее</button>
 		<button class="button constructor-switcher toPay hidden">Оплатить заказ</button>
 	</div>
+    <?php \Annex\Annex::showArray($servicesList); ?>
 </div>

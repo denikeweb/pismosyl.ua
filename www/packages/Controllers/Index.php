@@ -39,12 +39,14 @@
                ];
 
             $letter = [
-                'templateId' => '1'
+                'templateId' => '1',
+                'commentsPersonalText' => 'sdfsfsgjshfks hfdhskfhds k'
                 ];
 			$userData = [  'email' => 'den@lux-blog.org',
 	                        'phone' => '097 888 88 44',
 	                        'name' => 'Lacosta'
 	                      ];
+            $order->calculateOrderPrice($services, $letter);
             $order->setOrderData ($services, $letter, $userData);
             //$discount = 20;
             //$query = $order->createOrder($services, $letter,$userData,$discount);
