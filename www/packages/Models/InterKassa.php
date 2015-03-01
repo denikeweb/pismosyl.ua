@@ -23,7 +23,7 @@ class InterKassa {
 		$params = [
 			'ik_co_id' => $this->kassId,
 			'ik_pm_no' => $id,
-			'ik_am' => $price,
+			'ik_am' => $price['discount'],
 			'ik_cur' => $this->cur,
 			'ik_desc' => $this->desc
 		];

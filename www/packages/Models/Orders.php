@@ -258,10 +258,10 @@ class Orders
         }
 
         if (($letter['commentsPersonalText']!=-1) && (iconv_strlen($letter['commentsPersonalText'])>3)) {
-            $error['code'] = '3';
-            $error['description'] = 'Не нужно выбирать шаблон, если выбран персональный текст.';
-            array_push($errors, $error);
-            //unset($letter['templateId']);
+//            $error['code'] = '3';
+//            $error['description'] = 'Не нужно выбирать шаблон, если выбран персональный текст.';
+//            array_push($errors, $error);
+            unset($letter['templateId']);
         }
 
         if ($services['delivery']['id'] == 1) { //перевіряємо чи замовлення доставляється поштою
