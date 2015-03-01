@@ -530,7 +530,7 @@ $prev-active-bdr: #D8D8D8;
 		display: block;
 		margin: 3px 0;
 		&.x2 {
-			height: 200%;
+			height: 280px;
 		}
 	}
 }
@@ -670,6 +670,38 @@ input {
 		margin-top: -1px;
 	}
 }
+.myTextCreate {
+	/*&:before {
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background: url("../img/pencil_16.png") no-repeat;
+		vertical-align: middle;
+		margin-right: 3px;
+		margin-top: -1px;
+	}*/
+}
+.myTextCreateHelp {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url("../img/info_16.png") no-repeat;
+	vertical-align: middle;
+	margin-right: 3px;
+	opacity: 0.7;
+	&:hover {
+		opacity: 1;
+		$scale-param: scale(1.2);
+		-moz-transform:    $scale-param; /* Для Firefox */
+		-ms-transform:     $scale-param; /* Для IE */
+		-webkit-transform: $scale-param; /* Для Safari, Chrome, iOS */
+		-o-transform: 	   $scale-param; /* Для Opera */
+		transform: 		   $scale-param;
+
+	}
+}
+
 
 .surgutchBlock {
   display: inline-block;
