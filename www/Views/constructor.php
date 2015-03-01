@@ -87,14 +87,14 @@
 	<div class="constructor-steps step2 hidden">
 		<div class="form-blocks-2">
 			<div><label for="delivery">Доставка:</label></div>
-			<select name="server_id" id="delivery" class="constructorVisitor">
+			<select name="server_id" id="delivery" class="leftFormIndent constructorVisitor">
              <?php $deliveryType = $servicesList['delivery'];
              foreach ($deliveryType as $type) : ?>
 				<option value="<?= $type['id']?>"><?=  $type['name']?></option>
              <?php endforeach;?>
 			</select>
             <div class="serviceElBlock"><div><label><input type="checkbox" name="smellCB" class="paramsCB constructorVisitor"/>С запахом</label></div>
-                <select name="se_id" id="smell" class="constructorVisitor">
+                <select name="se_id" id="smell" class="leftFormIndent constructorVisitor">
                 <?php $smellType = $servicesList['smell'];
                 foreach ($smellType as $type) : ?>
                     <option value="<?= $type['id']?>"><?=  $type['name']?></option>
@@ -107,18 +107,18 @@
         </div><div class="form-blocks-2">
             <div class="surgutch">
                 <div><label><input type="checkbox" name="surgutchCB" class="paramsCB constructorVisitor"/>Сургуч</label></div>
-                <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
+                <div class="leftFormIndent surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg" src="/img/photos/letterText.png"/></a></div>
                 <div class="surgutchBlock"><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><a class="surgutchGal" href="img/photos/constructLetter.jpg"><img class="surgutchImg"  src="/img/photos/letterText.png"/></a></div>
-                <div class="surgutchInitsBlock"><label><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><span>С ининциалами </span>
+                <div class="leftFormIndent surgutchInitsBlock"><label><input class="surgutchRb constructorVisitor" name="surgutchType" type="radio"/><span>С ининциалами </span>
                     <input class="initials constructorVisitor" type="text" name="initial1" placeholder="И" maxlength="1"/><input class="initials constructorVisitor" type="text" name="initial2" placeholder="В" maxlength="1"/></label>
                 </div>
             </div>
             <div class="serviceElBlock"><label><input type="checkbox" name="burntEdgesCB" class="paramsCB constructorVisitor"/>Обжигать края</label></div>
             <div class="serviceElBlock"><div><label><input type="checkbox" name="mealCB" class="paramsCB constructorVisitor"/>Со вкусным сюрпризом</label></div>
-                <select name="mealId" id="mealSelect" class="constructorVisitor">
+                <select name="mealId" id="mealSelect" class="leftFormIndent constructorVisitor">
                     <?php $mealType = $servicesList['meal'];
                     foreach ($mealType as $type) : ?>
                         <option value="<?= $type['id']?>"><?=  $type['name']?></option>
