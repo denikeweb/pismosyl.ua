@@ -117,7 +117,7 @@ SmartCore = {
 					textContainerObj.parent().addClass (active);
 				SmartCore.globals.thisTemplateId = id;
 				SmartCore.globals.thisTextContainerObj =
-					(own == undefined) ? textContainerObj : $('.myTextField').first ();
+					(own == undefined) ? textContainerObj : $('.' + own).first ();
 
 				$('.templateTextArea').on ('keyup', SmartCore.constructor.templates.onKeyUp.textarea);
 				$('.templateInput').on ('keyup', SmartCore.constructor.templates.onKeyUp.input);
@@ -134,7 +134,11 @@ SmartCore = {
 			},
 			myTextWrite : function () {
 				var text = $('.myTextField').html ();
-				SmartCore.constructor.templates.viewText('-1', text, undefined, true);
+				SmartCore.constructor.templates.viewText('-1', text, undefined, 'myTextField');
+			},
+			myTextCreate : function () {
+				var text = $('.myTextField2').html ();
+				SmartCore.constructor.templates.viewText('-2', text, undefined, 'myTextField2');
 			},
             surgutchImgCheck : function () {
                 var $this = $(this);
@@ -149,8 +153,9 @@ SmartCore = {
 			ownText : {
 				init : function () {
 					$('.myTextCreateHelp').on ('click', SmartCore.constructor.templates.ownText.myTextCreateHelp);
-					$('.myTextCreate').off ('click', SmartCore.constructor.templates.catClick)
-						.on ('click', SmartCore.constructor.templates.ownText.myTextCreate);
+					//$('.myTextCreate').off ('click', SmartCore.constructor.templates.catClick)
+					//	.on ('click', SmartCore.constructor.templates.ownText.myTextCreate);
+					$('.myTextCreate').on ('click', SmartCore.constructor.templates.myTextCreate);
 				},
 				myTextCreate : function () {
 					SmartCore.globals.personalText = true;
@@ -162,6 +167,11 @@ SmartCore = {
 					$.la ('Написание текста письма', 'Написание текста можно поручить нашим филологам. Стоимость услуги — 80 гривен — включает работу автора и цену за объем письма; Чтобы мы поняли, что именно Вам необходимо, пожалуйста, напишите в примечании к заказу (на третьем этапе), с какой целью пишите письмо, какие чувства хотите выразить, расскажите об адресате, возможно какие-то подробности, которые нам стоит учесть. Дополнительно можете прикрепить ссылку на страницу в соцсети.');
 					return false;
 				}
+			},
+			formProperties : function () {
+				var rows = {};
+				
+				return rows;
 			}
 		},
 		switcher : {

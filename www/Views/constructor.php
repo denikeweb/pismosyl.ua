@@ -40,7 +40,7 @@
 				$active = '';
 				endforeach; ?>
 			<div data-id="-1" class="letters-item ctgr myTextWrite">Написать свое</div>
-			<div class="letters-item ctgr myTextCreate">Помочь сочинить <span class="myTextCreateHelp"></span></div>
+			<div data-id="-2" class="letters-item ctgr myTextCreate">Помочь сочинить <span class="myTextCreateHelp"></span></div>
 		</div><div class="letters previews scrollbar-inner">
 			<?php
 				$i = -1;
@@ -82,6 +82,9 @@
 		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"></div></div>
 	</div>
 	<div class="myTextField hidden">Вы можете сочинить свой собственный текст, который наши калиграфы напишут в письме:
+		<textarea cols="30" rows="20" class="templateTextArea x2 ownText"></textarea>
+	</div>
+	<div class="myTextField2 hidden">2Вы можете сочинить свой собственный текст, который наши калиграфы напишут в письме:
 		<textarea cols="30" rows="20" class="templateTextArea x2 ownText"></textarea>
 	</div>
 	<div class="constructor-steps step2 hidden">
