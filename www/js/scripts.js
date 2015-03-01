@@ -154,6 +154,7 @@ SmartCore = {
 				},
 				myTextCreate : function () {
 					SmartCore.globals.personalText = true;
+					SmartCore.constructor.templates.ownText.myTextCreateHelp ();
 					SmartCore.constructor.switcher.showStep2();
 					return false;
 				},
