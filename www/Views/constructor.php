@@ -80,8 +80,8 @@
 			?>
 		</div><div class="letters text scrollbar-inner"><div class="text-letter-content"></div></div>
 	</div>
-	<div class="myTextField hidden">Вы можете написать свой собственный текст, который наши калиграфы напишут в письме:
-		<textarea cols="30" rows="20" class="templateTextArea x2 ownText"></textarea>
+	<div class="myTextField hidden">Вы можете сочинить свой собственный текст, который наши калиграфы напишут в письме:
+		<textarea cols="30" rows="20" class="templateTextArea x2 ownText"></textarea><label><input type="checkbox" name="surgutchCB" class="paramsPersonalText paramsCB constructorVisitor"/> Поручить написание текста нашим филологам. </label>
 	</div>
 	<div class="constructor-steps step2 hidden">
 		<div class="form-blocks-2">
