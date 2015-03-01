@@ -119,9 +119,10 @@
             <div class="serviceElBlock"><label><input type="checkbox" name="burntEdgesCB" class="paramsCB constructorVisitor"/>Обжигать края</label></div>
             <div class="serviceElBlock"><div><label><input type="checkbox" name="mealCB" class="paramsCB constructorVisitor"/>Со вкусным сюрпризом</label></div>
                 <select name="mealId" id="mealSelect" class="constructorVisitor">
-                    <option value="1">Сникерс</option>
-                    <option value="2">Баунти</option>
-                    <option value="3">Казмандур</option>
+                    <?php $mealType = $servicesList['meal'];
+                    foreach ($mealType as $type) : ?>
+                        <option value="<?= $type['id']?>"><?=  $type['name']?></option>
+                    <?php endforeach;?>
                 </select>
             </div>
         </div>

@@ -13,8 +13,6 @@ class Validator {
     public function run () {
         if (isset ($_GET ['jsonData'])) {
             $this->dataConvert();
-            //$method = 'method_' . $_GET ['method'];
-            //$this->$method ();
             $res = $this->validateOrder();
             echo $res;
         } else
