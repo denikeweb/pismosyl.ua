@@ -169,8 +169,19 @@ SmartCore = {
 				}
 			},
 			formProperties : function () {
-				var rows = {};
-				
+				var rows = {
+					surgutchId : ($('#smellCheck').prop("checked") === true) ? $('#smell').val () : -1,
+					smellId : ($('#smellCheck').prop("checked") === true) ? $('#smell').val () : -1,
+					mealId : ($('#smellCheck').prop("checked") === true) ? $('#smell').val () : -1,
+					burnt_edgesId : 1,
+					delivery : {
+						id : $('#delivery').val ()
+					},
+					surgutchInitials : {
+						i1 : 1,
+						i2 : 1
+					}
+				};
 				return rows;
 			}
 		},
@@ -334,8 +345,7 @@ SmartCore = {
 				});
 			},
 			generate_services : function () {
-				var rows = {};
-				rows = {
+				var rows = {
 					surgutchId : 1,
 					smellId : 1,
 					mealId : -1, // не вибрано, значить -1
@@ -346,6 +356,8 @@ SmartCore = {
 						nameWhom : 'Софія Крушельницька'
 					}
 				};
+
+				console.log (SmartCore.constructor.templates.formProperties());
 				return rows;
 			},
 			generate_letter : function () {
